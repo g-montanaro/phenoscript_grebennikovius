@@ -31,7 +31,7 @@ OTU = {
     this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
     #surface covered with ocellate setigerous punctures separated by approximately 1 diameter on the frons, becoming smaller and sparser anteriorly;
     this > aism-head_capsule > aism-frons > aism-punctate_cuticle:id-f64e8a > aism-cuticular_puncture:id-d19cdf > aism-cuticular_seta;
-        aism-punctate_cuticle:id-8cf51e >> aism-interpunctural_distance:id-b0ab74 .iao-is_quality_measured_as iao-measurement_datum:md-b9b039 .iao-has_measurement_unit_label pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf;
+        aism-punctate_cuticle:id-f64e8a >> aism-interpunctural_distance:id-b0ab74 .iao-is_quality_measured_as iao-measurement_datum:md-b9b039 .iao-has_measurement_unit_label pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf;
       																					iao-measurement_datum:md-b9b039 .iao-has_measurement_value 1.0;
     this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c;
     #posterior edge of vertex with a small smooth space medially;
