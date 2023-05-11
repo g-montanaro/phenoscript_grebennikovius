@@ -6,7 +6,7 @@
 
 OTU = {
   DATA = {
-    uberon-male_organism:grebennikovius_armiger[this = True] .rdfs-label 'Grebennikovius armiger';
+    uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True] .rdfs-label 'Grebennikovius armiger';
   }
 
   #Description based on the holotype of Grebennikovius armiger
