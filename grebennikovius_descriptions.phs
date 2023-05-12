@@ -87,6 +87,8 @@ OTU = {
     #Ventral body surface
     #Hypomeral depression broad, deep;
     this > colao-hypomeron > aism-cuticular_depression;
+    #posterior longitudinal hypomeral carina absent;
+    this !> colao-posterior_longitudinal_hypomeral_carina;
     #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
     this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-dd6374 .iao-has_measurement_unit_label pato-width:id-e42fd9;
 																					iao-measurement_datum:md-dd6374 .iao-has_measurement_value 0.375;
@@ -113,7 +115,9 @@ OTU = {
         aism-abdominal_tergite_VIII:id-791f84 > aism-cuticular_tubercle >> pato-bilaterally_paired;
 
     #Legs
-    #Protibia with 3 teeth;
+    #Tarsi qith 5 segments;
+    this > (aism-protarsus_with_5_protarsomeres, aism-mesotarsus_with_5_mesotarsomeres, aism-metatarsus_with_5_metatarsomeres);
+    #protibia with 3 teeth;
     this > aism-protibia:id-6b42fe > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
         aism-protibia:id-6b42fe !> aism-dorsal_protibial_cuticular_tooth_4;
     #middle and hind tibiae expanded distally;
