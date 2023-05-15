@@ -1,0 +1,16 @@
+<!-- Grebennikovius armiger -->
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [length](http://purl.obolibrary.org/obo/PATO_0000122) = 4.5, unit: [millimeter](http://purl.obolibrary.org/obo/UO_0000016);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [ovate](http://purl.obolibrary.org/obo/PATO_0001891);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [flattened](http://purl.obolibrary.org/obo/PATO_0002254);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [cuticle](http://purl.obolibrary.org/obo/UBERON_0001002): [red brown](http://purl.obolibrary.org/obo/PATO_0001287);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [ventral side](http://purl.obolibrary.org/obo/BSPO_0000068): [dark brown](http://purl.obolibrary.org/obo/PATO_0001245);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [antenna](http://purl.obolibrary.org/obo/AISM_0000032): [yellow brown](http://purl.obolibrary.org/obo/PATO_0002411);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [gena](http://purl.obolibrary.org/obo/AISM_0004026): [acute angle to](http://purl.obolibrary.org/obo/PATO_0001051);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [lateral clypeal tooth 1](http://purl.obolibrary.org/obo/AISM_0000362)
+	- [lateral clypeal tooth 1](http://purl.obolibrary.org/obo/AISM_0000362): [upturned](http://purl.obolibrary.org/obo/PATO_0002031);
+	- [lateral clypeal tooth 1](http://purl.obolibrary.org/obo/AISM_0000362): [sharp](http://purl.obolibrary.org/obo/PATO_0001419);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [head margin at genoclypeal sulcus](http://purl.obolibrary.org/obo/AISM_0000381): [notched](http://purl.obolibrary.org/obo/PATO_0001495);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [head capsule](http://purl.obolibrary.org/obo/AISM_0000019), [frons](http://purl.obolibrary.org/obo/AISM_0004020), [interpunctural distance](http://purl.obolibrary.org/obo/AISM_0000376) = 1.0, unit: [diameter](http://purl.obolibrary.org/obo/PATO_0001334) of [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [clypeus](http://purl.obolibrary.org/obo/AISM_0004019), [anterior region](http://purl.obolibrary.org/obo/BSPO_0000071), [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524): [diameter](http://purl.obolibrary.org/obo/PATO_0001334) [smaller than](http://purl.obolibrary.org/obo/RO_0015008) [diameter](http://purl.obolibrary.org/obo/PATO_0001334) of [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524)
+	- [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524) of [frons](http://purl.obolibrary.org/obo/AISM_0004020)
+	- [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524), [cuticular seta](http://purl.obolibrary.org/obo/AISM_0000039): present;
