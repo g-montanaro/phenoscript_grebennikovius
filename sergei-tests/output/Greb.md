@@ -1,7 +1,6 @@
-<!-- Grebennikovius armiger -->
-- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [length](http://purl.obolibrary.org/obo/PATO_0000122) = 4.5, unit: [millimeter](http://purl.obolibrary.org/obo/UO_0000016);
-- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [ovate](http://purl.obolibrary.org/obo/PATO_0001891);
-- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [flattened](http://purl.obolibrary.org/obo/PATO_0002254);
+<!-- org_Grebennikovius armiger -->
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [Catalog Number](http://rs.tdwg.org/dwc/terms/catalogNumber)xx111
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [TU](http://purl.obolibrary.org/obo/CDAO_0000138) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [species](http://purl.obolibrary.org/obo/TAXRANK_0000006) [Taxon ID](http://rs.tdwg.org/dwc/terms/TaxonID)https://www.gbif.org/species/1092856
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [cuticle](http://purl.obolibrary.org/obo/UBERON_0001002): [red brown](http://purl.obolibrary.org/obo/PATO_0001287);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [ventral side](http://purl.obolibrary.org/obo/BSPO_0000068): [dark brown](http://purl.obolibrary.org/obo/PATO_0001245);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [antenna](http://purl.obolibrary.org/obo/AISM_0000032): [yellow brown](http://purl.obolibrary.org/obo/PATO_0002411);
@@ -14,3 +13,6 @@
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [clypeus](http://purl.obolibrary.org/obo/AISM_0004019), [anterior region](http://purl.obolibrary.org/obo/BSPO_0000071), [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524): [diameter](http://purl.obolibrary.org/obo/PATO_0001334) [smaller than](http://purl.obolibrary.org/obo/RO_0015008) [diameter](http://purl.obolibrary.org/obo/PATO_0001334) of [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524)
 	- [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524) of [frons](http://purl.obolibrary.org/obo/AISM_0004020)
 	- [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524), [cuticular seta](http://purl.obolibrary.org/obo/AISM_0000039): present;
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [length](http://purl.obolibrary.org/obo/PATO_0000122) = 4.5, unit: [millimeter](http://purl.obolibrary.org/obo/UO_0000016);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [ovate](http://purl.obolibrary.org/obo/PATO_0001891);
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101): [flattened](http://purl.obolibrary.org/obo/PATO_0002254);

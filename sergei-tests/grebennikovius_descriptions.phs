@@ -6,8 +6,15 @@
 
 OTU = {
   DATA = {
-    uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True] .rdfs-label 'Grebennikovius armiger';
-  }
+    uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
+    uberon-male_organism:grebennikovius_armiger .dwc-Catalog_Number 'xx111';
+    uberon-male_organism:grebennikovius_armiger .iao-denotes cdao-TU .iao-denotes taxrank-species:id-6aba72;
+    
+    taxrank-species:id-6aba72 .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/1092856';
+    taxrank-species:id-6aba72 .rdfs-label 'Parachorius Thomsoni';
+    # taxrank-species:id-6aba72 .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/9501800';
+    # taxrank-species:id-6aba72 .rdfs-label 'Grebennikovius armiger';
+  } 
 
   #Description based on the holotype of Grebennikovius armiger
 

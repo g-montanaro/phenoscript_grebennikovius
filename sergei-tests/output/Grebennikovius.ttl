@@ -1,0 +1,1153 @@
+@prefix : <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Phen: <https://github.com/sergeitarasov/PhenoScript/> .
+@prefix oboI: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix term: <http://purl.org/dc/terms/> .
+@prefix x_1.1: <http://purl.org/dc/elements/1.1/> .
+@base <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740#> .
+
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740> rdf:type owl:Ontology ;
+                                                         x_1.1:contributor "Giulio Montanaro https://orcid.org/0000-0003-0836-1364" ,
+                                                                           "Sergei Tarasov https://orcid.org/0000-0001-5237-2330" ;
+                                                         term:requires "http://camwebb.info/dsw/dsw.owl" ,
+                                                                       "http://purl.obolibrary.org/obo/uberon/uberon-base.owl" ,
+                                                                       "https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/bco.owl" ,
+                                                                       "https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl" ,
+                                                                       "https://raw.githubusercontent.com/evoinfo/cdao/master/cdao.owl" ,
+                                                                       "https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2020-12-09/iao.owl" ,
+                                                                       "https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/master/bspo.owl" ,
+                                                                       "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl" ,
+                                                                       "https://raw.githubusercontent.com/pato-ontology/pato/master/pato.owl" ,
+                                                                       "https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl" ,
+                                                                       "https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl" ,
+                                                                       "https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+x_1.1:contributor rdf:type owl:AnnotationProperty ;
+                  rdfs:label "contributor" .
+
+
+###  http://purl.org/dc/elements/1.1/source
+x_1.1:source rdf:type owl:AnnotationProperty ;
+             rdfs:label "source" .
+
+
+###  http://purl.org/dc/terms/requires
+term:requires rdf:type owl:AnnotationProperty ;
+              rdfs:label "requires" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#created_by
+oboI:created_by rdf:type owl:AnnotationProperty ;
+                rdfs:label "created_by" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#creation_date
+oboI:creation_date rdf:type owl:AnnotationProperty ;
+                   rdfs:label "creation_date" .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000001
+Phen:PHS_0000001 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "phenoscript_annotations" .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000002
+Phen:PHS_0000002 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "phs_original_class" ;
+                 rdfs:subPropertyOf Phen:PHS_0000001 .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000003
+Phen:PHS_0000003 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "phs_implies_absence_of" ;
+                 rdfs:subPropertyOf Phen:PHS_0000001 .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000004
+Phen:PHS_0000004 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "phs_NL" ;
+                 rdfs:subPropertyOf Phen:PHS_0000001 .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000005
+Phen:PHS_0000005 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "phs_original_assertion" ;
+                 rdfs:subPropertyOf Phen:PHS_0000001 .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000017
+Phen:PHS_0000017 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "has_trait" .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000018
+Phen:PHS_0000018 rdf:type owl:AnnotationProperty ;
+                 rdfs:label "project_id" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                rdfs:label "part of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:label "has part" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000039
+obo:IAO_0000039 rdf:type owl:ObjectProperty ;
+                rdfs:label "has measurement unit label" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000417
+obo:IAO_0000417 rdf:type owl:ObjectProperty ;
+                rdfs:label "is quality measured as" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               rdfs:label "inheres in" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ;
+               rdfs:label "bearer of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0015008
+obo:RO_0015008 rdf:type owl:ObjectProperty ;
+               rdfs:label "0015008" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000004
+obo:IAO_0000004 rdf:type owl:DatatypeProperty ;
+                rdfs:label "has measurement value" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/AISM_0000019
+obo:AISM_0000019 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "head capsule" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000032
+obo:AISM_0000032 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "antenna" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000039
+obo:AISM_0000039 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "cuticular seta" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000362
+obo:AISM_0000362 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "lateral clypeal tooth 1" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000376
+obo:AISM_0000376 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "interpunctural distance" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000381
+obo:AISM_0000381 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "head margin at genoclypeal sulcus" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0000524
+obo:AISM_0000524 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "cuticular puncture" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0004019
+obo:AISM_0004019 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "clypeus" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0004020
+obo:AISM_0004020 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "frons" .
+
+
+###  http://purl.obolibrary.org/obo/AISM_0004026
+obo:AISM_0004026 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "gena" .
+
+
+###  http://purl.obolibrary.org/obo/BSPO_0000068
+obo:BSPO_0000068 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "ventral side" .
+
+
+###  http://purl.obolibrary.org/obo/BSPO_0000071
+obo:BSPO_0000071 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "anterior region" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000109
+obo:IAO_0000109 rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "measurement datum" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0000122
+obo:PATO_0000122 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "length" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001051
+obo:PATO_0001051 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "acute angle to" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001245
+obo:PATO_0001245 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "dark brown" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001287
+obo:PATO_0001287 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "red brown" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001334
+obo:PATO_0001334 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "diameter" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001419
+obo:PATO_0001419 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "sharp" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001495
+obo:PATO_0001495 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "notched" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001891
+obo:PATO_0001891 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "ovate" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002031
+obo:PATO_0002031 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "upturned" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002254
+obo:PATO_0002254 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "flattened" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0002411
+obo:PATO_0002411 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "yellow brown" .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0001002
+obo:UBERON_0001002 rdf:type owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
+                   rdfs:label "cuticle" .
+
+
+###  http://purl.obolibrary.org/obo/UBERON_0003101
+obo:UBERON_0003101 rdf:type owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
+                   rdfs:label "male organism" .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000016
+obo:UO_0000016 rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "millimeter" .
+
+
+###  https://github.com/sergeitarasov/PhenoScript/PHS_0000019
+Phen:PHS_0000019 rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "project" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> rdf:type owl:NamedIndividual ,
+                                                                              obo:AISM_0000381 ;
+                                                                     obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "head margin at genoclypeal sulcus:_cc2139_10-3" ;
+                                                                     Phen:PHS_0000002 obo:AISM_0000381 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5> rdf:type owl:NamedIndividual ,
+                                                                              obo:PATO_0001495 ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "notched:_cc2139_10-5" ;
+                                                                     Phen:PHS_0000002 obo:PATO_0001495 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> rdf:type owl:NamedIndividual ,
+                                                                              obo:AISM_0000019 ;
+                                                                     obo:BFO_0000051 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "head capsule:_cc2139_11-3" ;
+                                                                     Phen:PHS_0000002 obo:AISM_0000019 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> rdf:type owl:NamedIndividual ,
+                                                                              obo:AISM_0004019 ;
+                                                                     obo:BFO_0000051 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "clypeus:_cc2139_13-3" ;
+                                                                     Phen:PHS_0000002 obo:AISM_0004019 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> rdf:type owl:NamedIndividual ,
+                                                                              obo:BSPO_0000071 ;
+                                                                     obo:BFO_0000051 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "anterior region:_cc2139_13-5" ;
+                                                                     Phen:PHS_0000002 obo:BSPO_0000071 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> rdf:type owl:NamedIndividual ,
+                                                                              obo:AISM_0000524 ;
+                                                                     obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "cuticular puncture:_cc2139_13-7" ;
+                                                                     Phen:PHS_0000002 obo:AISM_0000524 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> rdf:type owl:NamedIndividual ,
+                                                                              obo:PATO_0001334 ;
+                                                                     obo:RO_0015008 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "diameter:_cc2139_13-9" ;
+                                                                     Phen:PHS_0000002 obo:PATO_0001334 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> ;
+   owl:annotatedProperty obo:RO_0015008 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3> rdf:type owl:NamedIndividual ,
+                                                                              obo:AISM_0000039 ;
+                                                                     x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                     oboI:created_by "phenospy v. 1.0.0" ;
+                                                                     oboI:creation_date "15/05/2023" ;
+                                                                     rdfs:label "cuticular seta:_cc2139_14-3" ;
+                                                                     Phen:PHS_0000002 obo:AISM_0000039 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1> rdf:type owl:NamedIndividual ,
+                                                                                obo:PATO_0001891 ;
+                                                                       x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                       oboI:created_by "phenospy v. 1.0.0" ;
+                                                                       oboI:creation_date "15/05/2023" ;
+                                                                       rdfs:label "ovate:_cc2139_2-L3-1" ;
+                                                                       Phen:PHS_0000002 obo:PATO_0001891 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2> rdf:type owl:NamedIndividual ,
+                                                                                obo:PATO_0002254 ;
+                                                                       x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                       oboI:created_by "phenospy v. 1.0.0" ;
+                                                                       oboI:creation_date "15/05/2023" ;
+                                                                       rdfs:label "flattened:_cc2139_2-L3-2" ;
+                                                                       Phen:PHS_0000002 obo:PATO_0002254 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:UBERON_0001002 ;
+                                                                    obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "cuticle:_cc2139_3-3" ;
+                                                                    Phen:PHS_0000002 obo:UBERON_0001002 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5> rdf:type owl:NamedIndividual ,
+                                                                             obo:PATO_0001287 ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "red brown:_cc2139_3-5" ;
+                                                                    Phen:PHS_0000002 obo:PATO_0001287 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:BSPO_0000068 ;
+                                                                    obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "ventral side:_cc2139_4-3" ;
+                                                                    Phen:PHS_0000002 obo:BSPO_0000068 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5> rdf:type owl:NamedIndividual ,
+                                                                             obo:PATO_0001245 ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "dark brown:_cc2139_4-5" ;
+                                                                    Phen:PHS_0000002 obo:PATO_0001245 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:AISM_0000032 ;
+                                                                    obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "antenna:_cc2139_5-3" ;
+                                                                    Phen:PHS_0000002 obo:AISM_0000032 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5> rdf:type owl:NamedIndividual ,
+                                                                             obo:PATO_0002411 ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "yellow brown:_cc2139_5-5" ;
+                                                                    Phen:PHS_0000002 obo:PATO_0002411 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:PATO_0000122 ;
+                                                                    obo:IAO_0000417 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "length:_cc2139_6-3" ;
+                                                                    Phen:PHS_0000002 obo:PATO_0000122 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> ;
+   owl:annotatedProperty obo:IAO_0000417 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7> rdf:type owl:NamedIndividual ,
+                                                                             obo:UO_0000016 ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "millimeter:_cc2139_6-7" ;
+                                                                    Phen:PHS_0000002 obo:UO_0000016 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:AISM_0004026 ;
+                                                                    obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "gena:_cc2139_8-3" ;
+                                                                    Phen:PHS_0000002 obo:AISM_0004026 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5> rdf:type owl:NamedIndividual ,
+                                                                             obo:PATO_0001051 ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "acute angle to:_cc2139_8-5" ;
+                                                                    Phen:PHS_0000002 obo:PATO_0001051 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> rdf:type owl:NamedIndividual ,
+                                                                             obo:AISM_0000362 ;
+                                                                    obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1> ,
+                                                                                   <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2> ;
+                                                                    x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                    oboI:created_by "phenospy v. 1.0.0" ;
+                                                                    oboI:creation_date "15/05/2023" ;
+                                                                    rdfs:label "lateral clypeal tooth 1:_cc2139_9-3" ;
+                                                                    Phen:PHS_0000002 obo:AISM_0000362 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1> rdf:type owl:NamedIndividual ,
+                                                                                obo:PATO_0002031 ;
+                                                                       x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                       oboI:created_by "phenospy v. 1.0.0" ;
+                                                                       oboI:creation_date "15/05/2023" ;
+                                                                       rdfs:label "upturned:_cc2139_9-L5-1" ;
+                                                                       Phen:PHS_0000002 obo:PATO_0002031 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2> rdf:type owl:NamedIndividual ,
+                                                                                obo:PATO_0001419 ;
+                                                                       x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                       oboI:created_by "phenospy v. 1.0.0" ;
+                                                                       oboI:creation_date "15/05/2023" ;
+                                                                       rdfs:label "sharp:_cc2139_9-L5-2" ;
+                                                                       Phen:PHS_0000002 obo:PATO_0001419 .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> rdf:type owl:NamedIndividual ,
+                                                                                        obo:UBERON_0003101 ;
+                                                                               obo:BFO_0000051 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> ,
+                                                                                               <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ;
+                                                                               obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1> ,
+                                                                                              <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2> ,
+                                                                                              <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> ;
+                                                                               x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                               oboI:created_by "phenospy v. 1.0.0" ;
+                                                                               oboI:creation_date "15/05/2023" ;
+                                                                               rdfs:label "Grebennikovius armiger" ;
+                                                                               Phen:PHS_0000002 obo:UBERON_0003101 ;
+                                                                               Phen:PHS_0000017 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ,
+                                                                                                <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty rdfs:label ;
+   owl:annotatedTarget "Grebennikovius armiger" ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger> ;
+   owl:annotatedProperty Phen:PHS_0000017 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> rdf:type owl:NamedIndividual ,
+                                                                           obo:AISM_0004020 ;
+                                                                  obo:RO_0000053 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "frons:id-42a3e6" ;
+                                                                  Phen:PHS_0000002 obo:AISM_0004020 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+   owl:annotatedProperty obo:RO_0000053 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> rdf:type owl:NamedIndividual ,
+                                                                           obo:AISM_0000376 ;
+                                                                  obo:IAO_0000417 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "interpunctural distance:id-b0ab74" ;
+                                                                  Phen:PHS_0000002 obo:AISM_0000376 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74> ;
+   owl:annotatedProperty obo:IAO_0000417 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> rdf:type owl:NamedIndividual ,
+                                                                           obo:PATO_0001334 ;
+                                                                  obo:RO_0000052 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "diameter:id-cd5a9c" ;
+                                                                  Phen:PHS_0000002 obo:PATO_0001334 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+   owl:annotatedProperty obo:RO_0000052 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> rdf:type owl:NamedIndividual ,
+                                                                           obo:AISM_0000524 ;
+                                                                  obo:BFO_0000050 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+                                                                  obo:BFO_0000051 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3> ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "cuticular puncture:id-d19cdf" ;
+                                                                  Phen:PHS_0000002 obo:AISM_0000524 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ;
+   owl:annotatedProperty obo:BFO_0000050 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf> ;
+   owl:annotatedProperty obo:BFO_0000051 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> rdf:type owl:NamedIndividual ,
+                                                                           obo:IAO_0000109 ;
+                                                                  obo:IAO_0000039 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+                                                                  obo:IAO_0000004 1.0 ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "measurement datum:md-b9b039" ;
+                                                                  Phen:PHS_0000002 obo:IAO_0000109 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ;
+   owl:annotatedProperty obo:IAO_0000039 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039> ;
+   owl:annotatedProperty obo:IAO_0000004 ;
+   owl:annotatedTarget 1.0 ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> rdf:type owl:NamedIndividual ,
+                                                                           obo:IAO_0000109 ;
+                                                                  obo:IAO_0000039 <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7> ;
+                                                                  obo:IAO_0000004 4.5 ;
+                                                                  x_1.1:source <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> ;
+                                                                  oboI:created_by "phenospy v. 1.0.0" ;
+                                                                  oboI:creation_date "15/05/2023" ;
+                                                                  rdfs:label "measurement datum:md-c4c164" ;
+                                                                  Phen:PHS_0000002 obo:IAO_0000109 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> ;
+   owl:annotatedProperty obo:IAO_0000039 ;
+   owl:annotatedTarget <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7> ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164> ;
+   owl:annotatedProperty obo:IAO_0000004 ;
+   owl:annotatedTarget 4.5 ;
+   Phen:PHS_0000005 "true"^^xsd:boolean
+ ] .
+
+
+###  https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project
+<https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/project> rdf:type owl:NamedIndividual ,
+                                                                         Phen:PHS_0000019 ;
+                                                                x_1.1:contributor "Giulio Montanaro https://orcid.org/0000-0003-0836-1364" ,
+                                                                                  "Sergei Tarasov https://orcid.org/0000-0001-5237-2330" ;
+                                                                term:requires "http://camwebb.info/dsw/dsw.owl" ,
+                                                                              "http://purl.obolibrary.org/obo/uberon/uberon-base.owl" ,
+                                                                              "https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/bco.owl" ,
+                                                                              "https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl" ,
+                                                                              "https://raw.githubusercontent.com/evoinfo/cdao/master/cdao.owl" ,
+                                                                              "https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2020-12-09/iao.owl" ,
+                                                                              "https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/master/bspo.owl" ,
+                                                                              "https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl" ,
+                                                                              "https://raw.githubusercontent.com/pato-ontology/pato/master/pato.owl" ,
+                                                                              "https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl" ,
+                                                                              "https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl" ,
+                                                                              "https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl" ;
+                                                                Phen:PHS_0000018 "https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740" .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

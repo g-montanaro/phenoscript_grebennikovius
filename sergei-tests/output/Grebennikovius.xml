@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <Phenoscript xmlns:phs="https://github.com/sergeitarasov/PhenoScript">
 	<phs-config-yaml>
-		<base-iri>https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740</base-iri>
+		<base-iri>https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740</base-iri>
 		<authors>
 			<author name="Giulio Montanaro">https://orcid.org/0000-0003-0836-1364</author>
 			<author name="Sergei Tarasov">https://orcid.org/0000-0001-5237-2330</author>
@@ -15,10 +15,10 @@
 			<importOntology>https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2020-12-09/iao.owl</importOntology>
 			<importOntology>https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl</importOntology>
 			<importOntology>https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl</importOntology>
-			<importOntology>http://camwebb.info/dsw/dsw.owl</importOntology>
 			<importOntology>https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl</importOntology>
 			<importOntology>https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/bco.owl</importOntology>
 			<importOntology>http://purl.obolibrary.org/obo/uberon/uberon-base.owl</importOntology>
+			<importOntology>https://raw.githubusercontent.com/phenoscape/taxrank/master/taxrank.owl</importOntology>
 		</importOntologies>
 	</phs-config-yaml>
 	<phs:otu_objects_list>
@@ -26,28 +26,77 @@
 			<phs:otu_properties>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/grebennikovius_armiger" phs:triple_pos="1" phs:node_name="uberon-male_organism" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0003101" phs:label_original="male organism" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/grebennikovius_armiger" phs:triple_pos="1" phs:node_name="uberon-male_organism" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0003101" phs:label_original="male organism" phs:type_onto="C">
 							<phs:node_property phs:value="uberon-male_organism">node_name</phs:node_property>
 							<phs:node_property phs:value="True" phs:var-iri="KeyWord:this" phs:var-label_original="this" phs:var-type_onto="KeyWord" phs:value-iri="KeyWord:True" phs:value-label_original="True" phs:value-type_onto="KeyWord">this</phs:node_property>
 							<phs:node_property phs:value="True" phs:var-iri="KeyWord:linksTraits" phs:var-label_original="linksTraits" phs:var-type_onto="KeyWord" phs:value-iri="KeyWord:True" phs:value-label_original="True" phs:value-type_onto="KeyWord">linksTraits</phs:node_property>
+							<phs:node_property phs:value="uberon-adult_organism" phs:var-iri="KeyWord:cls" phs:var-label_original="cls" phs:var-type_onto="KeyWord" phs:value-iri="http://purl.obolibrary.org/obo/UBERON_0007023" phs:value-label_original="adult organism" phs:value-type_onto="C">cls</phs:node_property>
+							<phs:node_property phs:value="dwc-Preserved_Specimen" phs:var-iri="KeyWord:cls" phs:var-label_original="cls" phs:var-type_onto="KeyWord" phs:value-iri="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" phs:value-label_original="Preserved Specimen" phs:value-type_onto="C">cls</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="rdfs-label" phs:iri="http://www.w3.org/2000/01/rdf-schema#label" phs:label_original="label" phs:type_onto="AP"/>
-						<phs:quoted_node phs:triple_pos="3" phs:node_name="Grebennikovius armiger"/>
+						<phs:quoted_node phs:triple_pos="3" phs:node_name="org_Grebennikovius armiger"/>
+					</phs:triple_node>
+				</phs:ophu_statement>
+				<phs:ophu_statement>
+					<phs:triple_node>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/grebennikovius_armiger" phs:triple_pos="1" phs:node_name="uberon-male_organism" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0003101" phs:label_original="male organism" phs:type_onto="C">
+							<phs:node_property phs:value="uberon-male_organism">node_name</phs:node_property>
+						</phs:node>
+						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="dwc-Catalog_Number" phs:iri="http://rs.tdwg.org/dwc/terms/catalogNumber" phs:label_original="Catalog Number" phs:type_onto="DP"/>
+						<phs:quoted_node phs:triple_pos="3" phs:node_name="xx111"/>
+					</phs:triple_node>
+				</phs:ophu_statement>
+				<phs:ophu_statement>
+					<phs:triple_node>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/grebennikovius_armiger" phs:triple_pos="1" phs:node_name="uberon-male_organism" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0003101" phs:label_original="male organism" phs:type_onto="C">
+							<phs:node_property phs:value="uberon-male_organism">node_name</phs:node_property>
+						</phs:node>
+						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-denotes" phs:iri="http://purl.obolibrary.org/obo/IAO_0000219" phs:label_original="denotes" phs:type_onto="OP"/>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_3-3" phs:triple_pos="3" phs:node_name="cdao-TU" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/CDAO_0000138" phs:label_original="TU" phs:type_onto="C">
+							<phs:node_property phs:value="cdao-TU">node_name</phs:node_property>
+						</phs:node>
+					</phs:triple_node>
+					<phs:triple_node>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_3-3" phs:triple_pos="1" phs:node_name="cdao-TU" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/CDAO_0000138" phs:label_original="TU" phs:type_onto="C">
+							<phs:node_property phs:value="cdao-TU">node_name</phs:node_property>
+						</phs:node>
+						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-denotes" phs:iri="http://purl.obolibrary.org/obo/IAO_0000219" phs:label_original="denotes" phs:type_onto="OP"/>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-6aba72" phs:triple_pos="3" phs:node_name="taxrank-species" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/TAXRANK_0000006" phs:label_original="species" phs:type_onto="C">
+							<phs:node_property phs:value="taxrank-species">node_name</phs:node_property>
+						</phs:node>
+					</phs:triple_node>
+				</phs:ophu_statement>
+				<phs:ophu_statement>
+					<phs:triple_node>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-6aba72" phs:triple_pos="1" phs:node_name="taxrank-species" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/TAXRANK_0000006" phs:label_original="species" phs:type_onto="C">
+							<phs:node_property phs:value="taxrank-species">node_name</phs:node_property>
+						</phs:node>
+						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="dwc-Taxon_ID_TaxonID" phs:iri="http://rs.tdwg.org/dwc/terms/TaxonID" phs:label_original="Taxon ID" phs:type_onto="DP"/>
+						<phs:quoted_node phs:triple_pos="3" phs:node_name="https://www.gbif.org/species/1092856"/>
+					</phs:triple_node>
+				</phs:ophu_statement>
+				<phs:ophu_statement>
+					<phs:triple_node>
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-6aba72" phs:triple_pos="1" phs:node_name="taxrank-species" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/TAXRANK_0000006" phs:label_original="species" phs:type_onto="C">
+							<phs:node_property phs:value="taxrank-species">node_name</phs:node_property>
+						</phs:node>
+						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="rdfs-label" phs:iri="http://www.w3.org/2000/01/rdf-schema#label" phs:label_original="label" phs:type_onto="AP"/>
+						<phs:quoted_node phs:triple_pos="3" phs:node_name="Parachorius Thomsoni"/>
 					</phs:triple_node>
 				</phs:ophu_statement>
 			</phs:otu_properties>
 			<phs:ophu_list>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_6-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
 						<phs:list_node phs:triple_pos="3">
-							<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-1" phs:triple_pos="NO" phs:node_name="pato-ovate" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001891" phs:label_original="ovate" phs:type_onto="C">
+							<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_6-L3-1" phs:triple_pos="NO" phs:node_name="pato-ovate" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001891" phs:label_original="ovate" phs:type_onto="C">
 								<phs:node_property phs:value="pato-ovate">node_name</phs:node_property>
 							</phs:node>
-							<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_2-L3-2" phs:triple_pos="NO" phs:node_name="pato-flattened" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002254" phs:label_original="flattened" phs:type_onto="C">
+							<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_6-L3-2" phs:triple_pos="NO" phs:node_name="pato-flattened" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002254" phs:label_original="flattened" phs:type_onto="C">
 								<phs:node_property phs:value="pato-flattened">node_name</phs:node_property>
 							</phs:node>
 						</phs:list_node>
@@ -55,96 +104,96 @@
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_7-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3" phs:triple_pos="3" phs:node_name="uberon-cuticle" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0001002" phs:label_original="cuticle" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_7-3" phs:triple_pos="3" phs:node_name="uberon-cuticle" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0001002" phs:label_original="cuticle" phs:type_onto="C">
 							<phs:node_property phs:value="uberon-cuticle">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-3" phs:triple_pos="1" phs:node_name="uberon-cuticle" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0001002" phs:label_original="cuticle" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_7-3" phs:triple_pos="1" phs:node_name="uberon-cuticle" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UBERON_0001002" phs:label_original="cuticle" phs:type_onto="C">
 							<phs:node_property phs:value="uberon-cuticle">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_3-5" phs:triple_pos="3" phs:node_name="pato-red_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001287" phs:label_original="red brown" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_7-5" phs:triple_pos="3" phs:node_name="pato-red_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001287" phs:label_original="red brown" phs:type_onto="C">
 							<phs:node_property phs:value="pato-red_brown">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_8-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3" phs:triple_pos="3" phs:node_name="bspo-ventral_side" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000068" phs:label_original="ventral side" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_8-3" phs:triple_pos="3" phs:node_name="bspo-ventral_side" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000068" phs:label_original="ventral side" phs:type_onto="C">
 							<phs:node_property phs:value="bspo-ventral_side">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-3" phs:triple_pos="1" phs:node_name="bspo-ventral_side" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000068" phs:label_original="ventral side" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_8-3" phs:triple_pos="1" phs:node_name="bspo-ventral_side" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000068" phs:label_original="ventral side" phs:type_onto="C">
 							<phs:node_property phs:value="bspo-ventral_side">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_4-5" phs:triple_pos="3" phs:node_name="pato-dark_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001245" phs:label_original="dark brown" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_8-5" phs:triple_pos="3" phs:node_name="pato-dark_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001245" phs:label_original="dark brown" phs:type_onto="C">
 							<phs:node_property phs:value="pato-dark_brown">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_9-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3" phs:triple_pos="3" phs:node_name="aism-antenna" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000032" phs:label_original="antenna" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_9-3" phs:triple_pos="3" phs:node_name="aism-antenna" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000032" phs:label_original="antenna" phs:type_onto="C">
 							<phs:node_property phs:value="aism-antenna">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-3" phs:triple_pos="1" phs:node_name="aism-antenna" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000032" phs:label_original="antenna" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_9-3" phs:triple_pos="1" phs:node_name="aism-antenna" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000032" phs:label_original="antenna" phs:type_onto="C">
 							<phs:node_property phs:value="aism-antenna">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_5-5" phs:triple_pos="3" phs:node_name="pato-yellow_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002411" phs:label_original="yellow brown" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_9-5" phs:triple_pos="3" phs:node_name="pato-yellow_brown" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002411" phs:label_original="yellow brown" phs:type_onto="C">
 							<phs:node_property phs:value="pato-yellow_brown">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_10-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3" phs:triple_pos="3" phs:node_name="pato-length" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0000122" phs:label_original="length" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_10-3" phs:triple_pos="3" phs:node_name="pato-length" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0000122" phs:label_original="length" phs:type_onto="C">
 							<phs:node_property phs:value="pato-length">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-3" phs:triple_pos="1" phs:node_name="pato-length" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0000122" phs:label_original="length" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_10-3" phs:triple_pos="1" phs:node_name="pato-length" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0000122" phs:label_original="length" phs:type_onto="C">
 							<phs:node_property phs:value="pato-length">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-is_quality_measured_as" phs:iri="http://purl.obolibrary.org/obo/IAO_0000417" phs:label_original="is quality measured as" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164" phs:triple_pos="3" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-c4c164" phs:triple_pos="3" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-c4c164" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-has_measurement_unit_label" phs:iri="http://purl.obolibrary.org/obo/IAO_0000039" phs:label_original="has measurement unit label" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_6-7" phs:triple_pos="3" phs:node_name="unit-millimeter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UO_0000016" phs:label_original="millimeter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_10-7" phs:triple_pos="3" phs:node_name="unit-millimeter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/UO_0000016" phs:label_original="millimeter" phs:type_onto="C">
 							<phs:node_property phs:value="unit-millimeter">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-c4c164" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-c4c164" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-has_measurement_value" phs:iri="http://purl.obolibrary.org/obo/IAO_0000004" phs:label_original="has measurement value" phs:type_onto="DP"/>
@@ -156,44 +205,44 @@
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_12-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3" phs:triple_pos="3" phs:node_name="aism-gena" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004026" phs:label_original="gena" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_12-3" phs:triple_pos="3" phs:node_name="aism-gena" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004026" phs:label_original="gena" phs:type_onto="C">
 							<phs:node_property phs:value="aism-gena">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-3" phs:triple_pos="1" phs:node_name="aism-gena" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004026" phs:label_original="gena" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_12-3" phs:triple_pos="1" phs:node_name="aism-gena" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004026" phs:label_original="gena" phs:type_onto="C">
 							<phs:node_property phs:value="aism-gena">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_8-5" phs:triple_pos="3" phs:node_name="pato-acute_angle_to" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001051" phs:label_original="acute angle to" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_12-5" phs:triple_pos="3" phs:node_name="pato-acute_angle_to" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001051" phs:label_original="acute angle to" phs:type_onto="C">
 							<phs:node_property phs:value="pato-acute_angle_to">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_13-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3" phs:triple_pos="3" phs:node_name="aism-lateral_clypeal_tooth_1" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000362" phs:label_original="lateral clypeal tooth 1" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_13-3" phs:triple_pos="3" phs:node_name="aism-lateral_clypeal_tooth_1" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000362" phs:label_original="lateral clypeal tooth 1" phs:type_onto="C">
 							<phs:node_property phs:value="aism-lateral_clypeal_tooth_1">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-3" phs:triple_pos="1" phs:node_name="aism-lateral_clypeal_tooth_1" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000362" phs:label_original="lateral clypeal tooth 1" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_13-3" phs:triple_pos="1" phs:node_name="aism-lateral_clypeal_tooth_1" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000362" phs:label_original="lateral clypeal tooth 1" phs:type_onto="C">
 							<phs:node_property phs:value="aism-lateral_clypeal_tooth_1">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
 						<phs:list_node phs:triple_pos="3">
-							<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-1" phs:triple_pos="NO" phs:node_name="pato-upturned" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002031" phs:label_original="upturned" phs:type_onto="C">
+							<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_13-L5-1" phs:triple_pos="NO" phs:node_name="pato-upturned" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0002031" phs:label_original="upturned" phs:type_onto="C">
 								<phs:node_property phs:value="pato-upturned">node_name</phs:node_property>
 							</phs:node>
-							<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_9-L5-2" phs:triple_pos="NO" phs:node_name="pato-sharp" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001419" phs:label_original="sharp" phs:type_onto="C">
+							<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_13-L5-2" phs:triple_pos="NO" phs:node_name="pato-sharp" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001419" phs:label_original="sharp" phs:type_onto="C">
 								<phs:node_property phs:value="pato-sharp">node_name</phs:node_property>
 							</phs:node>
 						</phs:list_node>
@@ -201,83 +250,83 @@
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_14-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3" phs:triple_pos="3" phs:node_name="aism-head_margin_at_genoclypeal_sulcus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000381" phs:label_original="head margin at genoclypeal sulcus" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_14-3" phs:triple_pos="3" phs:node_name="aism-head_margin_at_genoclypeal_sulcus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000381" phs:label_original="head margin at genoclypeal sulcus" phs:type_onto="C">
 							<phs:node_property phs:value="aism-head_margin_at_genoclypeal_sulcus">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-3" phs:triple_pos="1" phs:node_name="aism-head_margin_at_genoclypeal_sulcus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000381" phs:label_original="head margin at genoclypeal sulcus" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_14-3" phs:triple_pos="1" phs:node_name="aism-head_margin_at_genoclypeal_sulcus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000381" phs:label_original="head margin at genoclypeal sulcus" phs:type_onto="C">
 							<phs:node_property phs:value="aism-head_margin_at_genoclypeal_sulcus">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_10-5" phs:triple_pos="3" phs:node_name="pato-notched" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001495" phs:label_original="notched" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_14-5" phs:triple_pos="3" phs:node_name="pato-notched" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001495" phs:label_original="notched" phs:type_onto="C">
 							<phs:node_property phs:value="pato-notched">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_15-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3" phs:triple_pos="3" phs:node_name="aism-head_capsule" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000019" phs:label_original="head capsule" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_15-3" phs:triple_pos="3" phs:node_name="aism-head_capsule" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000019" phs:label_original="head capsule" phs:type_onto="C">
 							<phs:node_property phs:value="aism-head_capsule">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_11-3" phs:triple_pos="1" phs:node_name="aism-head_capsule" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000019" phs:label_original="head capsule" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_15-3" phs:triple_pos="1" phs:node_name="aism-head_capsule" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000019" phs:label_original="head capsule" phs:type_onto="C">
 							<phs:node_property phs:value="aism-head_capsule">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6" phs:triple_pos="3" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-42a3e6" phs:triple_pos="3" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
 							<phs:node_property phs:value="aism-frons">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6" phs:triple_pos="1" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-42a3e6" phs:triple_pos="1" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
 							<phs:node_property phs:value="aism-frons">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74" phs:triple_pos="3" phs:node_name="aism-interpunctural_distance" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000376" phs:label_original="interpunctural distance" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-b0ab74" phs:triple_pos="3" phs:node_name="aism-interpunctural_distance" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000376" phs:label_original="interpunctural distance" phs:type_onto="C">
 							<phs:node_property phs:value="aism-interpunctural_distance">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-b0ab74" phs:triple_pos="1" phs:node_name="aism-interpunctural_distance" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000376" phs:label_original="interpunctural distance" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-b0ab74" phs:triple_pos="1" phs:node_name="aism-interpunctural_distance" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000376" phs:label_original="interpunctural distance" phs:type_onto="C">
 							<phs:node_property phs:value="aism-interpunctural_distance">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-is_quality_measured_as" phs:iri="http://purl.obolibrary.org/obo/IAO_0000417" phs:label_original="is quality measured as" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039" phs:triple_pos="3" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-b9b039" phs:triple_pos="3" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-b9b039" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-has_measurement_unit_label" phs:iri="http://purl.obolibrary.org/obo/IAO_0000039" phs:label_original="has measurement unit label" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-cd5a9c" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-cd5a9c" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_ll_" phs:iri="http://purl.obolibrary.org/obo/RO_0000052" phs:label_original="inheres in" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-d19cdf" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/md-b9b039" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/md-b9b039" phs:triple_pos="1" phs:node_name="iao-measurement_datum" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/IAO_0000109" phs:label_original="measurement datum" phs:type_onto="C">
 							<phs:node_property phs:value="iao-measurement_datum">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="iao-has_measurement_value" phs:iri="http://purl.obolibrary.org/obo/IAO_0000004" phs:label_original="has measurement value" phs:type_onto="DP"/>
@@ -289,76 +338,76 @@
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-1" phs:triple_pos="1" phs:node_name="this" phs:fromNegativeEdge="False" phs:iri="KeyWord:this" phs:label_original="this" phs:type_onto="KeyWord">
 							<phs:node_property phs:value="this">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3" phs:triple_pos="3" phs:node_name="aism-clypeus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004019" phs:label_original="clypeus" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-3" phs:triple_pos="3" phs:node_name="aism-clypeus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004019" phs:label_original="clypeus" phs:type_onto="C">
 							<phs:node_property phs:value="aism-clypeus">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-3" phs:triple_pos="1" phs:node_name="aism-clypeus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004019" phs:label_original="clypeus" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-3" phs:triple_pos="1" phs:node_name="aism-clypeus" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004019" phs:label_original="clypeus" phs:type_onto="C">
 							<phs:node_property phs:value="aism-clypeus">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5" phs:triple_pos="3" phs:node_name="bspo-anterior_region" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000071" phs:label_original="anterior region" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-5" phs:triple_pos="3" phs:node_name="bspo-anterior_region" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000071" phs:label_original="anterior region" phs:type_onto="C">
 							<phs:node_property phs:value="bspo-anterior_region">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-5" phs:triple_pos="1" phs:node_name="bspo-anterior_region" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000071" phs:label_original="anterior region" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-5" phs:triple_pos="1" phs:node_name="bspo-anterior_region" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/BSPO_0000071" phs:label_original="anterior region" phs:type_onto="C">
 							<phs:node_property phs:value="bspo-anterior_region">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-7" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-7" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-7" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_gg_" phs:iri="http://purl.obolibrary.org/obo/RO_0000053" phs:label_original="bearer of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-9" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_13-9" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_17-9" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_vlv_" phs:iri="http://purl.obolibrary.org/obo/RO_0015008" phs:label_original="0015008" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-cd5a9c" phs:triple_pos="3" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-cd5a9c" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-cd5a9c" phs:triple_pos="1" phs:node_name="pato-diameter" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/PATO_0001334" phs:label_original="diameter" phs:type_onto="C">
 							<phs:node_property phs:value="pato-diameter">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_ll_" phs:iri="http://purl.obolibrary.org/obo/RO_0000052" phs:label_original="inheres in" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-d19cdf" phs:triple_pos="3" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-d19cdf" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_l_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000050" phs:label_original="part of" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-42a3e6" phs:triple_pos="3" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-42a3e6" phs:triple_pos="3" phs:node_name="aism-frons" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0004020" phs:label_original="frons" phs:type_onto="C">
 							<phs:node_property phs:value="aism-frons">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
 				</phs:ophu_statement>
 				<phs:ophu_statement>
 					<phs:triple_node>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/id-d19cdf" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/id-d19cdf" phs:triple_pos="1" phs:node_name="aism-cuticular_puncture" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000524" phs:label_original="cuticular puncture" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_puncture">node_name</phs:node_property>
 						</phs:node>
 						<phs:edge phs:triple_pos="2" phs:negative_prop="False" phs:edge_name="_g_" phs:iri="http://purl.obolibrary.org/obo/BFO_0000051" phs:label_original="has part" phs:type_onto="OP"/>
-						<phs:node phs:node_id="https://urn:uuid:a05c6806-f35c-11ed-8312-aabb8a6a9740/_cc2139_14-3" phs:triple_pos="3" phs:node_name="aism-cuticular_seta" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000039" phs:label_original="cuticular seta" phs:type_onto="C">
+						<phs:node phs:node_id="https://urn:uuid:18916bf0-f8a8-11ed-ab41-aabb8a6a9740/_a4485d_18-3" phs:triple_pos="3" phs:node_name="aism-cuticular_seta" phs:fromNegativeEdge="False" phs:iri="http://purl.obolibrary.org/obo/AISM_0000039" phs:label_original="cuticular seta" phs:type_onto="C">
 							<phs:node_property phs:value="aism-cuticular_seta">node_name</phs:node_property>
 						</phs:node>
 					</phs:triple_node>
