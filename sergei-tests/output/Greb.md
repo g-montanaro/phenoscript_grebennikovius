@@ -1,6 +1,7 @@
 <!-- org_Grebennikovius armiger -->
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [Catalog Number](http://rs.tdwg.org/dwc/terms/catalogNumber)xx111
-- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [TU](http://purl.obolibrary.org/obo/CDAO_0000138) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [species](http://purl.obolibrary.org/obo/TAXRANK_0000006) [Taxon ID](http://rs.tdwg.org/dwc/terms/TaxonID)https://www.gbif.org/species/1092856
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [TU](http://purl.obolibrary.org/obo/CDAO_0000138) [denotes](http://purl.obolibrary.org/obo/IAO_0000219) [species](http://purl.obolibrary.org/obo/TAXRANK_0000006) [Taxon ID](http://rs.tdwg.org/dwc/terms/TaxonID) https://www.gbif.org/species/1092856
+---
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [cuticle](http://purl.obolibrary.org/obo/UBERON_0001002): [red brown](http://purl.obolibrary.org/obo/PATO_0001287);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [ventral side](http://purl.obolibrary.org/obo/BSPO_0000068): [dark brown](http://purl.obolibrary.org/obo/PATO_0001245);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [antenna](http://purl.obolibrary.org/obo/AISM_0000032): [yellow brown](http://purl.obolibrary.org/obo/PATO_0002411);

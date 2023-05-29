@@ -34,7 +34,7 @@ owl_file = os.path.join(save_dir, save_pref + '.owl')
 onto = owlToNLgraph(owl_file)
 
 # Convert NL graph to Markdown
-taxon = 'Grebennikovius armiger'
+taxon = 'org_Grebennikovius armiger'
 file_md = os.path.join(current_dir, 'output', 'Greb.md')
 ind0 = onto.search(label = taxon)[0]
 NLgraphToMarkdown(onto, ind0, file_save = file_md, verbose =False)
