@@ -53,7 +53,7 @@ OTU = {
     #Pronotum
     #Wider than elytra, maximum width on anterior half;
         # ST: added :id-5770f5 to colao-elytron
-    this > aism-pronotum:id-1549f8 > pato-width:id-e42fd9 |>| pato-width << colao-elytron:id-5770f5 < this;
+    this > aism-pronotum:id-1549f8 >> pato-width:id-e42fd9 |>| pato-width << colao-elytron:id-5770f5 < this;
     #very convex on disc, strongly flattened anterolaterally, steeply declivous posteriorly;
     this > colao-pronotal_disc:id-9a2769 >> pato-convex;
         aism-pronotum:id-1549f8 > bspo-antero-lateral_region >> pato-flattened;
@@ -88,22 +88,19 @@ OTU = {
                                                                                 iao-measurement_datum:md-584ce3 .iao-has_measurement_value 3;
                                                                                                                                                         
     #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
-        colao-elytron:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina:id-503423;
-        # ST: not sure if .aism-lateral_to is correct
-        colao-elytron:id-5770f5 > bspo-lateral_region:id-878439 .aism-lateral_to aism-cuticular_carina:id-503423;
+        # -----
+        # ST: should .aism-medial_to be inverse of .aism-lateral_to? ADD Inverse Axiom to AISM
+        colao-elytron:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina:id-503423 .aism-medial_to bspo-lateral_region:id-878439 < colao-elytron:id-5770f5;
             bspo-lateral_region:id-878439 >> pato-sloped;
+        # ----
     
     #elytral surface depressed along the proximal edge of interstriae 5—6;
-        # ST: is pato-sunken correct?
-        # ST: bspo-proximal_region >> pato-sunken
-    this > colao-elytral_interstria_5:id-2e035a > bspo-proximal_region >> pato-sunken;
-    this > colao-elytral_interstria_6 > bspo-anterior-most_region >> pato-sunken;
+    this > colao-elytral_interstria_5:id-2e035a > bspo-proximal_region >> pato-concave;
+    this > colao-elytral_interstria_6 > bspo-anterior-most_region >> pato-concave;
     #carina of interstria 8 expanded posteriorly;
-        # ST: ???
-        aism-cuticular_carina:id-503423 > bspo-distal_region >> pato-dilated;
+        aism-cuticular_carina:id-503423 > bspo-distal_region >> pato-increased_height;
     #scutellum absent;
-        # ST: scutellum cannot be absent
-    this !> aism-scutellum;
+    this > aism-scutellum >> pato-concealed;
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-2e035a !> aism-cuticular_tubercle;
     #hind wings extremely reduced, larger than in G. basilewskyi.
@@ -111,17 +108,15 @@ OTU = {
 
     #Ventral body surface
     #Hypomeral depression broad, deep;
-        # ST: Should it be depression of anterior part
-    this > colao-hypomeron > aism-cuticular_depression;
+        # ST: ADD anterior hypomeral depression to COLAO
+    this > colao-hypomeron > XXXX >> pato-concave;
     #posterior longitudinal hypomeral carina absent;
     this !> colao-posterior_longitudinal_hypomeral_carina;
     #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
-        # ST: should colao-procoxal_cavity be aism?
-        #   pato-width:id-e42fd9 should it be pronotal width???
+        # ST: should colao-procoxal_cavity be aism? Discuss later.
     this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-dd6374 .iao-has_measurement_unit_label pato-width:id-e42fd9;
 																					iao-measurement_datum:md-dd6374 .iao-has_measurement_value 0.375;
     #mesometaventral sulcus rounded medially, straight laterally;
-        # ST: ???
     this > colao-mesometaventral_sulcus:id-1d9c37 > bspo-medial_region >> pato-curved;
     colao-mesometaventral_sulcus:id-1d9c37 > bspo-lateral_region >> pato-straight;
 
@@ -135,17 +130,20 @@ OTU = {
                                                                                     iao-measurement_datum:md-0cdf7a .cdao-has_Range_End_Value 2.0;
         aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture |<| aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
 
-    #Sternite VIII.
+    #Tergite VIII.
     #Entirely bordered;
-    # ST: ??? redundancy
-    this > aism-abdominal_tergite_VIII:id-791f84 > (bspo-anatomical_margin:id-8d523d, aism-cuticular_groove:id-994073);
-        bspo-anatomical_margin:id-8d523d .bspo-parallel_to aism-cuticular_groove:id-994073;
+    # ST: NEW VERSION
+    # ---
+    this > aism-abdominal_tergite_VIII:id-791f84 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-791f84;
+
+    # ---
+
     #covered with ocellate setigerous punctures
-        # ST: should it be bspo-dorsal_side of ...        
+        # ST: should it be bspo-dorsal_side of? FOR DISCUSSION       
         aism-abdominal_tergite_VIII:id-791f84 > aism-ocellate_cuticular_puncture > aism-cuticular_seta;
     #depressed along the anterior margin, with a tubercle at each side of the middle.
-    # ST: ????
-    this > aism-anterior_groove_of_tergite_VIII >> pato-sunken;
+    # ST: Removed pato-concave
+    this > aism-anterior_groove_of_tergite_VIII;
         aism-abdominal_tergite_VIII:id-791f84 > aism-cuticular_tubercle >> pato-bilaterally_paired;
 
     #Legs
@@ -155,7 +153,6 @@ OTU = {
     this > aism-protibia:id-6b42fe > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
         aism-protibia:id-6b42fe !> aism-dorsal_protibial_cuticular_tooth_4;
     #middle and hind tibiae expanded distally;
-    # ST: is pato-dilated correct?
     this > aism-mesotibia:id-7e0055 > bspo-distal_region >> pato-dilated;
     this > aism-metatibia:id-716cf1 > bspo-distal_region >> pato-dilated;
     #dorsal margin of metafemur with a carina;
@@ -177,17 +174,20 @@ OTU = {
 
     #Genitalia
     #Parameres symmetrical, very elongated;
-    # ST: not sure how to code symmetrical??????
-    this > aism-paramere:id-1c690f >> (pato-symmetrical, pato-elongated);
+    # ST: how to code symmetrical?????? New Class Parameres!
+        this > aism-paramere:id-1c690f >> (pato-symmetrical, pato-elongated);
+
     #parameres notched proximoventrally, notched proximoventrally, narrowing distally;
     aism-paramere:id-1c690f > bspo-proximal_region > bspo-ventral_region >> pato-notched;
     aism-paramere:id-1c690f > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
     #HOW TO MEAN THIS???
-    #endophallus bearing an elongated, almost straight lamella copulatrix associated with a small additional sclerification.
+    # Thickness
+    #endophallus bearing an elongated, almost straight lamella copulatrix associated with a small additional sclerification. # Do not ADD :)
     this > colao-lamella_copulatrix >> (pato-elongated, pato-straight);
     #HOW TO MEAN THE "ADDITIONAL SCLERIFICATION"???
     #axial and subaxial sclerites fused together;
+    # fused axial and subaxial sclerites DEFINITION: .ro-derived_from_ancestral_fusion_of some (axial and subaxial)
     #HOW TO CODE THIS???
     #frontolateral peripheral sclerite absent
     this !> colao-frontolateral_peripheral_endophallite;
