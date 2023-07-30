@@ -70,12 +70,11 @@ OTU = {
     #longitudinally depressed medially from base to almost anterior edge; the depression smooth;
         aism-pronotum:id-1549f8 > colao-longitudinal_pronotal_groove >> pato-smooth;
     #the rest of the surface covered with ocellate setigerous punctures separated by 1—2 diameters on disc;
-            #ST ->, not >
         aism-pronotum:id-1549f8 > aism-ocellate_cuticular_puncture:id-01b141 -> aism-cuticular_seta;
             # ST: this pattern should be verified by Jim.
         aism-pronotum:id-1549f8 > aism-punctate_cuticle >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .iao-has_measurement_unit_label pato-diameter << aism-ocellate_cuticular_puncture:id-01b141;
-																					iao-measurement_datum:md-1b36aa .cdao-has_Range_Start_Value 1.0;
-                                                                                    iao-measurement_datum:md-1b36aa .cdao-has_Range_End_Value 2.0;
+																					iao-measurement_datum:md-1b36aa .aism-has_minimum_value_inclusive 1.0;
+                                                                                    iao-measurement_datum:md-1b36aa .aism-has_maximum_value_inclusive 2.0;
     #with a row of large, ovalar ocellate punctures posteriorly.
         bspo-posterior_region:id-464ac3 > aism-row_of_punctures > aism-ocellate_cuticular_puncture >> (pato-increased_size, pato-ovate);
 
@@ -121,8 +120,8 @@ OTU = {
     #punctures of metaventrite separated by 1-2 diameters, becoming smaller posteriorly;
     # ST: this pattern should be verified by Jim.
         colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .iao-has_measurement_unit_label pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
-																					iao-measurement_datum:md-0cdf7a .cdao-has_Range_Start_Value 1.0;
-                                                                                    iao-measurement_datum:md-0cdf7a .cdao-has_Range_End_Value 2.0;
+																					iao-measurement_datum:md-0cdf7a .aism-has_minimum_value_inclusive 1.0;
+                                                                                    iao-measurement_datum:md-0cdf7a .aism-has_maximum_value_inclusive 2.0;
         aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture |<| aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
     #abdomen with 7 sternites;
     this > aism-abdomen_with_7_sternites;
