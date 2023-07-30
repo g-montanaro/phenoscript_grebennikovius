@@ -9,6 +9,7 @@ import os
 
 # Get the current directory
 # current_dir = os.getcwd()
+#current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius'
 current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius'
 
 # -----------------------------------------
@@ -71,7 +72,9 @@ obo = onto.get_namespace("http://purl.obolibrary.org/obo/")
 dwc = onto.get_namespace("http://rs.tdwg.org/dwc/terms/")
 ind0 = onto.search(label = taxon)[0]
 # http://rs.tdwg.org/dwc/terms/catalogNumber
+x=ind0.catalogNumber[0]
 type(ind0.catalogNumber[0])
+" %s;" % x
 
 xx=onto.search(label = 'Catalog Number')[0]
 xx.iri
