@@ -8,8 +8,8 @@ from owlready2 import *
 import os
 
 # Get the current directory
-# current_dir = os.getcwd()
-current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius'
+current_dir = os.getcwd()
+#current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius'
 
 # -----------------------------------------
 # ARGUMENTS

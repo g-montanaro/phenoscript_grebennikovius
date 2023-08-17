@@ -166,7 +166,7 @@ OTU = {
 
     #Genitalia
     #Parameres symmetrical, very elongated;
-    this > colao-parameres >> pato-symmetrical;
+    this > aism-paramere >> pato-symmetrical;
     this > aism-paramere:id-1c690f >> pato-elongated;
     #parameres notched proximoventrally, notched proximoventrally, narrowing distally;
     aism-paramere:id-1c690f > bspo-proximal_region > bspo-ventral_region >> pato-notched;

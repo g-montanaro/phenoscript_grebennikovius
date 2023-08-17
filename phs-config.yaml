@@ -1,11 +1,11 @@
 # Specify the snippet directory that is used by your VS code
-# It looks something like: C:\Users\giuli\.vscode\extensions\tarasov-lab.phenoscript-0.0.14\snippets\
+# It looks something like: C:\Users\giuli\.vscode\extensions\tarasov-lab.phenoscript-0.0.16\snippets\
 # Depending on your system it is located in:
 #   Win: `%USERPROFILE%\.vscode\extensions`
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
 # ADD CORRECT DIRECTORY
-snippet-dir: C:/Users/giuli/.vscode/extensions/tarasov-lab.phenoscript-0.0.14/snippets/
+snippet-dir: C:/Users/giuli/.vscode/extensions/tarasov-lab.phenoscript-0.0.16/snippets/
 # ADD the names of the authors
 authors:
   'Giulio Montanaro': https://orcid.org/0000-0003-0836-1364
