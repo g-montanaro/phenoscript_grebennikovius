@@ -47,9 +47,13 @@ OTU = {
     this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf < aism-frons:id-42a3e6;
     # aism-cuticular_puncture:id-d19cdf > aism-cuticular_seta;
     aism-cuticular_puncture:id-d19cdf > aism-cuticular_seta;
+
+    this !> aism-antenna;
+    this !> aism-mid_leg;
   }
 }
 
+organism
 #HOW TO USE BOTH THIS AND LINKS TRAIT?? id-b0ab74 id-cd5a9c
 
 # {'E0': punctate cuticle:id-f64e8a, 'Q': id-b0ab74, 'Val': 1.0, 'x': md-b9b039, 'Unit': id-cd5a9c, 'Unit_loc': cuticular puncture:id-d19cdf}
