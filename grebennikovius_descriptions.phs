@@ -1,8 +1,6 @@
 #Descriptions of Grebennikovius species:
 #Grebennikovius armiger
-#Grebennikovius basilewskyi
-#Grebennikovius lupanganus
-#Grebennikovius parallelicollis
+
 
 OTU = {
   DATA = {
@@ -122,7 +120,7 @@ OTU = {
         colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .iao-has_measurement_unit_label pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
 																					iao-measurement_datum:md-0cdf7a .aism-has_minimum_value_inclusive 1.0;
                                                                                     iao-measurement_datum:md-0cdf7a .aism-has_maximum_value_inclusive 2.0;
-        aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture |<| aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
+        aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter << aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
     #abdomen with 7 sternites;
     this > aism-abdomen_with_7_sternites;
 
