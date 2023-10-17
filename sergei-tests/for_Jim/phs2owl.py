@@ -11,7 +11,9 @@ print(version)
 # Get the current directory
 current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius/sergei-tests/for_Jim'
 
-
+#------
+cd /Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius/sergei-tests/for_Jim
+phenospy phs2owl 'Grebennikovius_toy-example.phs' 'out/greb'
 
 # -----------------------------------------
 # ARGUMENTS
@@ -19,7 +21,8 @@ current_dir = '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsink
 phs_file    = os.path.join(current_dir, 'Grebennikovius_toy-example.phs')
 yaml_file   = os.path.join(current_dir, 'phs-config.yaml')
 save_dir    = os.path.join(current_dir, 'output/')
-save_pref   = 'Greb_toy'
+#save_pref   = 'Greb_toy'
+save_pref   = 'Greb_toy_updated'
 
 # -----------------------------------------
 # Convert PHS to OWL and XML
@@ -37,11 +40,15 @@ onto = owlToNLgraph(owl_file)
 
 # Convert NL graph to Markdown
 taxon = 'org_Grebennikovius armiger'
-file_md = os.path.join(current_dir, 'output', 'Greb_toy.md')
+file_md = os.path.join(current_dir, 'output', 'Greb_toy_updated.md')
 ind0 = onto.search(label = taxon)[0]
 xxx=NLgraphToMarkdown(onto, ind0, file_save = file_md, verbose =True)
 
 xxx
+
+
+
+#--------- To HTML
 
 import markdown
 
@@ -50,7 +57,7 @@ def save_html_to_file(html_content, output_file):
         fl.write(html_content)
 
 html = markdown.markdown(xxx)
-output_html = os.path.join(current_dir, 'output', 'Greb_toy.html')
+output_html = os.path.join(current_dir, 'output', 'Greb_toy_updated.html')
 save_html_to_file(html, output_html)
 
 

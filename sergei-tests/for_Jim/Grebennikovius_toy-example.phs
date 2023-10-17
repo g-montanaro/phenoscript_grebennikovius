@@ -20,7 +20,8 @@ OTU = {
   TRAITS = {
     #Body
     #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
-    this >> (pato-ovate, pato-flattened);
+    this >> (pato-ovate:id-1, pato-flattened);
+    this >> pato-ovate:id-1;
     this > uberon-chitin-based_cuticle >> pato-red_brown;
   }
 }
