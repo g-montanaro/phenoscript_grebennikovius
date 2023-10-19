@@ -23,7 +23,7 @@ OTU = {
     this > bspo-ventral_side >> pato-dark_brown;
     this > aism-antenna >> pato-yellow_brown;
     #Length 4.5mm.
-    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .iao-has_measurement_unit_label unit-millimeter;
+    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .aism-has_unit unit-millimeter;
 																					iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
 
 
@@ -36,12 +36,15 @@ OTU = {
     this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
     #surface covered with ocellate setigerous punctures separated by approximately 1 diameter on the frons, becoming smaller and sparser anteriorly;
     this > aism-head_capsule > aism-frons:id-42a3e6 >> aism-interpunctural_distance:id-b0ab74 .iao-is_quality_measured_as iao-measurement_datum:md-b9b039
-            .iao-has_measurement_unit_label pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf;
+            .aism-has_unit pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf;
       	    iao-measurement_datum:md-b9b039 .iao-has_measurement_value 1.0;
     this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf < aism-frons:id-42a3e6;
         aism-cuticular_puncture:id-d19cdf -> aism-cuticular_seta;
     #posterior edge of vertex with a small smooth space medially;
-    this > aism-vertex > bspo-posterior_region > bspo-medial_region > pato-area >> pato-smooth;
+    
+    # !!!! ST: area is quality. this > aism-vertex > bspo-posterior_region > bspo-medial_region > pato-area >> pato-smooth;
+    this > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth;
+
     #antennae with 9 segments;
     this > aism-antenna_with_9_antennomeres > colao-antennal_club > (aism-flagellomere_5, aism-flagellomere_6, aism-flagellomere_7);
     #glossa, maxilla and epipharynx present;
@@ -70,7 +73,7 @@ OTU = {
     #the rest of the surface covered with ocellate setigerous punctures separated by 1—2 diameters on disc;
         aism-pronotum:id-1549f8 > aism-ocellate_cuticular_puncture:id-01b141 -> aism-cuticular_seta;
             # ST: this pattern should be verified by Jim.
-        aism-pronotum:id-1549f8 > aism-punctate_cuticle >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .iao-has_measurement_unit_label pato-diameter << aism-ocellate_cuticular_puncture:id-01b141;
+        aism-pronotum:id-1549f8 > aism-punctate_cuticle >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .aism-has_unit pato-diameter << aism-ocellate_cuticular_puncture:id-01b141;
 																					iao-measurement_datum:md-1b36aa .aism-has_minimum_value_inclusive 1.0;
                                                                                     iao-measurement_datum:md-1b36aa .aism-has_maximum_value_inclusive 2.0;
     #with a row of large, ovalar ocellate punctures posteriorly.
@@ -81,7 +84,7 @@ OTU = {
     #Elytra with 9 striae;
     this > colao-elytron:id-5770f5 > (colao-elytral_stria_1, colao-elytral_stria_2, colao-elytral_stria_3, colao-elytral_stria_4, colao-elytral_stria_5, colao-elytral_stria_6, colao-elytral_stria_7, colao-elytral_stria_8, colao-elytral_stria_9);
     #punctures of striae large, diameter almost three times strial width, separated by less than 1 diameter on disc;
-        colao-elytron:id-5770f5 > colao-elytral_stria:id-3e0164 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-584ce3 .iao-has_measurement_unit_label pato-width << colao-elytral_stria:id-3e0164;
+        colao-elytron:id-5770f5 > colao-elytral_stria:id-3e0164 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-584ce3 .aism-has_unit pato-width << colao-elytral_stria:id-3e0164;
                                                                                 iao-measurement_datum:md-584ce3 .iao-has_measurement_value 3;
     #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
         colao-elytron:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina:id-503423 .aism-medial_to bspo-lateral_region:id-878439 < colao-elytron:id-5770f5;
@@ -96,7 +99,7 @@ OTU = {
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-2e035a !> aism-cuticular_tubercle;
     #hind wings extremely reduced, larger than in G. basilewskyi.
-    this > aism-hind_wing:id-d22366 > pato-atrophied;
+    this > aism-hind_wing:id-d22366 >> pato-atrophied;
 
 
     #Ventral body surface
@@ -106,7 +109,7 @@ OTU = {
     this !> colao-posterior_longitudinal_hypomeral_carina;
     #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
         # ST: should colao-procoxal_cavity be aism? Discuss later.
-    this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-dd6374 .iao-has_measurement_unit_label pato-width:id-e42fd9;
+    this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-dd6374 .aism-has_unit pato-width:id-e42fd9;
 																					iao-measurement_datum:md-dd6374 .iao-has_measurement_value 0.375;
     #mesometaventral sulcus rounded medially, straight laterally;
     this > colao-mesometaventral_sulcus:id-1d9c37 > bspo-medial_region >> pato-curved;
@@ -114,10 +117,12 @@ OTU = {
 
     #meso- and metaventrite covered with simple punctures; mesoventrite evenly convex;
     this > colao-mesoventrite > aism-cuticular_puncture;
-    this > colao-metaventrite:id-eff197 > pato-convex;
+    
+    this > colao-metaventrite:id-eff197 >> pato-convex;
+
     #punctures of metaventrite separated by 1-2 diameters, becoming smaller posteriorly;
     # ST: this pattern should be verified by Jim.
-        colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .iao-has_measurement_unit_label pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
+        colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
 																					iao-measurement_datum:md-0cdf7a .aism-has_minimum_value_inclusive 1.0;
                                                                                     iao-measurement_datum:md-0cdf7a .aism-has_maximum_value_inclusive 2.0;
         aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter << aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
@@ -180,7 +185,7 @@ OTU = {
 
     this > aism-head_capsule >> pato-red;
 
-    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-13a36f .iao-has_measurement_unit_label unit-millimeter;
+    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-13a36f .aism-has_unit unit-millimeter;
 																					iao-measurement_datum:md-13a36f .iao-has_measurement_value 5.0;
 
   }

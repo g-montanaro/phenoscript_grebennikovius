@@ -127,4 +127,7 @@ robot explain --input output/grebennikovius_merged.owl --reasoner ELK \
   -M unsatisfiability --unsatisfiable all --explanation explain/explanation.md
 
 
-robot explain --input output/grebennikovius_merged.owl --reasoner ELK -M inconsistency --explanation explanation.md
+robot explain --input output/grebennikovius_merged.owl --reasoner whelk -M inconsistency --explanation explanation.md
+
+
+robot reason --reasoner whelk --input output/grebennikovius_merged.owl -D temp/debug.owl

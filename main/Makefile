@@ -1,3 +1,8 @@
+# Explain inconsistencies
+# robot explain --input output/grebennikovius_merged.owl --reasoner whelk -M inconsistency --explanation explanation.md
+# Make minimal consistent ontology
+# robot reason --reasoner whelk --input output/grebennikovius_merged.owl -D temp/debug.owl
+
 # Define variables
 PHS_FILE = grebennikovius_descriptions.phs
 OUT_DIR_OWL = output
@@ -8,7 +13,8 @@ ONTOS_DIR = source_ontologies
 
 # Default target
 all: check-fetch-merge-ontos phs2owl merge-reason-phs
-
+#all: check-fetch-merge-ontos
+#all: phs2owl merge-reason-phs
 
 # Target to check if source_ontologies directory is empty or noexistent  and then fetch ontologies from yaml
 check-fetch-merge-ontos:
@@ -21,6 +27,12 @@ check-fetch-merge-ontos:
 		robot merge --inputs "source_ontologies/*.owl" --output merged_ontologies/merged.owl; \
 		echo "robot remove individuals ..."; \
 		robot remove --input merged_ontologies/merged.owl --select individuals --output merged_ontologies/merged_clean.owl; \
+		echo "robot reason --reasoner WHELK ..."; \
+		if robot reason --reasoner whelk --input merged_ontologies/merged_clean.owl > merged_ontologies/WHELK_merged_clean.owl.log; then \
+			echo "WHELK reasoning completed successfully."; \
+		else \
+			echo "WHELK reasoning failed or produced errors. Check ELK_merged_clean.log for details."; \
+		fi; \
 		echo "robot reasoner ELK ..."; \
 		if robot reason --reasoner ELK --input merged_ontologies/merged_clean.owl > merged_ontologies/ELK_merged_clean.owl.log; then \
 			echo "ELK reasoning completed successfully."; \
@@ -41,6 +53,8 @@ phs2owl:
 merge-reason-phs:
 	@echo "STEP: merge-reason-phs";
 	robot merge --input merged_ontologies/merged_clean.owl --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL).owl  --output $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl
+	@echo "robot convert OWL to TTL ...";
+	robot convert --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl --output $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.ttl
 	@echo "robot reason --reasoner WHELK ...";
 	@if robot reason --reasoner whelk --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl > $(OUT_DIR_OWL)/WHELK_$(OUT_FILE_OWL)_merged.owl.log; then \
 			echo "WHELK reasoning completed successfully."; \

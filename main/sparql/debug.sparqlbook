@@ -1,0 +1,20 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# SPARQL queries to debug phenotype descriptions\n\n- Help: [SPARQL Notebook](https://github.com/zazuko/vscode-sparql-notebook)\n- Local endpoint: Configure a local endpoint by right-clicking on a TTL, NT, or RDF file and selecting SPARQL Notebook: Use File as Store.\n- File: main/output/grebennikovius_merged.ttl",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Check if quality is connected to an entity via has_part or part_of\n\nIt's a common mistake to state: 'leg > red'.\n\n- BFO_0000051 **has_part**\n- BFO_0000050 **part_of**",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\n\nSELECT ?Entity ?Entity_label ?Edge ?quality_label\nWHERE {\n  {\n    ?Entity obo:BFO_0000051 ?quality .\n  }\n    UNION\n  {\n    ?quality obo:BFO_0000050 ?Entity .\n  }\n  ?Entity rdfs:label ?Entity_label .\n  ?quality rdf:type/rdfs:subClassOf* obo:BFO_0000020 .\n  ?quality rdfs:label ?quality_label .\n\n}\n",
+    "metadata": {}
+  }
+]
