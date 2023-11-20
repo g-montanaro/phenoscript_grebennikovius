@@ -387,11 +387,11 @@ OTU = {
   DATA = {
     uberon-male_organism:grebennikovius_lupanganus[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius lupanganus';
     uberon-male_organism:grebennikovius_lupanganus .dwc-Catalog_Number 'CNCCOLVG00004077';
-    uberon-male_organism:grebennikovius_lupanganus .iao-denotes cdao-TU .iao-denotes taxrank-species:id-fc32f8;
+    uberon-male_organism:grebennikovius_lupanganus .iao-denotes cdao-TU .iao-denotes taxrank-species:id-55a859;
         
-    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/1D32A7F2-0376-436B-976F-54C2EEEC430C';
-    taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
-    taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius lupanganus';
+    taxrank-species:id-55a859 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/1D32A7F2-0376-436B-976F-54C2EEEC430C';
+    taxrank-species:id-55a859 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-55a859 .rdfs-label 'Grebennikovius lupanganus';
     }
 
   #Description based on the holotype of Grebennikovius lupanganus
@@ -562,11 +562,11 @@ OTU = {
   DATA = {
     uberon-male_organism:grebennikovius_pafelo[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius pafelo';
     uberon-male_organism:grebennikovius_pafelo .dwc-Catalog_Number 'CNCCOLVG00001735';
-    uberon-male_organism:grebennikovius_pafelo .iao-denotes cdao-TU .iao-denotes taxrank-species:id-fc32f8;
+    uberon-male_organism:grebennikovius_pafelo .iao-denotes cdao-TU .iao-denotes taxrank-species:id-14dbc2;
         
-    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/6AA504F4-91BB-4EF9-AF8F-31EDA06AD5F9';
-    taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
-    taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius pafelo';
+    taxrank-species:id-14dbc2 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/6AA504F4-91BB-4EF9-AF8F-31EDA06AD5F9';
+    taxrank-species:id-14dbc2 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-14dbc2 .rdfs-label 'Grebennikovius pafelo';
     }
 
   #Description based on the holotype of Grebennikovius pafelo
