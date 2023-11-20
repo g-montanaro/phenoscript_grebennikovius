@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1698944996067" name="http://purl.obolibrary.org/obo/aism.owl" uri="test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1698944996067" name="duplicate:http://purl.obolibrary.org/obo/uberon/uberon-base.owl" uri="grebennikovius_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1698944996067" name="duplicate:http://purl.obolibrary.org/obo/uberon/uberon-base.owl" uri="grebennikovius_merged_reasoned.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1698944996067" name="https://e9158c50-79a1-11ee-8cbb-aabb8a6a9740" uri="grebennikovius.owl"/>
+    </group>
+</catalog>

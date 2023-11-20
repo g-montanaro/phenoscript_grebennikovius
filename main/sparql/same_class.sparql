@@ -1,0 +1,15 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>
+
+SELECT ?class ?individual1 ?individual2
+WHERE {
+  ?individual1 rdf:type ?class .
+  ?individual2 rdf:type ?class .
+  FILTER (?individual1 != ?individual2)
+}
+GROUP BY ?class ?individual1 ?individual2
+HAVING (COUNT(?individual1) >= 2)
+
+#robot query --input output/grebennikovius_merged.owl --query sparql/same_class.sparql sparql/same_class.csv

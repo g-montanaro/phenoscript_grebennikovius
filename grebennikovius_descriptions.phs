@@ -195,7 +195,6 @@ OTU = {
     uberon-male_organism:grebennikovius_basilewskyi .dwc-Catalog_Number 'RMCA-ENT-000015068';
     uberon-male_organism:grebennikovius_basilewskyi .iao-denotes cdao-TU .iao-denotes taxrank-species:id-22513e;
         
-    taxrank-species:id-22513e .dwc-Taxon_ID_TaxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
     taxrank-species:id-22513e .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-22513e .rdfs-label 'Grebennikovius basilewskyi';
     }
