@@ -1,5 +1,5 @@
 <!-- org_Grebennikovius armiger -->
-- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [Catalog Number](http://rs.tdwg.org/dwc/terms/catalogNumber)CNCCOLVG00001738
+- [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [Catalog Number](http://rs.tdwg.org/dwc/terms/catalogNumber) CNCCOLVG00001738
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101) [posterior longitudinal hypomeral carina](http://purl.obolibrary.org/obo/COLAO_0000246): absent;
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [length](http://purl.obolibrary.org/obo/PATO_0000122) = 4.5, unit: [millimeter](http://purl.obolibrary.org/obo/UO_0000016);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [chitin-based cuticle](http://purl.obolibrary.org/obo/UBERON_0001001): [red brown](http://purl.obolibrary.org/obo/PATO_0001287);

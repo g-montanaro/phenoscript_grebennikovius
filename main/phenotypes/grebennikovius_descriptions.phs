@@ -1,8 +1,15 @@
-#Descriptions of Grebennikovius species:
-#Grebennikovius armiger
+# New types of comments
+
+#// RES: sdmskdmskm
+#// OTUName:  Addd OTU/SPECIES NAME HERE 
+#/ Head 
 
 
-OTU = {
+#// FIXIT: head_capsule occurs twice
+
+
+
+OTU = { #// OTUName:  Addd OTU/SPECIES NAME HERE 
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
     uberon-male_organism:grebennikovius_armiger .dwc-Catalog_Number 'CNCCOLVG00001738';
@@ -11,7 +18,7 @@ OTU = {
     taxrank-species:id-08ba61 .dwc-Taxon_ID_taxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
     taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
-    }
+    } 
 
   #Description based on the holotype of Grebennikovius armiger
 
@@ -26,6 +33,8 @@ OTU = {
     this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .aism-has_unit unit-millimeter;
 																					iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
 
+aism-head_capsule >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-1593ec .aism-has_unit unit-millimeter;
+																					iao-measurement_datum:md-1593ec .iao-has_measurement_value 5;
 
     #Head
     #Genae sharply angled;
@@ -48,12 +57,12 @@ OTU = {
     #antennae with 9 segments;
     this > aism-antenna_with_9_antennomeres > colao-antennal_club > (aism-flagellomere_5, aism-flagellomere_6, aism-flagellomere_7);
     #glossa, maxilla and epipharynx present;
+    #// FIXIT: make aism-maxillary_palpus_with_4_palpomeres be part of  aism-insect_maxilla ETC.???? 
     this > (aism-glossa, aism-epipharynx, aism-insect_maxilla);
     #maxillary palpi with 4 palpomeres;
     this > aism-maxillary_palpus_with_4_palpomeres;
     #labial palpi with 3 palpomeres.
     this > aism-labial_palpus_with_3_palpomeres;
-
 
     #Pronotum
     #Wider than elytra, maximum width on anterior half;
@@ -169,7 +178,9 @@ OTU = {
 
     #Genitalia
     #Parameres symmetrical, very elongated;
+    #// FIXIT: this > aism-paramere:id-1c690f >> pato-symmetrical;
     this > aism-paramere >> pato-symmetrical;
+
     this > aism-paramere:id-1c690f >> pato-elongated;
     #parameres notched proximoventrally, notched proximoventrally, narrowing distally;
     aism-paramere:id-1c690f > bspo-proximal_region > bspo-ventral_region >> pato-notched;
@@ -188,5 +199,32 @@ OTU = {
     this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-13a36f .aism-has_unit unit-millimeter;
 																					iao-measurement_datum:md-13a36f .iao-has_measurement_value 5.0;
 
+  }
+}
+
+
+OTU = { #// OTUName:  Addd OTU/SPECIES NAME HERE 
+  DATA = {
+    uberon-male_organism:grebennikovius_armiger2[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger_2';
+    uberon-male_organism:grebennikovius_armiger2 .dwc-Catalog_Number 'CNCCOLVG00001738';
+    uberon-male_organism:grebennikovius_armiger2 .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-08ba61;
+        
+    taxrank-species:id-08ba612 .dwc-Taxon_ID_taxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
+    taxrank-species:id-08ba612 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-08ba612 .rdfs-label 'Grebennikovius armiger_2';
+    } 
+
+  #Description based on the holotype of Grebennikovius armiger
+
+  TRAITS = {
+    #Body
+    #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
+    this >> (pato-ovate, pato-flattened);
+    this > uberon-chitin-based_cuticle >> pato-red_brown;
+    this > bspo-ventral_side >> pato-dark_brown;
+    this > aism-antenna >> pato-yellow_brown;
+    this > aism-mesotibia:id-667001 > bspo-distal_region >> pato-dilated;
+    this > aism-mesotibia:id-667001 > bspo-proximal_region >> pato-red;
+    this > aism-mid_leg > aism-mesotibia > bspo-proximal_region;
   }
 }

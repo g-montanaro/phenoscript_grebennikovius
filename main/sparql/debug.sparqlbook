@@ -16,5 +16,65 @@
     "language": "sparql",
     "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\n\nSELECT ?Entity ?Entity_label ?Edge ?quality_label\nWHERE {\n  {\n    ?Entity obo:BFO_0000051 ?quality .\n  }\n    UNION\n  {\n    ?quality obo:BFO_0000050 ?Entity .\n  }\n  ?Entity rdfs:label ?Entity_label .\n  ?quality rdf:type/rdfs:subClassOf* obo:BFO_0000020 .\n  ?quality rdfs:label ?quality_label .\n\n}\n",
     "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Two or more individuals in the same class: shows Classes",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?class ?classLabel (GROUP_CONCAT(DISTINCT ?individual; separator=\", \") AS ?individuals)\nWHERE {\n  ?class rdf:type owl:Class .\n  OPTIONAL { ?class rdfs:label ?classLabel . }\n  ?individual rdf:type ?class .\n}\nGROUP BY ?class ?classLabel\nHAVING (COUNT(DISTINCT ?individual) >= 2)\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Two or more individuals in the same class: shows Individuals",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?individual ?individualLabel\nWHERE {\n  {\n    SELECT ?class \n    WHERE {\n      ?class rdf:type owl:Class .\n      ?individual rdf:type ?class .\n    }\n    GROUP BY ?class\n    HAVING (COUNT(DISTINCT ?individual) >= 2)\n  }\n  ?individual rdf:type ?class .\n  OPTIONAL { ?individual rdfs:label ?individualLabel . }\n}\nORDER BY ASC(COALESCE(?individualLabel, \"\"))\n\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Get all unique Object Properties",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?property (SAMPLE(?label) AS ?propertyLabel)\nWHERE {\n  ?subject ?property ?object .\n  ?property a owl:ObjectProperty .\n  OPTIONAL { ?property rdfs:label ?label . }\n}\nGROUP BY ?property",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?individualALabel ?relationship ?individualBLabel\nWHERE {\n    {\n        ?individualA obo:BFO_0000051 ?individualB .\n        BIND(obo:BFO_0000051 AS ?relationship)\n    } UNION {\n        ?individualA obo:BFO_0000050 ?individualB .\n        BIND(obo:BFO_0000050 AS ?relationship)\n    }\n    OPTIONAL { ?individualA rdfs:label ?individualALabel . }\n    OPTIONAL { ?individualB rdfs:label ?individualBLabel . }\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?individualALabel ?relationship ?individualBLabel\nWHERE {\n        ?individualA phs:PHS_0000017 ?individualX .\n    {\n        ?individualA obo:BFO_0000051 ?individualB .\n        BIND(obo:BFO_0000051 AS ?relationship)\n    } UNION {\n        ?individualA obo:BFO_0000050 ?individualB .\n        BIND(obo:BFO_0000050 AS ?relationship)\n    }\n    FILTER (?individualA != ?individualB)\n    OPTIONAL { ?individualA rdfs:label ?individualALabel . }\n    OPTIONAL { ?individualB rdfs:label ?individualBLabel . }\n}\nORDER BY ?individualBLabel",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?individualALabel ?relationship ?individualBLabel ?individualCLabel\nWHERE {\n    ?individualA phs:PHS_0000017 ?individualX .\n    {\n        ?individualA obo:BFO_0000051 ?individualB .\n        BIND(obo:BFO_0000051 AS ?relationship)\n    } UNION {\n        ?individualA obo:BFO_0000050 ?individualB .\n        BIND(obo:BFO_0000050 AS ?relationship)\n    }\n    FILTER (?individualA != ?individualB)\n    OPTIONAL { ?individualA rdfs:label ?individualALabel . }\n    OPTIONAL { ?individualB rdfs:label ?individualBLabel . }\n\n    {\n        ?individualB obo:BFO_0000051 ?individualC .\n    } UNION {\n        ?individualB obo:BFO_0000050 ?individualC .\n    }\n    FILTER (?individualB != ?individualC)\n    OPTIONAL { ?individualC rdfs:label ?individualCLabel . }\n}\nORDER BY ?individualBLabel\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?individualALabel ?individualA ?relationship ?individualBLabel ?individualB\nWHERE {\n        VALUES ?individualA {\n            <https://1fc500ec-77c6-11ee-8b9a-aabb8a6a9740/_472f04_61-3>\n            # <https://1fc500ec-77c6-11ee-8b9a-aabb8a6a9740/grebennikovius_armiger>\n            <https://1fc500ec-77c6-11ee-8b9a-aabb8a6a9740/_472f04_18-3>\n            <https://1fc500ec-77c6-11ee-8b9a-aabb8a6a9740/_472f04_18-5>\n            }\n        # ?individualA phs:PHS_0000017 ?individualX .\n    {\n        ?individualA obo:BFO_0000051 ?individualB .\n        BIND(obo:BFO_0000051 AS ?relationship)\n    } UNION {\n        ?individualA obo:BFO_0000050 ?individualB .\n        BIND(obo:BFO_0000050 AS ?relationship)\n    }\n    FILTER (?individualA != ?individualB)\n    OPTIONAL { ?individualA rdfs:label ?individualALabel . }\n    OPTIONAL { ?individualB rdfs:label ?individualBLabel . }\n}\nORDER BY ?individualBLabel",
+    "metadata": {}
   }
 ]

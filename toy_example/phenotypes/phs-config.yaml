@@ -5,8 +5,9 @@
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
 # ADD CORRECT DIRECTORY
-#snippet-dir: /Users/taravser/.vscode/extensions/tarasov-lab.phenoscript-0.0.16/snippets
-snippet-dir: ''
+#snippet-dir: /Users/taravser/.vscode/extensions/tarasov-lab.phenoscript-0.0.20/snippets
+snippet-dir: '/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius/toy_example/phenotypes'
+#snippet-dir: ''
 # ADD the names of the authors
 authors:
   'Giulio Montanaro': https://orcid.org/0000-0003-0836-1364

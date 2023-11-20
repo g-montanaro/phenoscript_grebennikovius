@@ -7,6 +7,7 @@ CONFIG_FILE = phenotypes/phs-config.yaml
 ONTOS_DIR = source_ontologies
 
 # Default target
+#all: check-fetch-merge-ontos phs2owl merge-reason-phs
 all: check-fetch-merge-ontos phs2owl merge-reason-phs
 
 
