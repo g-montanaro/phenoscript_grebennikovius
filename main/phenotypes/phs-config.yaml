@@ -4,8 +4,8 @@
 #   Win: `%USERPROFILE%\.vscode\extensions`
 #   Mac:`$HOME/.vscode/extensions`
 #   Linux: `$HOME/.vscode/extensions`
-# snippet-dir: /Users/taravser/.vscode/extensions/tarasov-lab.phenoscript-0.0.16/snippets
-# snippet-dir: ~/.vscode/extensions/tarasov-lab.phenoscript-0.0.16/snippets
+#snippet-dir: /Users/taravser/.vscode/extensions/tarasov-lab.phenoscript-0.0.17/snippets
+# snippet-dir: ~/.vscode/extensions/tarasov-lab.phenoscript-0.0.17/snippets
 snippet-dir: ''
 # ADD the names of the authors and ORCID
 authors:

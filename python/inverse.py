@@ -37,3 +37,5 @@ for pair in obo.BFO_0000051.get_relations():
     i2.BFO_0000050.append(i1)
 
 onto.save(file = ontoFile, format = "rdfxml")
+
+

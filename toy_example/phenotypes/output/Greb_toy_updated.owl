@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740"
+         xmlns="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740#"
+         xmlns:Phen="https://github.com/sergeitarasov/PhenoScript/"
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/"
+         xmlns:term="http://purl.org/dc/terms/"
+         xmlns:oboI="http://www.geneontology.org/formats/oboInOwl#"
+         xmlns:obo="http://purl.obolibrary.org/obo/"
+         xmlns:term2="http://rs.tdwg.org/dwc/terms/">
+
+<owl:Ontology rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740">
+  <x_1.1:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0003-0836-1364</x_1.1:contributor>
+  <x_1.1:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0001-5237-2330</x_1.1:contributor>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/pato-ontology/pato/master/pato.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/master/bspo.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/evoinfo/cdao/master/cdao.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2020-12-09/iao.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/bco.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/uberon/uberon-base.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/phenoscape/taxrank/master/taxrank.owl</term:requires>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denoted by</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000219">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denotes</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bearer of</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/catalogNumber">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/taxonID">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon ID</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/parentNameUsageID">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parent Name Usage ID</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000001">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenoscript_annotations</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000003">
+  <rdfs:subPropertyOf rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000001"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phs_implies_absence_of</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000004">
+  <rdfs:subPropertyOf rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000001"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phs_NL</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000005">
+  <rdfs:subPropertyOf rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000001"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phs_original_assertion</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000002">
+  <rdfs:subPropertyOf rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000001"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phs_original_class</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000017">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_trait</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contributor</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">created_by</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000018">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project_id</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/requires">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creation_date</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:AnnotationProperty>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003101">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male organism</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/CDAO_0000138">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TU</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/TAXRANK_0000006">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">species</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001891">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002254">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flattened</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001001">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chitin-based cuticle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001287">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red brown</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/AISM_0000019">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head capsule</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007023">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adult organism</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/PreservedSpecimen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preserved Specimen</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000020">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DATA Block</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000021">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAITS Block</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000022">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTU Block</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://github.com/sergeitarasov/PhenoScript/PHS_0000019">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project</rdfs:label>
+</owl:Class>
+
+<Phen:PHS_0000019 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000018 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://65dc50a4-7739-11ee-afb7-aabb8a6a9740</Phen:PHS_0000018>
+  <x_1.1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of Grebennikovius species</x_1.1:title>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project: Description of Grebennikovius speci...</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.211</oboI:creation_date>
+  <x_1.1:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0003-0836-1364</x_1.1:contributor>
+  <x_1.1:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0001-5237-2330</x_1.1:contributor>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/pato-ontology/pato/master/pato.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/master/bspo.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/evoinfo/cdao/master/cdao.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2020-12-09/iao.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/oborel/obo-relations/master/ro.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/BiodiversityOntologies/bco/master/bco.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/uberon/uberon-base.owl</term:requires>
+  <term:requires rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/phenoscape/taxrank/master/taxrank.owl</term:requires>
+</Phen:PHS_0000019>
+
+<obo:UBERON_0001001 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001001"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-5"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chitin-based cuticle:_def2d9_9-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.212</oboI:creation_date>
+</obo:UBERON_0001001>
+
+<obo:UBERON_0003101 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003101"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007023"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007023"/>
+  <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
+  <Phen:PHS_0000002 rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
+  <obo:IAO_0000235 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_13-3"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-2"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_17-L3-2"/>
+  <obo:BFO_0000051 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3"/>
+  <obo:BFO_0000051 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_20-3"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-2"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_17-L3-2"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-5"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_20-3"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_c84390"/>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.212</oboI:creation_date>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org_Grebennikovius basilewskiy</rdfs:label>
+  <term2:catalogNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNCCOLVG00001738</term2:catalogNumber>
+</obo:UBERON_0003101>
+
+<obo:PATO_0001287 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001287"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red brown:_def2d9_9-5</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.212</oboI:creation_date>
+</obo:PATO_0001287>
+
+<obo:PATO_0001287 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001287"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red brown:_def2d9_19-5</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.212</oboI:creation_date>
+</obo:PATO_0001287>
+
+<obo:AISM_0000019 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_20-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/AISM_0000019"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head capsule:_def2d9_20-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:AISM_0000019>
+
+<obo:PATO_0001891 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001891"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovate:id-2</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:PATO_0001891>
+
+<obo:CDAO_0000138 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_13-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <obo:IAO_0000219 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_c84390"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TU:_def2d9_13-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:CDAO_0000138>
+
+<obo:UBERON_0001001 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001001"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-5"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chitin-based cuticle:_def2d9_19-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:UBERON_0001001>
+
+<obo:PATO_0001891 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001891"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovate:id-1</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:PATO_0001891>
+
+<obo:AISM_0000019 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_10-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/AISM_0000019"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head capsule:_def2d9_10-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:AISM_0000019>
+
+<obo:TAXRANK_0000006 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000006"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_f6c8b6"/>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+  <term2:taxonID rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190</term2:taxonID>
+  <term2:parentNameUsageID rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gbif.org/species/10360397</term2:parentNameUsageID>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grebennikovius armiger</rdfs:label>
+</obo:TAXRANK_0000006>
+
+<obo:PATO_0002254 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_7-L3-2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002254"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flattened:_def2d9_7-L3-2</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.213</oboI:creation_date>
+</obo:PATO_0002254>
+
+<obo:TAXRANK_0000006 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000006"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_c84390"/>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.214</oboI:creation_date>
+  <term2:taxonID rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190</term2:taxonID>
+  <term2:parentNameUsageID rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gbif.org/species/10360397</term2:parentNameUsageID>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grebennikovius basilewskiy</rdfs:label>
+</obo:TAXRANK_0000006>
+
+<obo:PATO_0002254 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_17-L3-2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002254"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flattened:_def2d9_17-L3-2</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.214</oboI:creation_date>
+</obo:PATO_0002254>
+
+<obo:UBERON_0003101 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003101"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007023"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007023"/>
+  <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
+  <Phen:PHS_0000002 rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
+  <obo:IAO_0000235 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_3-3"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-1"/>
+  <obo:RO_0000053 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_7-L3-2"/>
+  <obo:BFO_0000051 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3"/>
+  <obo:BFO_0000051 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_10-3"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-1"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_7-L3-2"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-5"/>
+  <Phen:PHS_0000017 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_10-3"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_f6c8b6"/>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.214</oboI:creation_date>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org_Grebennikovius armiger</rdfs:label>
+  <term2:catalogNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNCCOLVG00001738</term2:catalogNumber>
+</obo:UBERON_0003101>
+
+<obo:CDAO_0000138 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_3-3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Phen:PHS_0000002 rdf:resource="http://purl.obolibrary.org/obo/CDAO_0000138"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <obo:IAO_0000219 rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_f6c8b6"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TU:_def2d9_3-3</rdfs:label>
+  <oboI:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenospy-0.228</oboI:created_by>
+  <oboI:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T17:31:30.214</oboI:creation_date>
+</obo:CDAO_0000138>
+
+<Phen:PHS_0000022 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_fa1601">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTU Block:_fa1601</rdfs:label>
+</Phen:PHS_0000022>
+
+<Phen:PHS_0000020 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_f6c8b6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_fa1601"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DATA Block:_f6c8b6</rdfs:label>
+</Phen:PHS_0000020>
+
+<Phen:PHS_0000021 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_99773f">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_fa1601"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAITS Block:_99773f</rdfs:label>
+</Phen:PHS_0000021>
+
+<Phen:PHS_0000022 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_53da1c">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTU Block:_53da1c</rdfs:label>
+</Phen:PHS_0000022>
+
+<Phen:PHS_0000020 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_c84390">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_53da1c"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DATA Block:_c84390</rdfs:label>
+</Phen:PHS_0000020>
+
+<Phen:PHS_0000021 rdf:about="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_a1b237">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <x_1.1:source rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_53da1c"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAITS Block:_a1b237</rdfs:label>
+</Phen:PHS_0000021>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_20-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-5"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_17-L3-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_10-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-5"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_7-L3-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-1"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="https://github.com/sergeitarasov/PhenoScript/PHS_0000017"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_20-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-5"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_19-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_17-L3-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611"/>
+  <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grebennikovius basilewskiy</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/parentNameUsageID"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gbif.org/species/10360397</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_13-3"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba611"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_13-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/catalogNumber"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNCCOLVG00001738</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger1"/>
+  <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org_Grebennikovius basilewskiy</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_10-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-5"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_9-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_7-L3-2"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-1"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61"/>
+  <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grebennikovius armiger</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/parentNameUsageID"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gbif.org/species/10360397</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_3-3"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/id-08ba61"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
+  <owl:annotatedTarget rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/_def2d9_3-3"/>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://rs.tdwg.org/dwc/terms/catalogNumber"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CNCCOLVG00001738</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/grebennikovius_armiger"/>
+  <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org_Grebennikovius armiger</owl:annotatedTarget>
+  <Phen:PHS_0000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Phen:PHS_0000005>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <owl:annotatedProperty rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0001-5237-2330</owl:annotatedTarget>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergei Tarasov</rdfs:label>
+</owl:Axiom>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="https://65dc50a4-7739-11ee-afb7-aabb8a6a9740/project"/>
+  <owl:annotatedProperty rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+  <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0003-0836-1364</owl:annotatedTarget>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giulio Montanaro</rdfs:label>
+</owl:Axiom>
+
+
+</rdf:RDF>
