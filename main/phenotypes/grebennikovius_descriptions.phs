@@ -1,8 +1,9 @@
 #/ some comment
 #// RES: some comment
 
+
 #// FIXIT: TO DO:
-# 1. .aism-has_unit TO .aism-has_unit
+# 1. .iao-has_measurement_unit_label TO .aism-has_unit
 
 # 2. uberon-male_organism:grebennikovius_armiger .iao-denotes cdao-TU .iao-denotes taxrank-species:id-08ba61;
 #       SHOULD BE 
@@ -50,6 +51,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     
     this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf < aism-frons:id-42a3e6;
         #// FIXIT:  ?? aism-setose_cuticle     pato-setose
+        #// FIXIT: NEW CLASS: cuticle with setigerous punctures
         aism-cuticular_puncture:id-d19cdf -> aism-cuticular_seta;
 
     #posterior edge of vertex with a small smooth space medially;
@@ -112,6 +114,8 @@ OTU = { #// OTUName:  Grebennikovius armiger
         colao-elytral_interstria_5:id-2e035a !> aism-cuticular_tubercle;
     #hind wings extremely reduced, smaller than in G. basilewskyi.
     this > aism-hind_wing >> pato-atrophied;
+    #// FIXIT: add relative comparison
+    # aism-hind_wing:some_tag |<| aism-hind_wing:basilewskiy[exclude = True]
 
 
     #Ventral body surface

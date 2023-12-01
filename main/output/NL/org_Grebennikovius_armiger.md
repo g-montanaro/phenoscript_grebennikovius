@@ -57,10 +57,10 @@
 		- [elytron](http://purl.obolibrary.org/obo/COLAO_0000000), [elytral stria 9](http://purl.obolibrary.org/obo/COLAO_0000218): present;
 		- [elytron](http://purl.obolibrary.org/obo/COLAO_0000000), [elytral stria](http://purl.obolibrary.org/obo/COLAO_0000017), [cuticular puncture](http://purl.obolibrary.org/obo/AISM_0000524), [diameter](http://purl.obolibrary.org/obo/PATO_0001334) = 3, unit: [width](http://purl.obolibrary.org/obo/PATO_0000921) of [elytral stria](http://purl.obolibrary.org/obo/COLAO_0000017);
 		- [elytron](http://purl.obolibrary.org/obo/COLAO_0000000), [elytral interstria 8](http://purl.obolibrary.org/obo/COLAO_0000215), [cuticular carina](http://purl.obolibrary.org/obo/AISM_0000501)
+			- [cuticular carina](http://purl.obolibrary.org/obo/AISM_0000501), [distal region](http://purl.obolibrary.org/obo/BSPO_0000078): [increased height](http://purl.obolibrary.org/obo/PATO_0000570);
 			- [cuticular carina](http://purl.obolibrary.org/obo/AISM_0000501) [medial_to](http://purl.obolibrary.org/obo/AISM_0000012) [lateral region](http://purl.obolibrary.org/obo/BSPO_0000082)
 				- [lateral region](http://purl.obolibrary.org/obo/BSPO_0000082) of [elytron](http://purl.obolibrary.org/obo/COLAO_0000000)
 				- [lateral region](http://purl.obolibrary.org/obo/BSPO_0000082): [sloped](http://purl.obolibrary.org/obo/PATO_0001481);
-			- [cuticular carina](http://purl.obolibrary.org/obo/AISM_0000501), [distal region](http://purl.obolibrary.org/obo/BSPO_0000078): [increased height](http://purl.obolibrary.org/obo/PATO_0000570);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [pronotal disc](http://purl.obolibrary.org/obo/COLAO_0000002): [convex](http://purl.obolibrary.org/obo/PATO_0001355);
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [elytron](http://purl.obolibrary.org/obo/COLAO_0000000)
 - [male organism](http://purl.obolibrary.org/obo/UBERON_0003101), [elytral interstria 5](http://purl.obolibrary.org/obo/COLAO_0000209)
