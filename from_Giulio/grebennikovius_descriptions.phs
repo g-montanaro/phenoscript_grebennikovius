@@ -9,7 +9,7 @@
 
 #Grebennikovius armiger Montanaro, Grebennikov, Rossini, Grapputo, Ruzzier & Tarasov, in preparation
 
-OTU = {
+OTU = { #// OTUName:  Grebennikovius armiger
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
     uberon-male_organism:grebennikovius_armiger .dwc-Catalog_Number 'CNCCOLVG00001738';
