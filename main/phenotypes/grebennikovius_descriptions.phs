@@ -1,18 +1,15 @@
-#/ some comment
-#// RES: some comment
+#Descriptions of Grebennikovius species:
+
+#1) G. armiger: line 10
+#2) G. basilewskyi: line 190
+#3) G. lupanganus: line 384
+#4) G. pafelo: line 559
 
 
-#// FIXIT: TO DO:
-# 1. .iao-has_measurement_unit_label TO .aism-has_unit
 
-# 2. uberon-male_organism:grebennikovius_armiger .iao-denotes cdao-TU .iao-denotes taxrank-species:id-08ba61;
-#       SHOULD BE 
-#           uberon-male_organism:grebennikovius_armiger .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-08ba61; 
+#Grebennikovius armiger Montanaro, Grebennikov, Rossini, Grapputo, Ruzzier & Tarasov, in preparation
 
-
-            #// FIXIT: add the following names
-OTU = { #// OTUName:  Grebennikovius armiger 
-
+OTU = { #// OTUName:  Grebennikovius armiger
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
     uberon-male_organism:grebennikovius_armiger .dwc-Catalog_Number 'CNCCOLVG00001738';
@@ -23,6 +20,8 @@ OTU = { #// OTUName:  Grebennikovius armiger
     taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
     }
 
+  #Description based on the holotype of Grebennikovius armiger
+
   TRAITS = {
     #Body
     #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
@@ -30,7 +29,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > uberon-chitin-based_cuticle >> pato-red_brown;
     this > bspo-ventral_side >> pato-dark_brown;
     this > aism-antenna >> pato-yellow_brown;
-    # Body Length 4.5mm.
+    #Length 4.5mm.
     this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .aism-has_unit unit-millimeter;
 																					iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
 
@@ -43,17 +42,10 @@ OTU = { #// OTUName:  Grebennikovius armiger
     #external edge slightly notched at clypeogenal junction;
     this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
     #surface covered with ocellate setigerous punctures separated by approximately 1 diameter on the frons, becoming smaller and sparser anteriorly;
-
-    #// FIXIT: the following commented lines  are incorrect
     this > aism-head_capsule > aism-frons:id-42a3e6 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-b9b039;
-                                                    iao-measurement_datum:md-b9b039 .aism-has_unit pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf < aism-frons:id-42a3e6;
-                                                    iao-measurement_datum:md-b9b039 .iao-has_measurement_value 1.0;
-    
-    this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c << aism-cuticular_puncture:id-d19cdf;
-        #// FIXIT:  ?? aism-setose_cuticle     pato-setose
-        #// FIXIT: NEW CLASS: cuticle with setigerous punctures
-        aism-cuticular_puncture:id-d19cdf -> aism-cuticular_seta;
-
+            iao-measurement_datum:md-b9b039 .aism-has_unit pato-diameter:id-cd5a9c << aism-setigerous_cuticular_puncture:id-d19cdf < aism-frons:id-42a3e6;
+      	    iao-measurement_datum:md-b9b039 .iao-has_measurement_value 1.0;
+    this > aism-clypeus > bspo-anterior_region > aism-setigerous_cuticular_puncture >> pato-diameter |<| pato-diameter:id-cd5a9c << aism-setigerous_cuticular_puncture:id-d19cdf;
     #posterior edge of vertex with a small smooth space medially;
     this > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth;
     #antennae with 9 segments;
@@ -68,7 +60,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
 
     #Pronotum
     #Wider than elytra, maximum width on anterior half;
-        this > aism-pronotum:id-1549f8 >> pato-width:id-e42fd9 |>| pato-width << colao-elytron:id-5770f5 < this;
+        this > aism-pronotum:id-1549f8 >> pato-width:id-e42fd9 |>| pato-width << colao-elytron_with_9_striae:id-5770f5 < this;
     #very convex on disc, strongly flattened anterolaterally, steeply declivous posteriorly;
     this > colao-pronotal_disc:id-9a2769 >> pato-convex;
         aism-pronotum:id-1549f8 > bspo-antero-lateral_region >> pato-flattened;
@@ -82,11 +74,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     #longitudinally depressed medially from base to almost anterior edge; the depression smooth;
         aism-pronotum:id-1549f8 > colao-longitudinal_pronotal_groove >> pato-smooth;
     #the rest of the surface covered with ocellate setigerous punctures separated by 1—2 diameters on disc;
-    #// FIXIT: maybe creating a class setigerous punctures ?? and 'collection of setigerous punctures'
-        aism-pronotum:id-1549f8 > aism-ocellate_cuticular_puncture:id-01b141 -> aism-cuticular_seta;
-        #// FIXIT: what if: ??? aism-pronotum:id-1549f8 >> aism-interpunctural_distance. 
-        #// FIXIT: REMOVE aism-punctate_cuticle everywhere where relevant
-        aism-pronotum:id-1549f8 > aism-punctate_cuticle >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .aism-has_unit pato-diameter << aism-ocellate_cuticular_puncture:id-01b141;
+        aism-pronotum:id-1549f8 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .aism-has_unit pato-diameter << aism-ocellate_setigerous_cuticular_puncture < aism-pronotum:id-1549f8;
 																					iao-measurement_datum:md-1b36aa .iao-has_measurement_value 1.5;
     #with a row of large, ovalar ocellate punctures posteriorly.
         bspo-posterior_region:id-464ac3 > aism-row_of_punctures > aism-ocellate_cuticular_puncture >> (pato-increased_size, pato-ovate);
@@ -94,14 +82,12 @@ OTU = { #// OTUName:  Grebennikovius armiger
 
     #Elytra and hind wings
     #Elytra with 9 striae;
-    #// FIXIT: should we have a class elytra_with_9_stria
-    this > colao-elytron:id-5770f5 > (colao-elytral_stria_1, colao-elytral_stria_2, colao-elytral_stria_3, colao-elytral_stria_4, colao-elytral_stria_5, colao-elytral_stria_6, colao-elytral_stria_7, colao-elytral_stria_8, colao-elytral_stria_9);
+    this > colao-elytron_with_9_striae:id-5770f5;
     #punctures of striae large, diameter almost three times strial width, separated by less than 1 diameter on disc;
-        colao-elytron:id-5770f5 > colao-elytral_stria:id-3e0164 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-584ce3 .aism-has_unit pato-width << colao-elytral_stria:id-3e0164;
+        colao-elytron_with_9_striae:id-5770f5 > colao-elytral_stria:id-3e0164 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-584ce3 .aism-has_unit pato-width << colao-elytral_stria:id-3e0164;
                                                                                 iao-measurement_datum:md-584ce3 .iao-has_measurement_value 3;
-
     #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
-        colao-elytron:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina:id-503423 .aism-medial_to bspo-lateral_region:id-878439 < colao-elytron:id-5770f5;
+        colao-elytron_with_9_striae:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina:id-503423 .aism-medial_to bspo-lateral_region:id-878439 < colao-elytron_with_9_striae:id-5770f5;
         bspo-lateral_region:id-878439 >> pato-sloped;
     #elytral surface depressed along the proximal edge of interstriae 5—6;
     this > colao-elytral_interstria_5:id-2e035a > bspo-proximal_region >> pato-concave;
@@ -113,9 +99,9 @@ OTU = { #// OTUName:  Grebennikovius armiger
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-2e035a !> aism-cuticular_tubercle;
     #hind wings extremely reduced, smaller than in G. basilewskyi.
-    this > aism-hind_wing >> pato-atrophied;
-    #// FIXIT: add relative comparison
-    # aism-hind_wing:some_tag |<| aism-hind_wing:basilewskiy[exclude = True]
+    this > aism-hind_wing:id-d5c24a >> pato-atrophied;
+        aism-hind_wing:id-d5c24a >> pato-length |<| pato-length:id-d38816[exclude = True];
+
 
 
     #Ventral body surface
@@ -135,8 +121,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > colao-mesoventrite > aism-cuticular_puncture;
     this > colao-metaventrite:id-eff197 >> pato-convex;
     #punctures of metaventrite separated by 1-2 diameters, becoming smaller posteriorly;
-    # ST: this pattern should be verified by Jim.
-        colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
+    colao-metaventrite:id-eff197 > aism-punctate_cuticle:id-ed81c3 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-0cdf7a .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ed81c3;
 																					iao-measurement_datum:md-0cdf7a .iao-has_measurement_value 1.5;
         aism-punctate_cuticle:id-ed81c3 > bspo-posterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter << aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ed81c3;
     #abdomen with 7 sternites;
@@ -146,9 +131,8 @@ OTU = { #// OTUName:  Grebennikovius armiger
     #Tergite VIII.
     #Entirely bordered;
     this > aism-abdominal_tergite_VIII:id-791f84 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-791f84;
-    #covered with ocellate setigerous punctures
-        # ST: should it be bspo-dorsal_side of? FOR DISCUSSION       
-        aism-abdominal_tergite_VIII:id-791f84 > aism-ocellate_cuticular_puncture -> aism-cuticular_seta;
+    #covered with ocellate setigerous punctures  
+        aism-abdominal_tergite_VIII:id-791f84 > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
     #depressed along the anterior margin, with a tubercle at each side of the middle.
     this > aism-anterior_groove_of_tergite_VIII;
         aism-abdominal_tergite_VIII:id-791f84 > aism-cuticular_tubercle >> pato-bilaterally_paired;
@@ -171,11 +155,8 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
     #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
         aism-protibia:id-6b42fe >> pato-bent;
-
-        #// FIXIT: should they be BSPO? talk to Jim and Jennifer
         aism-protibia:id-6b42fe > aism-antero-distal_margin >> pato-setose;
         aism-protibia:id-6b42fe > aism-postero-distal_margin >> (pato-dilated, pato-curved);
-    
     #ventral margin of hind femur produced in the middle into a broad subtriangular tooth;
     this > aism-metafemur:id-f5252e > bspo-ventral_margin > aism-cuticular_protrusion >> (pato-triangular, pato-flattened);
     #metatibia strongly bent in the middle, abruptly widened in distal third, dorsal edge sinuated on distal half.
@@ -186,11 +167,10 @@ OTU = { #// OTUName:  Grebennikovius armiger
 
     #Genitalia
     #Parameres symmetrical, very elongated;
-    #// FIXIT: aism-paramereS >> pato-symmetrical ?? and the same for others ???
-    this > aism-paramere:id-1c690f >> (pato-symmetrical, pato-elongated);
+    this > aism-parameres:id-1c690f >> (pato-symmetrical, pato-elongated);
     #parameres notched proximoventrally, narrowing distally;
-        aism-paramere:id-1c690f > bspo-ventral_side > bspo-proximal_region >> pato-notched;
-        aism-paramere:id-1c690f > bspo-lateral_side > bspo-distal_region >> pato-tapered;
+        aism-parameres:id-1c690f > bspo-ventral_side > bspo-proximal_region >> pato-notched;
+        aism-parameres:id-1c690f > bspo-lateral_side > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
     this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
     #endophallus bearing elongated, almost straight lamella copulatrix associated with a small additional sclerification.
@@ -199,7 +179,558 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > colao-fused_axial_and_subaxial_endophallites;
     #frontolateral peripheral sclerite absent
     this !> colao-frontolateral_peripheral_endophallite;
+    }
 
+}
+
+
+
+#Grebennikovius basilewskyi (Balthasar, 1960)
+
+OTU = { #// OTUName:  Grebennikovius basilewskyi 
+  DATA = {
+    uberon-male_organism:grebennikovius_basilewskyi[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius basilewskyi';
+    uberon-male_organism:grebennikovius_basilewskyi .dwc-Catalog_Number 'RMCA-ENT-000015068';
+    uberon-male_organism:grebennikovius_basilewskyi .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-22513e;
+        
+    taxrank-species:id-22513e .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-22513e .rdfs-label 'Grebennikovius basilewskyi';
+    }
+
+  #Description based on the holotype of Phacosoma basilewskyi (=Grebennikovius basilewskyi)
+
+  TRAITS = {
+    #Body
+    #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
+    this >> (pato-ovate, pato-flattened);
+    this > uberon-chitin-based_cuticle >> pato-red_brown;
+    this > bspo-ventral_side >> pato-dark_brown;
+    this > aism-antenna >> pato-yellow_brown;
+    #Length 3.8mm.
+    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:id-b86a3d .aism-has_unit unit-millimeter;
+																					iao-measurement_datum:id-b86a3d .iao-has_measurement_value 3.8;
+
+
+    #Head
+    #Genae obtusely angled;
+    this > aism-gena >> pato-obtuse;
+    #clypeus with two sharp, upturned triangular teeth;
+    this > aism-lateral_clypeal_tooth_1 >> (pato-upturned, pato-sharp);
+    #external edge slightly notched at clypeogenal junction;
+    this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
+    #surface covered with ocellate setigerous punctures separated by approximately 1 diameter on the frons, becoming smaller and sparser anteriorly;
+    this > aism-head_capsule > aism-frons:id-1ed921 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-c3414a;
+            iao-measurement_datum:md-c3414a .aism-has_unit pato-diameter:id-cb4439 << aism-setigerous_cuticular_puncture:id-e87598 < aism-frons:id-1ed921;
+      	    iao-measurement_datum:md-c3414a .iao-has_measurement_value 1.0;
+    this > aism-clypeus > bspo-anterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter:id-cb4439 << aism-setigerous_cuticular_puncture:id-e87598;
+    #posterior edge of vertex with a small smooth space medially;
+    this > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth;
+    #antennae with 9 segments;
+    this > aism-antenna_with_9_antennomeres > colao-antennal_club > (aism-flagellomere_5, aism-flagellomere_6, aism-flagellomere_7);
+    #glossa, maxilla and epipharynx present;
+    this > (aism-glossa, aism-epipharynx, aism-insect_maxilla);
+    #maxillary palpi with 4 palpomeres;
+    this > aism-maxillary_palpus_with_4_palpomeres;
+    #labial palpi with 3 palpomeres.
+    this > aism-labial_palpus_with_3_palpomeres;
+
+
+    #Pronotum
+    #Less wide than elytra, maximum width on anterior half;
+    this > aism-pronotum:id-422e93 >> pato-width:id-735d1c |<| pato-width << colao-elytron_with_9_striae:id-2c694c < this;
+    #evenly convex on disc;
+    this > colao-pronotal_disc >> pato-convex;
+    #lateral edges obtusely angled on the anterior half, rounded; posterior angles rounded; base rounded;
+        aism-pronotum:id-422e93 > bspo-antero-lateral_margin >> (pato-curved, pato-obtuse);
+        aism-pronotum:id-422e93 > colao-posterolateral_pronotal_angle >> pato-curved;
+        aism-pronotum:id-422e93 > bspo-posterior_margin >> pato-curved;
+    #posterolateral margin oblique;
+        aism-pronotum:id-422e93 > bspo-postero-lateral_margin >> pato-oblique_orientation;
+    #with longitudinal median groove basally;
+        aism-pronotum:id-422e93 > bspo-posterior_region:id-f2bd0c > colao-longitudinal_pronotal_groove;
+    #evenly covered with covered with ocellate punctures separated by 1 diameter on disc,
+        aism-pronotum:id-422e93 > colao-pronotal_disc:id-22f969 >> aism-interpunctural_distance:id-4796cc .iao-is_quality_measured_as iao-measurement_datum:md-783035 .aism-has_unit pato-diameter << aism-ocellate_setigerous_cuticular_puncture < colao-pronotal_disc:id-22f969;
+																					iao-measurement_datum:md-783035 .iao-has_measurement_value 1.5;
+    #punctuation denser laterally, 
+        aism-pronotum:id-422e93 > bspo-lateral_region >> aism-interpunctural_distance |<| aism-interpunctural_distance:id-4796cc;
+    #decreasing in size from base to anterior pronotal edge.
+        bspo-posterior_region:id-f2bd0c > aism-ocellate_cuticular_puncture >> pato-diameter |>| pato-diameter << aism-ocellate_cuticular_puncture < bspo-anterior_region < aism-pronotum:id-422e93;
+
+
+
+    #Elytra and hind wings
+    #Elytra with 9 striae;
+    this > colao-elytron_with_9_striae:id-2c694c;
+    #punctures of striae large, diameter almost three times strial width, separated by less than 1 diameter on disc;
+        colao-elytron_with_9_striae:id-2c694c > colao-elytral_stria:id-e25609 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-02dca9 .aism-has_unit pato-width << colao-elytral_stria:id-e25609;
+                                                                                iao-measurement_datum:md-02dca9 .iao-has_measurement_value 3;
+    #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
+        colao-elytron_with_9_striae:id-2c694c > colao-elytral_interstria_8 > aism-cuticular_carina:id-5d41b9 .aism-medial_to bspo-lateral_region:id-de412d < colao-elytron_with_9_striae:id-2c694c;
+        bspo-lateral_region:id-de412d >> pato-sloped;
+    #elytral interstriae slightly convex;
+    this > colao-elytral_interstria >> pato-convex;
+    #sutural interstria raised in distal half;
+    this > colao-elytral_interstria_1 > bspo-distal_region >> pato-protruding; #cmtg: HERE WE USE PROTRUDING INSTEAD OF RAISED
+    #interstria 7 swollen proximally;
+    this > colao-elytral_interstria_7 > bspo-proximal_region:id-86541e >> pato-protruding; #cmtg: HERE WE USE PROTRUDING INSTEAD OF SWOLLEN
+    #interstriae 6 and 7 with yellowish spots proximally;
+        bspo-proximal_region:id-86541e >> pato-yellow_brown;
+    this > colao-elytral_interstria_6 > bspo-proximal_region >> pato-yellow_brown;  
+    #interstria 5 tuberculated distally;
+    this > colao-elytral_interstria_5 > bspo-distal_region > aism-cuticular_tubercle;
+    #carina of interstria 8 expanded distally;
+        aism-cuticular_carina:id-5d41b9 > bspo-distal_region >> pato-increased_height;
+    #scutellum absent;
+    this > aism-scutellum >> pato-concealed;
+    #hind wings approximately as long as half elytral length.
+    this > aism-hind_wing:id-6b490e >> pato-atrophied;
+        aism-hind_wing:id-6b490e >> pato-length:id-d38816 .iao-is_quality_measured_as iao-measurement_datum:md-adc2ba .aism-has_unit pato-length << colao-elytron_with_9_striae:id-2c694c;
+                                                                                iao-measurement_datum:md-adc2ba .iao-has_measurement_value 0.5;
+    
+
+    #Ventral body surface
+    #Hypomeral depression broad, deep;
+    this > colao-anterior_hypomeral_depression;
+    #posterior longitudinal hypomeral carina absent;
+    this !> colao-posterior_longitudinal_hypomeral_carina;
+    #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
+        # ST: should colao-procoxal_cavity be aism? Discuss later.
+    this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-a76d23 .aism-has_unit pato-width:id-735d1c;
+																					iao-measurement_datum:md-a76d23 .iao-has_measurement_value 0.375;
+    #mesometaventral sulcus rounded medially, straight laterally;
+    this > colao-mesometaventral_sulcus:id-fcec5a > bspo-medial_region >> pato-curved;
+        colao-mesometaventral_sulcus:id-fcec5a > bspo-lateral_region >> pato-straight;
+
+    #meso- and metaventrite covered with simple punctures; mesoventrite evenly convex;
+    this > colao-mesoventrite > aism-cuticular_puncture;
+    this > colao-metaventrite:id-12b536 >> pato-convex;
+    #punctures of metaventrite separated by 1-2 diameters, distinctly smaller medially;
+        colao-metaventrite:id-12b536 > aism-punctate_cuticle:id-9b0513 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-5339aa .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-9b0513;
+																					iao-measurement_datum:md-5339aa .iao-has_measurement_value 1.5;
+        aism-punctate_cuticle:id-9b0513 > bspo-medial_region > aism-cuticular_puncture >> pato-decreased_magnitude; #cmtg: DOES THIS WORK?
+    #abdomen with 7 sternites;
+    this > aism-abdomen_with_7_sternites;
+
+
+    #Tergite VIII.
+    #Entirely bordered;
+    this > aism-abdominal_tergite_VIII:id-0422f3 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-0422f3;
+    #covered with ocellate setigerous punctures
+        aism-abdominal_tergite_VIII:id-0422f3 > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
+        
+    #depressed anteriorly, strongly transversely swollen medially.
+    this > aism-anterior_groove_of_tergite_VIII;
+        aism-abdominal_tergite_VIII:id-0422f3 > bspo-medial_region >> pato-protruding;
+
+
+    #Legs
+    #Tarsi with 5 segments;
+    this > (aism-protarsus_with_5_protarsomeres, aism-mesotarsus_with_5_mesotarsomeres, aism-metatarsus_with_5_metatarsomeres);
+    #protibia with 3 teeth;
+    this > aism-protibia:id-2a66d7 > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
+        aism-protibia:id-2a66d7 !> aism-dorsal_protibial_cuticular_tooth_4;
+    #middle and hind tibiae expanded distally;
+    this > aism-mesotibia > bspo-distal_region >> pato-dilated;
+    this > aism-metatibia:id-dcc60c > bspo-distal_region >> pato-dilated;
+    #ventral margin of profemur with sharp tooth medially;
+    this > aism-profemur > bspo-ventral_margin > bspo-medial_region > aism-cuticular_tooth >> pato-sharp;
+    
+    #dorsal margin of metafemur with a carina;
+    this > aism-metafemur:id-3dab8f > bspo-dorsal_margin > aism-cuticular_carina;
+    #ventral carina of male procoxae toothed medially;
+    this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
+    #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
+    #expansion of protibial apex below tarsal insertion obtusely angular;
+        aism-protibia:id-2a66d7 >> pato-bent;
+        aism-protibia:id-2a66d7 > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-2a66d7 > aism-postero-distal_margin >> pato-obtuse;
+    #ventral margin of metafemur with bulging on proximal 1/3, femur enlarged distally to the bulging;
+    this > aism-metafemur:id-3dab8f > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-a7a496;
+        aism-metafemur:id-3dab8f > bspo-anatomical_region:id-d75988 .bspo-distal_to aism-cuticular_tubercle:id-a7a496;
+        bspo-anatomical_region:id-d75988 >> pato-dilated; #cmtg: IS IT OK TO USE .distal_to?
+    #metatibia widening distally, dorsal edge straight on distal half
+    this > aism-metatibia:id-dcc60c > bspo-distal_region >> pato-dilated;
+        aism-metatibia:id-dcc60c > bspo-dorsal_margin > bspo-distal_region >> pato-straight;
+
+
+    #Genitalia
+    #Phallobase strongly curved proximally;
+    this > aism-phallobase > bspo-proximal_region >> pato-curved;
+    #parameres symmetrical;
+    this > aism-parameres:id-3a40b5 >> pato-symmetrical;
+    #parameres relatively short, notched and enlarged proximoventrally;
+        aism-parameres:id-3a40b5 > bspo-proximal_region > bspo-ventral_region >> (pato-notched, pato-dilated);
+        aism-parameres:id-3a40b5 > bspo-distal_region >> pato-tapered;
+    #ventral membranes of parameres equally sclerotised;
+    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    #lamella copulatrix elongated, rounded distally, with small and sharp projection near the distal apex; 
+    this > colao-lamella_copulatrix:id-8ab54d >> pato-elongated;
+        colao-lamella_copulatrix:id-8ab54d > bspo-distal_margin:id-c6aa33 >> pato-curved;
+        bspo-distal_margin:id-c6aa33 > aism-cuticular_spine; #cmtg: NOT SURE IT IS THE RIGHT TERM;
+    #axial and subaxial sclerites fused together;
+    this > colao-fused_axial_and_subaxial_endophallites;
+    #frontolateral peripheral sclerite absent.
+    this !> colao-frontolateral_peripheral_endophallite;
+
+    }
+
+}
+
+
+
+# #Grebennikovius lupanganus Montanaro, Grebennikov, Rossini, Grapputo, Ruzzier & Tarasov, in preparation
+
+OTU = { #// OTUName:  Grebennikovius lupanganus
+  DATA = {
+    uberon-male_organism:grebennikovius_lupanganus[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius lupanganus';
+    uberon-male_organism:grebennikovius_lupanganus .dwc-Catalog_Number 'CNCCOLVG00004077';
+    uberon-male_organism:grebennikovius_lupanganus .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-55a859;
+        
+    taxrank-species:id-55a859 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/1D32A7F2-0376-436B-976F-54C2EEEC430C';
+    taxrank-species:id-55a859 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-55a859 .rdfs-label 'Grebennikovius lupanganus';
+    }
+
+  #Description based on the holotype of Grebennikovius lupanganus
+
+  TRAITS = {
+    #Body
+    #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
+    this >> (pato-ovate, pato-flattened);
+    this > uberon-chitin-based_cuticle >> pato-red_brown;
+    this > bspo-ventral_side >> pato-dark_brown;
+    this > aism-antenna >> pato-yellow_brown;
+    #Length 4.9mm.
+    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-e25ed5 .aism-has_unit unit-millimeter;
+																					iao-measurement_datum:md-e25ed5 .iao-has_measurement_value 4.0;
+
+
+    #Head
+    #Genae sharply angled;
+    this > aism-gena >> pato-obtuse;
+    #clypeus with two sharp, upturned triangular teeth;
+    this > aism-lateral_clypeal_tooth_1 >> (pato-upturned, pato-sharp);
+    #external edge slightly notched at clypeogenal junction;
+    this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
+    #covered with ocellate setigerous punctures separated by approximately 1 diameter;
+    this > aism-head_capsule > aism-frons:id-8333aa >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-39d1ad;
+            iao-measurement_datum:md-39d1ad .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-frons:id-8333aa;
+      	    iao-measurement_datum:md-39d1ad .iao-has_measurement_value 1.0;
+    #posterior edge of vertex with a small smooth space medially;
+    this > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth; #cmtg: how to say that the area is almost null compared to the other species?
+    #antennae with 9 segments;
+    this > aism-antenna_with_9_antennomeres > colao-antennal_club > (aism-flagellomere_5, aism-flagellomere_6, aism-flagellomere_7);
+    #glossa, maxilla and epipharynx present;
+    this > (aism-glossa, aism-epipharynx, aism-insect_maxilla);
+    #maxillary palpi with 4 palpomeres;
+    this > aism-maxillary_palpus_with_4_palpomeres;
+    #labial palpi with 3 palpomeres.
+    this > aism-labial_palpus_with_3_palpomeres;
+
+
+    #Pronotum
+    #Less wide than elytra, maximum width on anterior half;
+        this > aism-pronotum:id-8f312b >> pato-width:id-cbfe05 |<| pato-width << colao-elytron_with_9_striae:id-0f4748 < this;
+    #convex on disc, strongly flattened anterolaterally;
+        aism-pronotum:id-8f312b > colao-pronotal_disc >> pato-convex;
+        aism-pronotum:id-8f312b > bspo-antero-lateral_region >> pato-flattened;
+    #lateral edges obtusely angled on the anterior half, rounded; posterior angles rounded; base rounded;
+        aism-pronotum:id-8f312b > bspo-antero-lateral_margin >> (pato-curved, pato-obtuse);
+        aism-pronotum:id-8f312b > colao-posterolateral_pronotal_angle >> pato-curved;
+        aism-pronotum:id-8f312b > bspo-posterior_margin >> pato-curved;
+    #posterolateral margins oblique;
+        aism-pronotum:id-8f312b > bspo-postero-lateral_region >> pato-oblique_orientation;
+    #longitudinally depressed medially from base to almost anterior edge; the depression smooth;
+        aism-pronotum:id-8f312b > colao-longitudinal_pronotal_groove >> pato-smooth;
+    #the rest of the surface covered with ocellate setigerous punctures separated by 1—2 diameters on disc;
+        aism-pronotum:id-8f312b >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-59c668 .aism-has_unit pato-diameter << aism-ocellate_setigerous_cuticular_puncture < aism-pronotum:id-8f312b;
+																					iao-measurement_datum:md-59c668 .iao-has_measurement_value 1.5;
+
+
+    #Elytra and hind wings
+    #Elytra with 9 striae;
+    this > colao-elytron_with_9_striae:id-0f4748;
+    #punctures of striae large, diameter almost three times strial width, separated by less than 1 diameter on disc;
+        colao-elytron_with_9_striae:id-0f4748 > colao-elytral_stria:id-4937c7 > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-b4488d .aism-has_unit pato-width << colao-elytral_stria:id-4937c7;
+                                                                                iao-measurement_datum:md-b4488d .iao-has_measurement_value 3;
+    #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
+        colao-elytron_with_9_striae:id-0f4748 > colao-elytral_interstria_8 > aism-cuticular_carina:id-44b1f2 .aism-medial_to bspo-lateral_region:id-dd2c94 < colao-elytron_with_9_striae:id-0f4748;
+        bspo-lateral_region:id-dd2c94 >> pato-sloped;
+    #elytral surface depressed proximally;
+        colao-elytron_with_9_striae:id-0f4748 > bspo-proximal_region >> pato-convex;
+    #carina of interstria 8 expanded distally;
+        aism-cuticular_carina:id-44b1f2 > bspo-distal_region >> pato-increased_height;
+    #scutellum absent;
+    this > aism-scutellum >> pato-concealed;
+    #elytral interstria 5 without tubercles;
+        colao-elytral_interstria_5:id-ba8303 !> aism-cuticular_tubercle;
+    #hind wings extremely reduced, smaller than in G. basilewskyi.
+    this > aism-hind_wing:id-591df5 >> pato-atrophied;
+        aism-hind_wing:id-591df5 >> pato-length |<| pato-length:id-d38816[exclude = True];
+
+
+    #Ventral body surface
+    #Hypomeral depression broad, deep;
+    this > colao-anterior_hypomeral_depression;
+    #posterior longitudinal hypomeral carina absent;
+    this !> colao-posterior_longitudinal_hypomeral_carina;
+    #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
+        # ST: should colao-procoxal_cavity be aism? Discuss later.
+    this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-81b0cf .aism-has_unit pato-width:id-cbfe05;
+																					iao-measurement_datum:md-81b0cf .iao-has_measurement_value 0.375;
+    #mesometaventral sulcus rounded medially, straight laterally;
+    this > colao-mesometaventral_sulcus:id-bca011 > bspo-medial_region >> pato-curved;
+        colao-mesometaventral_sulcus:id-bca011 > bspo-lateral_region >> pato-straight;
+    #meso- and metaventrite covered with simple punctures; mesoventrite evenly convex;
+    this > colao-mesoventrite > aism-cuticular_puncture;
+    this > colao-metaventrite:id-04bb22 >> pato-convex;
+    #punctures of metaventrite separated by 1 diameter, becoming smaller posteriorly;
+        colao-metaventrite:id-04bb22 > aism-punctate_cuticle:id-ee6c33 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-b23a98 .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-ee6c33;
+																					iao-measurement_datum:md-b23a98 .iao-has_measurement_value 1;
+        aism-punctate_cuticle:id-ee6c33 > bspo-posterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter << aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-ee6c33;
+    #abdomen with 7 sternites;
+    this > aism-abdomen_with_7_sternites;
+
+
+    #Tergite VIII.
+    #Entirely bordered;
+    this > aism-abdominal_tergite_VIII:id-38ed1f > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-38ed1f;
+    #covered with ocellate setigerous punctures 
+        aism-abdominal_tergite_VIII:id-38ed1f > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
+    #convex, flattened posteriorly.
+        aism-abdominal_tergite_VIII:id-38ed1f >> pato-convex;
+        aism-abdominal_tergite_VIII:id-38ed1f > bspo-posterior_region >> pato-flattened;
+
+
+    #Legs
+    #Tarsi with 5 segments;
+    this > (aism-protarsus_with_5_protarsomeres, aism-mesotarsus_with_5_mesotarsomeres, aism-metatarsus_with_5_metatarsomeres);
+    #protibia with 3 teeth;
+    this > aism-protibia:id-e5e18e > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
+        aism-protibia:id-e5e18e !> aism-dorsal_protibial_cuticular_tooth_4;
+    #middle and hind tibiae expanded distally;
+    this > aism-mesotibia > bspo-distal_region >> pato-dilated;
+    this > aism-metatibia:id-b811e6 > bspo-distal_region >> pato-dilated;
+    #ventral side of profemur slightly expanded medially; #cmtg how to render this? comparison with other species?
+    this > aism-profemur > bspo-ventral_side >> pato-dilated;
+    #dorsal margin of metafemur with a carina;
+    this > aism-metafemur:id-f717c2 > bspo-dorsal_margin > aism-cuticular_carina;
+    #ventral carina of male procoxae toothed medially;
+    this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
+    #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
+    #expansion of protibial apex below tarsal insertion notched.
+        aism-protibia:id-e5e18e >> pato-bent;
+        aism-protibia:id-e5e18e > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-e5e18e > aism-postero-distal_margin >> (pato-dilated, pato-notched);
+    #ventral margin of metafemur with a small bulging on proximal third;
+    this > aism-metafemur:id-f717c2 > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-74dad1;
+    #metatibia widened in distal half.
+    this > aism-metatibia:id-b811e6 > bspo-distal_region >> pato-dilated;
+
+
+    #Genitalia
+    #Parameres symmetrical, elongated;
+    this > aism-parameres:id-729fe7 >> (pato-symmetrical, pato-elongated);
+    #lateral edge of parameres slightly obtusely angled before apex in dorsal view;
+        aism-parameres:id-729fe7 > bspo-lateral_side > bspo-distal_region:id-4a59b6 >> pato-obtuse;
+    #parameres notched proximoventrally, narrowing distally;
+        aism-parameres:id-729fe7 > bspo-proximal_region > bspo-ventral_region >> pato-notched;
+        bspo-distal_region:id-4a59b6 >> pato-tapered;
+    #ventral membranes of parameres equally sclerotised;
+    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    #lamella copulatrix elongated, apex enlarged and bent, its tip rounded, associated with a small additional sclerification; 
+        #cmtg: shall we avoid mentioning the additional sclerification?
+    this > colao-lamella_copulatrix:id-43087b >> pato-elongated;
+        colao-lamella_copulatrix:id-43087b > bspo-distal_region >> (pato-flattened, pato-curved); 
+    #axial and subaxial sclerites fused together;
+    this > colao-fused_axial_and_subaxial_endophallites;
+    #frontolateral peripheral sclerite absent
+    this !> colao-frontolateral_peripheral_endophallite;
+
+    }
+
+}
+
+
+
+#Grebennikovius pafelo Montanaro, Grebennikov, Rossini, Grapputo, Ruzzier & Tarasov, in preparation
+
+OTU = { #// OTUName:  Grebennikovius pafelo
+  DATA = {
+    uberon-male_organism:grebennikovius_pafelo[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius pafelo';
+    uberon-male_organism:grebennikovius_pafelo .dwc-Catalog_Number 'CNCCOLVG00001735';
+    uberon-male_organism:grebennikovius_pafelo .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-14dbc2;
+        
+    taxrank-species:id-14dbc2 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/6AA504F4-91BB-4EF9-AF8F-31EDA06AD5F9';
+    taxrank-species:id-14dbc2 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+    taxrank-species:id-14dbc2 .rdfs-label 'Grebennikovius pafelo';
+    }
+
+  #Description based on the holotype of Grebennikovius pafelo
+
+  TRAITS = {
+    #Body
+    #Oval shaped, quite flattened, surface brown to reddish brown, darker ventrally, antennae paler.
+    this >> (pato-ovate, pato-flattened);
+    this > uberon-chitin-based_cuticle >> pato-red_brown;
+    this > bspo-ventral_side >> pato-dark_brown;
+    this > aism-antenna >> pato-yellow_brown;
+    #Length 4.9mm.
+    this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-1957fa .aism-has_unit unit-millimeter;
+																					iao-measurement_datum:md-1957fa .iao-has_measurement_value 4.9;
+
+
+    #Head
+    #Genae sharply angled;
+    this > aism-gena >> pato-obtuse;
+    #clypeus with two sharp, upturned triangular teeth;
+    this > aism-lateral_clypeal_tooth_1 >> (pato-upturned, pato-sharp);
+    #external edge slightly notched at clypeogenal junction;
+    this > aism-head_margin_at_genoclypeal_sulcus >> pato-notched;
+    #covered with ocellate setigerous punctures separated by approximately 1 diameter;
+    this > aism-head_capsule > aism-frons:id-253d1c >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-c1554c;
+            iao-measurement_datum:md-c1554c .aism-has_unit pato-diameter:id-9910ee << aism-cuticular_puncture:id-387a8a < aism-frons:id-253d1c;
+      	    iao-measurement_datum:md-c1554c .iao-has_measurement_value 1.0;
+    #posterior edge of vertex with a small smooth space medially;
+    this > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth;
+    #antennae with 9 segments;
+    this > aism-antenna_with_9_antennomeres > colao-antennal_club > (aism-flagellomere_5, aism-flagellomere_6, aism-flagellomere_7);
+    #glossa, maxilla and epipharynx present;
+    this > (aism-glossa, aism-epipharynx, aism-insect_maxilla);
+    #maxillary palpi with 4 palpomeres;
+    this > aism-maxillary_palpus_with_4_palpomeres;
+    #labial palpi with 3 palpomeres.
+    this > aism-labial_palpus_with_3_palpomeres;
+
+
+    #Pronotum
+    #Less wide than elytra, maximum width on anterior half;
+        this > aism-pronotum:id-21d5e5 >> pato-width:id-f6f53f |<| pato-width << colao-elytron_with_9_striae:id-815a03 < this;
+    #strongly flattened anterolaterally, steeply declivous posteriorly;
+    this > aism-pronotum:id-21d5e5 > bspo-antero-lateral_region >> pato-flattened;
+        aism-pronotum:id-21d5e5 > bspo-posterior_region:id-bcfb6a >> pato-sloped;
+    #lateral edges obtusely angled on the anterior half, rounded; posterior angles rounded; base rounded;
+        aism-pronotum:id-21d5e5 > bspo-antero-lateral_margin >> (pato-curved, pato-obtuse);
+        aism-pronotum:id-21d5e5 > colao-posterolateral_pronotal_angle >> pato-curved;
+        aism-pronotum:id-21d5e5 > bspo-posterior_margin >> pato-curved;
+    #posterolateral margins parallel;
+        aism-pronotum:id-21d5e5 > bspo-postero-lateral_region >> pato-parallel-sided;
+    #longitudinally depressed medially from base to almost anterior edge; the depression smooth;
+        aism-pronotum:id-21d5e5 > colao-longitudinal_pronotal_groove >> pato-smooth;
+    #the rest of the surface covered with ocellate setigerous punctures separated by 1—2 diameters on disc;
+        aism-pronotum:id-21d5e5 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-f51f65 .aism-has_unit pato-diameter << aism-ocellate_setigerous_cuticular_puncture < aism-pronotum:id-21d5e5;
+																					iao-measurement_datum:md-f51f65 .iao-has_measurement_value 1.5;
+    #posterior edge with row of large, ovalar ocellate punctures.
+        bspo-posterior_region:id-bcfb6a > aism-row_of_punctures > aism-ocellate_cuticular_puncture >> (pato-increased_size, pato-ovate);
+
+
+    #Elytra and hind wings
+    #Elytra with 9 striae;
+    this > colao-elytron_with_9_striae:id-815a03;
+    #punctures of striae large, diameter almost three times strial width, separated by less than 1 diameter on disc;
+        colao-elytron_with_9_striae:id-815a03 > colao-elytral_stria:id-3cafde > aism-cuticular_puncture >> pato-diameter .iao-is_quality_measured_as iao-measurement_datum:md-4af35c .aism-has_unit pato-width << colao-elytral_stria:id-3cafde;
+                                                                                iao-measurement_datum:md-4af35c .iao-has_measurement_value 3;
+    #interstria 8 carinated, sides below interstria slanted inward, carina almost reaching suture of elytra distally;
+        colao-elytron_with_9_striae:id-815a03 > colao-elytral_interstria_8 > aism-cuticular_carina:id-ce6248 .aism-medial_to bspo-lateral_region:id-2e4f5f < colao-elytron_with_9_striae:id-815a03;
+        bspo-lateral_region:id-2e4f5f >> pato-sloped;
+    #elytral surface depressed along the proximal edge of interstriae 4—6;
+    this > colao-elytral_interstria_4 > bspo-proximal_region >> pato-concave;
+    this > colao-elytral_interstria_5:id-dbda37 > bspo-proximal_region >> pato-concave;
+    this > colao-elytral_interstria_6 > bspo-anterior-most_region >> pato-concave;
+    #carina of interstria 8 expanded distally;
+        aism-cuticular_carina:id-ce6248 > bspo-distal_region >> pato-increased_height;
+    #elytral surface strongly depressed along medial side of carina of interstria 8;
+    this > colao-elytral_interstria_8 > bspo-anatomical_side:id-c96b79 .aism-lateral_to aism-cuticular_carina:id-ce6248;
+        bspo-anatomical_side:id-c96b79 >> pato-convex;
+    #scutellum absent;
+    this > aism-scutellum >> pato-concealed;
+    #elytral interstria 5 without tubercles;
+        colao-elytral_interstria_5:id-dbda37 !> aism-cuticular_tubercle;
+    #hind wings extremely reduced, smaller than in G. basilewskyi.
+    this > aism-hind_wing:id-a0806f >> pato-atrophied;
+        aism-hind_wing:id-a0806f >> pato-length |<| pato-length:id-d38816[exclude = True];
+
+
+    #Ventral body surface
+    #Hypomeral depression broad, deep;
+    this > colao-anterior_hypomeral_depression;
+    #posterior longitudinal hypomeral carina absent;
+    this !> colao-posterior_longitudinal_hypomeral_carina;
+    #procoxal cavities broad, approximately as wide as 3/4 or more of half pronotal width in males.
+        # ST: should colao-procoxal_cavity be aism? Discuss later.
+    this > colao-procoxal_cavity >> pato-width .iao-is_quality_measured_as iao-measurement_datum:md-4883fc .aism-has_unit pato-width:id-f6f53f;
+																					iao-measurement_datum:md-4883fc .iao-has_measurement_value 0.375;
+    #mesometaventral sulcus rounded medially, straight laterally;
+    this > colao-mesometaventral_sulcus:id-3e41ea > bspo-medial_region >> pato-curved;
+        colao-mesometaventral_sulcus:id-3e41ea > bspo-lateral_region >> pato-straight;
+    #meso- and metaventrite covered with simple punctures; mesoventrite evenly convex;
+    this > colao-mesoventrite > aism-cuticular_puncture;
+    this > colao-metaventrite:id-740867 >> pato-convex;
+    #punctures of metaventrite separated by 1 diameter, becoming smaller posteriorly;
+        colao-metaventrite:id-740867 > aism-punctate_cuticle:id-7c175b >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-d88e46 .aism-has_unit pato-diameter << aism-cuticular_puncture < aism-punctate_cuticle:id-7c175b;
+																					iao-measurement_datum:md-d88e46 .iao-has_measurement_value 1;
+        aism-punctate_cuticle:id-7c175b > bspo-posterior_region > aism-cuticular_puncture >> pato-diameter |<| pato-diameter << aism-cuticular_puncture < bspo-anterior_region < aism-punctate_cuticle:id-7c175b;
+    #abdomen with 7 sternites;
+    this > aism-abdomen_with_7_sternites;
+
+
+    #Tergite VIII.
+    #Entirely bordered;
+    this > aism-abdominal_tergite_VIII:id-551cbe > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-551cbe;
+    #covered with ocellate setigerous punctures
+        aism-abdominal_tergite_VIII:id-551cbe > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
+    #evenly convex.
+        aism-abdominal_tergite_VIII:id-551cbe >> pato-convex;
+
+
+    #Legs
+    #Tarsi with 5 segments;
+    this > (aism-protarsus_with_5_protarsomeres, aism-mesotarsus_with_5_mesotarsomeres, aism-metatarsus_with_5_metatarsomeres);
+    #protibia with 3 teeth;
+    this > aism-protibia:id-1ec803 > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
+        aism-protibia:id-1ec803 !> aism-dorsal_protibial_cuticular_tooth_4;
+    #middle and hind tibiae expanded distally;
+    this > aism-mesotibia > bspo-distal_region >> pato-dilated;
+    this > aism-metatibia:id-f31f1b > bspo-distal_region >> pato-dilated;
+    #ventral side of profemur expanded medially;
+    this > aism-profemur > bspo-ventral_side >> pato-dilated;
+    #dorsal margin of metafemur with a carina;
+    this > aism-metafemur:id-0365d4 > bspo-dorsal_margin > aism-cuticular_carina;
+    #ventral carina of male procoxae toothed medially;
+    this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
+    #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
+    #expansion of protibial apex below tarsal insertion rounded.
+        aism-protibia:id-1ec803 >> pato-bent;
+        aism-protibia:id-1ec803 > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-1ec803 > aism-postero-distal_margin >> (pato-dilated, pato-curved);
+    #ventral margin of metafemur with bulging on proximal third, femur notched and then enlarged distally to the bulging;
+    this > aism-metafemur:id-0365d4 > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-0fff74;
+        aism-metafemur:id-0365d4 > bspo-anatomical_region:id-9e0608 .bspo-distal_to aism-cuticular_tubercle:id-0fff74;
+        bspo-anatomical_region:id-9e0608 >> pato-dilated; #cmtg: IS IT OK TO USE .distal_to ?
+    #metatibia bent medially, widened in distal third, dorsal edge slightly sinuous on distal third.
+    this > aism-metatibia:id-f31f1b > bspo-medial_region >> pato-bent;
+        aism-metatibia:id-f31f1b > bspo-distal_region >> pato-dilated;
+        aism-metatibia:id-f31f1b > bspo-dorsal_margin > bspo-distal_region >> pato-curved;
+
+
+    #Genitalia
+    #Parameres symmetrical, elongated;
+    this > aism-parameres:id-2a1cbc >> (pato-symmetrical, pato-elongated);
+    #lateral edge of parameres evenly rounded in dorsal view;
+        aism-parameres:id-2a1cbc > bspo-lateral_side:id-1cc885 >> pato-curved;
+    #parameres notched proximoventrally, narrowing distally;
+        aism-parameres:id-2a1cbc > bspo-proximal_region > bspo-ventral_region >> pato-notched;
+        bspo-lateral_side:id-1cc885 > bspo-distal_region >> pato-tapered;
+    #ventral membranes of parameres equally sclerotised;
+    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    #lamella copulatrix elongated, apex enlarged and bent, its tip angular, associated with a small additional sclerification; 
+        #cmtg: shall we avoid mentioning the additional sclerification?
+    this > colao-lamella_copulatrix:id-588f2e >> pato-elongated;
+        colao-lamella_copulatrix:id-588f2e > bspo-distal_region >> (pato-flattened, pato-angular); 
+    #axial and subaxial sclerites fused together;
+    this > colao-fused_axial_and_subaxial_endophallites;
+    #frontolateral peripheral sclerite absent
+    this !> colao-frontolateral_peripheral_endophallite;
     }
 
 }

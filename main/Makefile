@@ -12,9 +12,9 @@ CONFIG_FILE = phenotypes/phs-config.yaml
 ONTOS_DIR = source_ontologies
 
 # Default target
-all: check-fetch-merge-ontos phs2owl merge-reason-phs
+#all: check-fetch-merge-ontos phs2owl merge-reason-phs
 #all: check-fetch-merge-ontos
-#all: phs2owl merge-reason-phs
+all: phs2owl merge-reason-phs
 #all: merge-reason-phs
 
 # Target to check if source_ontologies directory is empty or noexistent  and then fetch ontologies from yaml
@@ -64,10 +64,10 @@ merge-reason-phs:
 	else \
 			echo "WHELK reasoning failed or produced errors. Check log for details."; \
 	fi
-	@echo "robot reason --reasoner ELK ...";
-	@if robot reason --reasoner ELK --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl > $(OUT_DIR_OWL)/ELK_$(OUT_FILE_OWL)_merged.owl.log; then \
-			echo "ELK reasoning completed successfully."; \
-	else \
-			echo "ELK reasoning failed or produced errors. Check log for details."; \
-	fi
+	# @echo "robot reason --reasoner ELK ...";
+	# @if robot reason --reasoner ELK --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl > $(OUT_DIR_OWL)/ELK_$(OUT_FILE_OWL)_merged.owl.log; then \
+	# 		echo "ELK reasoning completed successfully."; \
+	# else \
+	# 		echo "ELK reasoning failed or produced errors. Check log for details."; \
+	# fi
 	@echo "MAKE COMPLETED";
