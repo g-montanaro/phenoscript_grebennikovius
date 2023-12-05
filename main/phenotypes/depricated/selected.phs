@@ -1,0 +1,64 @@
+
+#/ Presence of structures
+
+uberon-male_organism > aism-metafemur > bspo-dorsal_margin > aism-cuticular_carina;
+
+uberon-male_organism > aism-maxillary_palpus_with_4_palpomeres;
+
+uberon-male_organism > colao-fused_axial_and_subaxial_endophallites;
+
+uberon-male_organism > (aism-protarsus_with_5_protarsomeres, aism-mesotarsus_with_5_mesotarsomeres, aism-metatarsus_with_5_metatarsomeres);
+
+#protibia with 3 teeth;
+uberon-male_organism > aism-protibia > (aism-dorsal_protibial_cuticular_tooth_1, aism-dorsal_protibial_cuticular_tooth_2, aism-dorsal_protibial_cuticular_tooth_3);
+
+
+
+#/ Absence
+#elytral interstria 5 without tubercles;
+uberon-male_organism > colao-elytral_interstria_5 !> aism-cuticular_tubercle;
+
+#/ Quality
+uberon-male_organism >> (pato-ovate, pato-flattened); 
+
+#clypeus with two sharp, upturned triangular teeth;
+uberon-male_organism > aism-lateral_clypeal_tooth_1 >> (pato-upturned, pato-sharp);
+
+uberon-male_organism > aism-vertex > bspo-posterior_region > bspo-medial_region >> pato-smooth;
+
+uberon-male_organism > aism-pronotum > bspo-posterior_region > aism-row_of_punctures > aism-ocellate_cuticular_puncture >> (pato-increased_size, pato-ovate);
+
+uberon-male_organism > aism-scutellum >> pato-concealed;
+
+uberon-male_organism > colao-mesometaventral_sulcus > bspo-medial_region >> pato-curved;
+
+uberon-male_organism > aism-metatibia > bspo-distal_region >> pato-dilated;
+
+uberon-male_organism > aism-protibia > aism-antero-distal_margin >> pato-setose;
+
+uberon-male_organism > aism-parameres >> (pato-symmetrical, pato-elongated);
+
+
+
+#/ Absolute and relative mesuaremements
+uberon-male_organism >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .aism-has_unit unit-millimeter;
+    iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
+
+uberon-male_organism > aism-pronotum:id-1549f8 >> aism-interpunctural_distance .iao-is_quality_measured_as iao-measurement_datum:md-1b36aa .aism-has_unit pato-diameter << aism-ocellate_setigerous_cuticular_puncture < aism-pronotum:id-1549f8;
+    iao-measurement_datum:md-1b36aa .iao-has_measurement_value 1.5;
+
+
+#/ Relative comparison within species
+uberon-male_organism > aism-clypeus > bspo-anterior_region > aism-setigerous_cuticular_puncture >> pato-diameter |<| pato-diameter << aism-setigerous_cuticular_puncture < aism-frons;
+
+uberon-male_organism > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < uberon-male_organism;
+
+#/ Relative comparison between species
+uberon-male_organism::grebennikovius_armiger > aism-hind_wing >> pato-length |<| pato-length:id-d38816[exclude = True] << aism-hind_wing:id-6b490e[exclude = True] < uberon-male_organism:grebennikovius_basilewskyi[exclude = True];
+
+
+#/ Other types
+
+uberon-male_organism > colao-elytron_with_9_striae:id-5770f5 > colao-elytral_interstria_8 > aism-cuticular_carina .aism-medial_to bspo-lateral_region < colao-elytron_with_9_striae:id-5770f5;
+
+uberon-male_organism > aism-abdominal_tergite_VIII:id-791f84 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-791f84;

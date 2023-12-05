@@ -1,6 +1,7 @@
 from owlready2 import *
 
 
+
 ontoFile='/Users/taravser/Library/CloudStorage/OneDrive-UniversityofHelsinki/My_papers/PhenoScript_main/Phenoscript-Descriptions/phenoscript_grebennikovius/main/output/grebennikovius.owl'
 #--
 def render_using_label(entity):
@@ -37,5 +38,3 @@ for pair in obo.BFO_0000051.get_relations():
     i2.BFO_0000050.append(i1)
 
 onto.save(file = ontoFile, format = "rdfxml")
-
-
