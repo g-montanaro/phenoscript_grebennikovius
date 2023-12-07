@@ -71,7 +71,9 @@ def dic_Relat_ToNLinOWL(dic_RelatComp):
     # txt: Q2 of E2 in Org2
     # item = dic_RelatComp[0]
     # renderNL(item['CompProp'], onto)
+    item=dic_RelatComp[0]
     for item in dic_RelatComp:
+        print(item)
         if (item['Org1'].iri != item['Org2'].iri):
             # txt = " %s of %s in _%s_" % \
             # ( nodeToNL(item['Q2']), nodeToNL(item['E2']), item['Org2'].label.first() )

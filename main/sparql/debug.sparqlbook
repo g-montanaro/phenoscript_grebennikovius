@@ -78,6 +78,12 @@
     "metadata": {}
   },
   {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Find an individula that is connected to two species via has_trait",
+    "metadata": {}
+  },
+  {
     "kind": 2,
     "language": "sparql",
     "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nSELECT ?x ?z ?y\nWHERE {\n\n    ?x phs:PHS_0000017 ?y.\n    ?z phs:PHS_0000017 ?y.\n    FILTER (?x != ?z)  # Ensure ?x and ?z are different individuals\n}",

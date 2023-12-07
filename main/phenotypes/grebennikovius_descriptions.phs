@@ -6,9 +6,6 @@
 #4. G. pafelo: line 559
 
 
-
-#Grebennikovius armiger Montanaro, Grebennikov, Rossini, Grapputo, Ruzzier & Tarasov, in preparation
-
 OTU = { #// OTUName:  Grebennikovius armiger
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
@@ -19,8 +16,6 @@ OTU = { #// OTUName:  Grebennikovius armiger
     taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
     }
-
-  #Description based on the holotype of Grebennikovius armiger
 
   TRAITS = {
     #Body
@@ -137,7 +132,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
 
     #Tergite VIII.
     #Entirely bordered;
-    #/ add
+
     this > aism-abdominal_tergite_VIII:id-791f84 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-791f84;
     #covered with ocellate setigerous punctures  
         aism-abdominal_tergite_VIII:id-791f84 > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
@@ -201,7 +196,6 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
     uberon-male_organism:grebennikovius_basilewskyi .dwc-Catalog_Number 'RMCA-ENT-000015068';
     uberon-male_organism:grebennikovius_basilewskyi .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-22513e;
 
-    #// FIXIT: always add taxon IDs!!!! .dwc-Taxon_ID_TaxonID   
     taxrank-species:id-22513e .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/10023107';
     taxrank-species:id-22513e .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-22513e .rdfs-label 'Grebennikovius basilewskyi';
@@ -255,7 +249,7 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
         aism-pronotum:id-422e93 > colao-posterolateral_pronotal_angle >> pato-curved;
         aism-pronotum:id-422e93 > bspo-posterior_margin >> pato-curved;
     #posterolateral margin oblique;
-    #/ addd
+
         aism-pronotum:id-422e93 > bspo-postero-lateral_margin >> pato-oblique_orientation;
     #with longitudinal median groove basally;
         aism-pronotum:id-422e93 > bspo-posterior_region:id-f2bd0c > colao-longitudinal_pronotal_groove;
