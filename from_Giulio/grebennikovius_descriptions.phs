@@ -172,7 +172,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
         aism-parameres:id-1c690f > bspo-ventral_side > bspo-proximal_region >> pato-notched;
         aism-parameres:id-1c690f > bspo-lateral_side > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #endophallus bearing elongated, almost straight lamella copulatrix associated with a small additional sclerification.
     this > colao-lamella_copulatrix >> (pato-elongated, pato-straight);
     #axial and subaxial sclerites fused together;
@@ -360,7 +360,7 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
         aism-parameres:id-3a40b5 > bspo-proximal_region > bspo-ventral_region >> (pato-notched, pato-dilated);
         aism-parameres:id-3a40b5 > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, rounded distally, with small and sharp projection near the distal apex; 
     this > colao-lamella_copulatrix:id-8ab54d >> pato-elongated;
         colao-lamella_copulatrix:id-8ab54d > bspo-distal_margin:id-c6aa33 >> pato-curved;
@@ -534,7 +534,7 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
         aism-parameres:id-729fe7 > bspo-proximal_region > bspo-ventral_region >> pato-notched;
         bspo-distal_region:id-4a59b6 >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, apex enlarged and bent, its tip rounded, associated with a small additional sclerification; 
         #cmtg: shall we avoid mentioning the additional sclerification?
     this > colao-lamella_copulatrix:id-43087b >> pato-elongated;
@@ -718,7 +718,7 @@ OTU = { #// OTUName:  Grebennikovius pafelo
         aism-parameres:id-2a1cbc > bspo-proximal_region > bspo-ventral_region >> pato-notched;
         bspo-lateral_side:id-1cc885 > sbspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, apex enlarged and bent, its tip angular, associated with a small additional sclerification; 
         #cmtg: shall we avoid mentioning the additional sclerification?
     this > colao-lamella_copulatrix:id-588f2e >> pato-elongated;
