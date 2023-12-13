@@ -1,0 +1,109 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> . #FIXME eliminate
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix oio: <http://www.geneontology.org/formats/oboInOwl#> . #FIXME eliminate
+@prefix PHS: <https://github.com/sergeitarasov/PhenoScript/PHS_>
+@prefix ps: <http://phenoscript.org/shapes/> . #FIXME decide on namespace
+
+ps:IndividualShape a sh:NodeShape ;
+    sh:targetClass owl:NamedIndividual ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string
+    ] ;
+    .
+
+ps:OrganismShape a sh:NodeShape ;
+    # not sure how to best select these nodes
+    sh:targetSubjectsOf dwc:catalogNumber ;
+    sh:node ps:HasOneSourceProject ;
+    sh:property [
+        sh:path dwc:catalogNumber ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path obo:IAO_0000235 ; # denoted_by
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:nodeKind sh:IRI ;
+        sh:class obo:CDAO_0000138 # TU
+    ] .
+
+ps:TaxonomicUnitShape a sh:NodeShape ;
+    sh:targetClass obo:CDAO_0000138 ; # TU
+    sh:node ps:HasOneSourceProject ;
+    sh:property [
+        #FIXME looks like TUs are denoting both organisms and species
+        sh:path obo:IAO_0000219 ; # denotes
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:nodeKind sh:IRI ;
+        sh:class obo:TAXRANK_0000006 # species - #FIXME should this be more general?
+    ] .
+
+ps:TaxonShape a sh:NodeShape ;
+    sh:targetClass obo:TAXRANK_0000006 ; # species - #FIXME should this be more general?
+    sh:property [ #FIXME why only these nodes?
+        sh:path oio:created_by ; #FIXME use PAV
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [ #FIXME why only these nodes?
+        sh:path oio:creation_date ; #FIXME use dcTerms
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:dateTime
+    ] ;
+    sh:property [
+        sh:path dc:source ; #FIXME use dcTerms
+        sh:minCount 2;
+        sh:maxCount 2;
+    ] ;
+    sh:property [
+        sh:path dc:source ; #FIXME use dcTerms
+        sh:qualifiedValueShape [
+            sh:class PHS:0000020 # DATA block
+        ] ;
+        sh:qualifiedMinCount 1;
+        sh:qualifiedMaxCount 1;
+    ] ;
+    sh:node ps:HasOneSourceProject ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:minCount 2;
+        sh:maxCount 2;
+        sh:in ( owl:NamedIndividual obo:TAXRANK_0000006 )
+    ] ;
+    sh:property [
+        sh:path dwc:parentNameUsageID ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:anyURI
+    ] ;
+    sh:property [
+        sh:path dwc:TaxonID ; #FIXME change to taxonID
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:anyURI
+    ] .
+
+ps:HasOneSourceProject sh:message "Should have exactly one source project" ;
+    sh:property [
+        sh:path dc:source ; #FIXME use dcTerms
+        sh:qualifiedValueShape [
+            sh:class PHS:0000019 # project
+        ] ;
+        sh:qualifiedMinCount 1;
+        sh:qualifiedMaxCount 1;
+    ] .

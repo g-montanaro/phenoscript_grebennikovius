@@ -1,74 +1,52 @@
-# Explain inconsistencies
-# robot explain --input output/grebennikovius_merged.owl --reasoner whelk -M inconsistency --explanation explanation.md
-# Make minimal consistent ontology
-# robot reason --reasoner whelk --input output/grebennikovius_merged.owl -D temp/debug.owl
-
 # Define variables
 PHS_FILE = grebennikovius_descriptions.phs
-OUT_DIR_OWL = output
 OUT_FILE_OWL = grebennikovius
-PHENOSPY = phenospy
 CONFIG_FILE = phenotypes/phs-config.yaml
-ONTOS_DIR = source_ontologies
 
 # Default target
-all: check-fetch-merge-ontos phs2owl merge-reason-phs
-#all: check-fetch-merge-ontos
-#all: phs2owl
-#all: phs2owl merge-reason-phs
-#all: merge-reason-phs
-
-# Target to check if source_ontologies directory is empty or noexistent  and then fetch ontologies from yaml
-check-fetch-merge-ontos:
-	@echo "STEP: check-fetch-merge-ontos";
-	@if [ ! -d "$(ONTOS_DIR)" ] || [ -z "$$(ls $(ONTOS_DIR) 2>/dev/null)" ]; then \
-		echo "Current directory: $$(pwd)"; \
-		echo "Updating $(ONTOS_DIR) ..."; \
-		$(PHENOSPY) fetch-ontos $(CONFIG_FILE) $(ONTOS_DIR); \
-		echo "robot merge ..."; \
-		robot merge --inputs "source_ontologies/*.owl" --output merged_ontologies/merged.owl; \
-		echo "robot remove individuals ..."; \
-		robot remove --input merged_ontologies/merged.owl --select individuals --output merged_ontologies/merged_clean.owl; \
-		echo "robot reason --reasoner WHELK ..."; \
-		if robot reason --reasoner whelk  --input merged_ontologies/merged_clean.owl > merged_ontologies/WHELK_merged_clean.owl.log; then \
-			echo "WHELK reasoning completed successfully."; \
-		else \
-			echo "WHELK reasoning failed or produced errors. Check ELK_merged_clean.log for details."; \
-		fi; \
-		echo "robot reasoner ELK ..."; \
-		if robot reason --reasoner ELK --input merged_ontologies/merged_clean.owl > merged_ontologies/ELK_merged_clean.owl.log; then \
-			echo "ELK reasoning completed successfully."; \
-		else \
-			echo "ELK reasoning failed or produced errors. Check ELK_merged_clean.log for details."; \
-		fi \
-	else \
-		echo "$(ONTOS_DIR) is not empty. Skipping update."; \
-	fi
+all: phs2-owl-NL validate-phs make-tbox reason-owl
 
 
-# Target to run the phs2owl command
-phs2owl:
-	@echo "STEP: phs2owl";
-	cd phenotypes && $(PHENOSPY) phs2owl $(PHS_FILE) ../$(OUT_DIR_OWL)/$(OUT_FILE_OWL)
+# Convert phs To OWL & NL 
+phs2-owl-NL:
+	@echo "\nSTEP: phs TO OWL";
+	cd phenotypes && phenospy phs2owl $(PHS_FILE) ../output/$(OUT_FILE_OWL)
 	cd ..;
-	phenospy owl2text -f 'html' -s 'org_*' -o $(OUT_DIR_OWL)/$(OUT_FILE_OWL).owl -d $(OUT_DIR_OWL)/NL
-	phenospy owl2text -f 'md' -s 'org_*' -o $(OUT_DIR_OWL)/$(OUT_FILE_OWL).owl -d $(OUT_DIR_OWL)/NL
+	@echo "\nSTEP: phs TO NL";
+	phenospy owl2text -f 'html' -s 'org_*' -o output/$(OUT_FILE_OWL).owl -d output/NL
+	phenospy owl2text -f 'md' -s 'org_*' -o output/$(OUT_FILE_OWL).owl -d output/NL
 
-merge-reason-phs:
-	@echo "STEP: merge-reason-phs";
-	robot merge --input merged_ontologies/merged_clean.owl --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL).owl  --output $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl
-	@echo "robot convert OWL to TTL ...";
-	robot convert --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl --output $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.ttl
-	@echo "robot reason --reasoner WHELK ...";
-	@if robot reason --reasoner whelk --annotate-inferred-axioms true --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl --output $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged_reasoned.owl > $(OUT_DIR_OWL)/WHELK_$(OUT_FILE_OWL)_merged.owl.log; then \
-			echo "WHELK reasoning completed successfully."; \
+# Validate phs using SHACL
+validate-phs:
+	@echo "\nSTEP: Validate using SHACL";
+	shacl validate --data output/$(OUT_FILE_OWL).owl --shapes source_queries/phenoscript.shacl.ttl > output/shacl.log
+
+
+# Make Tbox ontology file: 
+# donwload source ontologies, merge them, remove individuals
+# also adds source_queries/query.rdf that contains precooked classes for queries
+make-tbox:
+	@echo "\nSTEP: make Tbox file";
+	@if [ ! -d "source_ontologies" ] || [ -z "$$(ls source_ontologies 2>/dev/null)" ]; then \
+		echo "Current directory: $$(pwd)"; \
+		echo "Downloading source_ontologies ..."; \
+		phenospy fetch-ontos $(CONFIG_FILE) source_ontologies; \
+		echo "robot merge ontologies ..."; \
+		robot merge --inputs "source_ontologies/*.owl" --input source_queries/query.rdf --output merged_ontologies/tbox.owl; \
+		echo "robot remove individuals ..."; \
+		robot remove --input merged_ontologies/tbox.owl --select individuals --output merged_ontologies/tbox.owl; \
 	else \
-			echo "WHELK reasoning failed or produced errors. Check log for details."; \
+		echo "source_ontologies is not empty. Skipping update."; \
 	fi
-	# @echo "robot reason --reasoner ELK ...";
-	# @if robot reason --reasoner ELK --input $(OUT_DIR_OWL)/$(OUT_FILE_OWL)_merged.owl > $(OUT_DIR_OWL)/ELK_$(OUT_FILE_OWL)_merged.owl.log; then \
-	# 		echo "ELK reasoning completed successfully."; \
-	# else \
-	# 		echo "ELK reasoning failed or produced errors. Check log for details."; \
-	# fi
-	@echo "MAKE COMPLETED";
+
+# resaon Abox using Tbox file with materializer
+# annotate inffered axioms
+# merge all ontologies into a single file
+reason-owl:
+	@echo "\nSTEP: reason using materializer";
+	materializer file --ontology-file merged_ontologies/tbox.owl --input output/$(OUT_FILE_OWL).owl --output output/$(OUT_FILE_OWL)-reasoned.ttl --reasoner whelk
+	@echo "\nSTEP: annotate inffered axioms";
+	update --data output/$(OUT_FILE_OWL)-reasoned.ttl --update source_queries/annotate.ru --dump > output/$(OUT_FILE_OWL)-reasoned-annotated.ttl
+	@echo "\nSTEP: merge all ontologies into a single file";
+	riot output/$(OUT_FILE_OWL).owl output/$(OUT_FILE_OWL)-reasoned-annotated.ttl merged_ontologies/tbox.owl > output/$(OUT_FILE_OWL)-all.ttl
+	@echo "\nMAKE COMPLETED";

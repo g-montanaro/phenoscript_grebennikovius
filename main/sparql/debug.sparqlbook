@@ -8,6 +8,18 @@
   {
     "kind": 1,
     "language": "markdown",
+    "value": "## Check the data model for taxa",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX dwc: <http://rs.tdwg.org/dwc/terms/>\n\n\nSELECT DISTINCT ?Org_label ?Spec_label ?Org ?CatalogID ?TaxonID ?parentNameUsageID\nWHERE {\n\n    ?Org rdfs:label ?Org_label .\n    ?Org dwc:catalogNumber ?CatalogID .\n    ?Org obo:IAO_0000235 ?TU .\n    \n    ?TU a obo:CDAO_0000138 .\n    ?TU obo:IAO_0000219 ?taxran_species .\n    \n    ?taxran_species a obo:TAXRANK_0000006 .\n    ?taxran_species dwc:TaxonID ?TaxonID .\n    ?taxran_species dwc:parentNameUsageID ?parentNameUsageID.\n    ?taxran_species rdfs:label ?Spec_label .\n\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
     "value": "## Check if quality is connected to an entity via has_part or part_of\n\nIt's a common mistake to state: 'leg > red'.\n\n- BFO_0000051 **has_part**\n- BFO_0000050 **part_of**",
     "metadata": {}
   },

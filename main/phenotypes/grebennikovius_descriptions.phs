@@ -6,6 +6,15 @@
 #4. G. pafelo: line 559
 
 
+# someClassIndividual .rdfs-label 'org_Grebennikovius armiger';
+# someClassIndividual .dwc-Catalog_Number 'CNCCOLVG00001738';
+# someClassIndividual .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-08ba61;
+
+# taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
+# taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
+# taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
+
+
 OTU = { #// OTUName:  Grebennikovius armiger
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
@@ -16,6 +25,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
     }
+
 
   TRAITS = {
     #Body

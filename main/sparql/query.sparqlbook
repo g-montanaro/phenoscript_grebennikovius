@@ -1,0 +1,98 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Color (PATO_0000014): all individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n# count total ind\n#SELECT (COUNT(DISTINCT ?individual) AS ?totalIndividuals)\nSELECT DISTINCT ?individual ?label ?sp_label\nWHERE {\n    # color\n    ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000014 .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nORDER BY ?sp_label\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Color (PATO_0000014): count individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nSELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?totalIndividuals)\nWHERE {\n    # color\n    ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000014 .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nGROUP BY ?sp_label\nORDER BY ?sp_label",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Shape (PATO_0000052): all individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nSELECT DISTINCT ?individual ?label ?sp_label\nWHERE {\n    ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000052 .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nORDER BY ?sp_label",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Shape (PATO_0000052): count individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nSELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?indShape)\nWHERE {\n\n    ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000052 .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nGROUP BY ?sp_label\nORDER BY ?sp_label",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Combined Query for Qualitites: color, shape, size, texture",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?sp_label ?ColorIndividuals ?ShapeIndividuals ?SizeIndividuals ?TextureIndividuals\nWHERE {\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?ColorIndividuals)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000014 .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n    \n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?ShapeIndividuals)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000052 .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?SizeIndividuals)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000117 .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?TextureIndividuals)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* obo:PATO_0000150 .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    FILTER (?sp_label = ?sp_label)\n}\nORDER BY ?sp_label\n",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# part_of_Thorax: all individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX query: <http://query_example/>\n\n# count total ind\n#SELECT (COUNT(DISTINCT ?individual) AS ?totalIndividuals)\nSELECT DISTINCT ?individual ?label ?sp_label\nWHERE {\n    # color\n    ?individual rdf:type/rdfs:subClassOf* query:part_of_Thorax .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nORDER BY ?sp_label\n#ORDER BY ?label",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# part_of_Thorax: count individuals per species ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX query: <http://query_example/>\n\n\nSELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?totalIndividuals)\nWHERE {\n    ?individual rdf:type/rdfs:subClassOf* query:part_of_Thorax .\n    ?individual rdfs:label ?label .\n    ?sp_iri phs:PHS_0000017 ?individual .\n    ?sp_iri rdfs:label ?sp_label .\n\n}\nGROUP BY ?sp_label\nORDER BY ?sp_label",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Combined Query for par_of_: ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX obo: <http://purl.obolibrary.org/obo/>\nPREFIX phs: <https://github.com/sergeitarasov/PhenoScript/>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX query: <http://query_example/>\n\nSELECT ?sp_label ?part_of_Head ?part_of_Thorax ?part_of_Abdomen ?part_of_Leg\nWHERE {\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?part_of_Head)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* query:part_of_Head  .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n    \n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?part_of_Thorax)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* query:part_of_Thorax  .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?part_of_Abdomen)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* query:part_of_Abdomen .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    {\n        SELECT ?sp_label (COUNT(DISTINCT ?individual) AS ?part_of_Leg)\n        WHERE {\n            ?individual rdf:type/rdfs:subClassOf* query:part_of_Leg  .\n            ?individual rdfs:label ?label .\n            ?sp_iri phs:PHS_0000017 ?individual .\n            ?sp_iri rdfs:label ?sp_label .\n        }\n        GROUP BY ?sp_label\n    }\n\n    FILTER (?sp_label = ?sp_label)\n}\nORDER BY ?sp_label\n",
+    "metadata": {}
+  }
+]

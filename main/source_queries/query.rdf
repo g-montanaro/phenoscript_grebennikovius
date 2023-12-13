@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/taravser/ontologies/2023/11/untitled-ontology-72/"
+     xml:base="http://www.semanticweb.org/taravser/ontologies/2023/11/untitled-ontology-72/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/taravser/ontologies/2023/11/untitled-ontology-72"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/AISM_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AISM_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/AISM_0000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AISM_0000107"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/AISM_0000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AISM_0000108"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/AISM_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AISM_0000109"/>
+    
+
+
+    <!-- http://query_example/Classes_for_queries -->
+
+    <owl:Class rdf:about="http://query_example/Classes_for_queries">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://query_example/part_of_Abdomen -->
+
+    <owl:Class rdf:about="http://query_example/part_of_Abdomen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AISM_0000109"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AISM_0000109"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://query_example/Classes_for_queries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://query_example/part_of_Head -->
+
+    <owl:Class rdf:about="http://query_example/part_of_Head">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AISM_0000107"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AISM_0000107"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://query_example/Classes_for_queries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://query_example/part_of_Leg -->
+
+    <owl:Class rdf:about="http://query_example/part_of_Leg">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AISM_0000031"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AISM_0000031"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://query_example/Classes_for_queries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://query_example/part_of_Thorax -->
+
+    <owl:Class rdf:about="http://query_example/part_of_Thorax">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AISM_0000108"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AISM_0000108"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://query_example/Classes_for_queries"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
