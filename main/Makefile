@@ -5,6 +5,7 @@ CONFIG_FILE = phenotypes/phs-config.yaml
 
 # Default target
 all: phs2-owl-NL validate-phs make-tbox reason-owl
+#all: make-tbox
 
 
 # Convert phs To OWL & NL 

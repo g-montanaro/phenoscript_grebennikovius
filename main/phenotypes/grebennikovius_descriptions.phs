@@ -8,9 +8,9 @@
 
 # someClassIndividual .rdfs-label 'org_Grebennikovius armiger';
 # someClassIndividual .dwc-Catalog_Number 'CNCCOLVG00001738';
-# someClassIndividual .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-08ba61;
+# someClassIndividual .ro-has_role_in_modeling cdao-TU .iao-denotes taxrank-species:id-08ba61;
 
-# taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
+# taxrank-species:id-08ba61 .dwc-Taxon_ID_taxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
 # taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
 # taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
 
@@ -19,9 +19,9 @@ OTU = { #// OTUName:  Grebennikovius armiger
   DATA = {
     uberon-male_organism:grebennikovius_armiger[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius armiger';
     uberon-male_organism:grebennikovius_armiger .dwc-Catalog_Number 'CNCCOLVG00001738';
-    uberon-male_organism:grebennikovius_armiger .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-08ba61;
+    uberon-male_organism:grebennikovius_armiger .ro-has_role_in_modeling cdao-TU .iao-denotes taxrank-species:id-08ba61;
         
-    taxrank-species:id-08ba61 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
+    taxrank-species:id-08ba61 .dwc-Taxon_ID_taxonID 'http://zoobank.org/883D3610-BE9D-4818-AE90-7D729A205190';
     taxrank-species:id-08ba61 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-08ba61 .rdfs-label 'Grebennikovius armiger';
     }
@@ -185,7 +185,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
         aism-parameres:id-1c690f > bspo-ventral_side > bspo-proximal_region >> pato-notched;
         aism-parameres:id-1c690f > bspo-lateral_side > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #endophallus bearing elongated, almost straight lamella copulatrix associated with a small additional sclerification.
     this > colao-lamella_copulatrix >> (pato-elongated, pato-straight);
     #axial and subaxial sclerites fused together;
@@ -204,9 +204,9 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
   DATA = {
     uberon-male_organism:grebennikovius_basilewskyi[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius basilewskyi';
     uberon-male_organism:grebennikovius_basilewskyi .dwc-Catalog_Number 'RMCA-ENT-000015068';
-    uberon-male_organism:grebennikovius_basilewskyi .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-22513e;
+    uberon-male_organism:grebennikovius_basilewskyi .ro-has_role_in_modeling cdao-TU .iao-denotes taxrank-species:id-22513e;
 
-    taxrank-species:id-22513e .dwc-Taxon_ID_TaxonID 'https://www.gbif.org/species/10023107';
+    taxrank-species:id-22513e .dwc-Taxon_ID_taxonID 'https://www.gbif.org/species/10023107';
     taxrank-species:id-22513e .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-22513e .rdfs-label 'Grebennikovius basilewskyi';
     }
@@ -377,7 +377,7 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
         aism-parameres:id-3a40b5 > bspo-proximal_region > bspo-ventral_region >> (pato-notched, pato-dilated);
         aism-parameres:id-3a40b5 > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, rounded distally, with small and sharp projection near the distal apex; 
     this > colao-lamella_copulatrix:id-8ab54d >> pato-elongated;
         colao-lamella_copulatrix:id-8ab54d > bspo-distal_margin:id-c6aa33 >> pato-curved;
@@ -399,9 +399,9 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
   DATA = {
     uberon-male_organism:grebennikovius_lupanganus[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius lupanganus';
     uberon-male_organism:grebennikovius_lupanganus .dwc-Catalog_Number 'CNCCOLVG00004077';
-    uberon-male_organism:grebennikovius_lupanganus .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-55a859;
+    uberon-male_organism:grebennikovius_lupanganus .ro-has_role_in_modeling cdao-TU .iao-denotes taxrank-species:id-55a859;
         
-    taxrank-species:id-55a859 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/1D32A7F2-0376-436B-976F-54C2EEEC430C';
+    taxrank-species:id-55a859 .dwc-Taxon_ID_taxonID 'http://zoobank.org/1D32A7F2-0376-436B-976F-54C2EEEC430C';
     taxrank-species:id-55a859 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-55a859 .rdfs-label 'Grebennikovius lupanganus';
     }
@@ -553,7 +553,7 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
         aism-parameres:id-729fe7 > bspo-proximal_region > bspo-ventral_region >> pato-notched;
         bspo-distal_region:id-4a59b6 >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, apex enlarged and bent, its tip rounded, associated with a small additional sclerification; 
         #cmtg: shall we avoid mentioning the additional sclerification?
     this > colao-lamella_copulatrix:id-43087b >> pato-elongated;
@@ -575,9 +575,9 @@ OTU = { #// OTUName:  Grebennikovius pafelo
   DATA = {
     uberon-male_organism:grebennikovius_pafelo[this = True, linksTraits = True, cls = 'uberon-adult_organism', cls = 'dwc-Preserved_Specimen'] .rdfs-label 'org_Grebennikovius pafelo';
     uberon-male_organism:grebennikovius_pafelo .dwc-Catalog_Number 'CNCCOLVG00001735';
-    uberon-male_organism:grebennikovius_pafelo .iao-denoted_by cdao-TU .iao-denotes taxrank-species:id-14dbc2;
+    uberon-male_organism:grebennikovius_pafelo .ro-has_role_in_modeling cdao-TU .iao-denotes taxrank-species:id-14dbc2;
         
-    taxrank-species:id-14dbc2 .dwc-Taxon_ID_TaxonID 'http://zoobank.org/6AA504F4-91BB-4EF9-AF8F-31EDA06AD5F9';
+    taxrank-species:id-14dbc2 .dwc-Taxon_ID_taxonID 'http://zoobank.org/6AA504F4-91BB-4EF9-AF8F-31EDA06AD5F9';
     taxrank-species:id-14dbc2 .dwc-Parent_Name_Usage_ID 'https://www.gbif.org/species/10360397';
     taxrank-species:id-14dbc2 .rdfs-label 'Grebennikovius pafelo';
     }
@@ -739,7 +739,7 @@ OTU = { #// OTUName:  Grebennikovius pafelo
         aism-parameres:id-2a1cbc > bspo-proximal_region > bspo-ventral_region >> pato-notched;
         bspo-lateral_side:id-1cc885 > bspo-distal_region >> pato-tapered;
     #ventral membranes of parameres equally sclerotised;
-    this > aism-left_ventral_membrane_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_membrane_of_paramere < this;
+    this > aism-left_ventral_conjunctiva_of_paramere >> pato-thickness .ro-similar_in_magnitude_relative_to pato-thickness << aism-right_ventral_conjunctiva_of_paramere < this;
     #lamella copulatrix elongated, apex enlarged and bent, its tip angular, associated with a small additional sclerification; 
         #cmtg: shall we avoid mentioning the additional sclerification?
     this > colao-lamella_copulatrix:id-588f2e >> pato-elongated;

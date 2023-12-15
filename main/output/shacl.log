@@ -1,4 +1,4 @@
-@prefix :      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740#> .
+@prefix :      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740#> .
 @prefix PHS:   <https://github.com/sergeitarasov/PhenoScript/PHS_> .
 @prefix Phen:  <https://github.com/sergeitarasov/PhenoScript/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
@@ -18,227 +18,291 @@
 [ rdf:type     sh:ValidationReport;
   sh:conforms  false;
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>;
-                 sh:resultMessage              "QualifiedValueShape[1,1,false]: Min = 1 but got 0 validations";
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
+                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
                  sh:resultPath                 dc:source;
                  sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b0
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
                  sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:creation_date;
+                 sh:resultPath                 term2:TaxonID;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b1
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_3-3>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_3-3>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonomicUnitShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_3-3>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>;
-                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
-                 sh:resultPath                 dc:source;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b2
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>;
-                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:created_by;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b3
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_264-3>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_264-3>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonomicUnitShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_264-3>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>;
-                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:created_by;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b3
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>;
-                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
-                 sh:resultPath                 dc:source;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b2
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
                  sh:resultMessage              "QualifiedValueShape[1,1,false]: Min = 1 but got 0 validations";
                  sh:resultPath                 dc:source;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent;
-                 sh:sourceShape                _:b0
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>;
-                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
-                 sh:resultPath                 dc:source;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b2
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_pafelo>;
                  sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:created_by;
+                 sh:resultPath                 obo:IAO_0000235;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b3
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_pafelo>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_pafelo>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:OrganismShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_pafelo>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-08ba61>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
                  sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:creation_date;
+                 sh:resultPath                 term2:TaxonID;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b1
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>;
-                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:creation_date;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_89-3>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_89-3>";
                  sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b1
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonomicUnitShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_89-3>
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_armiger>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_armiger>";
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:created_by;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b4
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_lupanganus>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_lupanganus>";
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:NodeConstraintComponent;
                  sh:sourceShape                ps:OrganismShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_armiger>
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_lupanganus>
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>;
-                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
-                 sh:resultPath                 oio:creation_date;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_3-3>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_3-3>";
                  sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
-                 sh:sourceShape                _:b1
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonomicUnitShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_3-3>
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
                  sh:resultMessage              "QualifiedValueShape[1,1,false]: Min = 1 but got 0 validations";
                  sh:resultPath                 dc:source;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent;
-                 sh:sourceShape                _:b0
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_182-3>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_182-3>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonomicUnitShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_182-3>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_basilewskyi>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_basilewskyi>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:OrganismShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_basilewskyi>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_lupanganus>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_lupanganus>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:OrganismShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/grebennikovius_lupanganus>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_89-3>;
-                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_89-3>";
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
-                 sh:sourceShape                ps:TaxonomicUnitShape;
-                 sh:value                      <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/_389e3c_89-3>
-               ];
-  sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-55a859>;
-                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
-                 sh:resultPath                 dc:source;
-                 sh:resultSeverity             sh:Violation;
-                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b2
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-14dbc2>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:creation_date;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b5
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
                  sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
                  sh:resultPath                 oio:created_by;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b4
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 term2:TaxonID;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b1
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_basilewskyi>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 obo:IAO_0000235;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b3
                ];
   sh:result    [ rdf:type                      sh:ValidationResult;
-                 sh:focusNode                  <https://data.phenoscript.org/f79e2b9c-990e-11ee-bb9f-aabb8a6a9740/id-22513e>;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:creation_date;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b5
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
+                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
+                 sh:resultPath                 dc:source;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b0
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:creation_date;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b5
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
+                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
+                 sh:resultPath                 dc:source;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b0
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
                  sh:resultMessage              "QualifiedValueShape[1,1,false]: Min = 1 but got 0 validations";
                  sh:resultPath                 dc:source;
                  sh:resultSeverity             sh:Violation;
                  sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent;
+                 sh:sourceShape                _:b2
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_182-3>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_182-3>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonomicUnitShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_182-3>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
+                 sh:resultMessage              "minCount[2]: Invalid cardinality: expected min 2: Got count = 0";
+                 sh:resultPath                 dc:source;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
                  sh:sourceShape                _:b0
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_armiger>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 obo:IAO_0000235;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b3
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:created_by;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b4
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-14dbc2>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-22513e>;
+                 sh:resultMessage              "QualifiedValueShape[1,1,false]: Min = 1 but got 0 validations";
+                 sh:resultPath                 dc:source;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent;
+                 sh:sourceShape                _:b2
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_264-3>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_264-3>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:TaxonomicUnitShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/_07ca1f_264-3>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_armiger>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_armiger>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:OrganismShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_armiger>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:created_by;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b4
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-08ba61>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 oio:creation_date;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b5
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_pafelo>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_pafelo>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:OrganismShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_pafelo>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/id-55a859>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 term2:TaxonID;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b1
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_basilewskyi>;
+                 sh:resultMessage              "Node[<http://phenoscript.org/shapes/HasOneSourceProject>] at focusNode <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_basilewskyi>";
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent;
+                 sh:sourceShape                ps:OrganismShape;
+                 sh:value                      <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_basilewskyi>
+               ];
+  sh:result    [ rdf:type                      sh:ValidationResult;
+                 sh:focusNode                  <https://data.phenoscript.org/777833b8-9b3e-11ee-863d-aabb8a6a9740/grebennikovius_lupanganus>;
+                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";
+                 sh:resultPath                 obo:IAO_0000235;
+                 sh:resultSeverity             sh:Violation;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;
+                 sh:sourceShape                _:b3
                ]
 ] .
