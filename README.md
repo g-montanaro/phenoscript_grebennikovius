@@ -19,7 +19,7 @@ It contains all data files and scripts necessary to reproduce the results. For d
     - `sparql`, SPARQL queries: `query.sparqlbook` for running queries from the paper; `debug.sparqlbook` for debugging the descriptions.
     - `output`, main outputs, including:
         - `grebennikovius.owl`, Phenoscript descriptions converted into OWL.
-        - `grebennikovius-all.ttl`, the full OWL file after running reasoning (i.e., after Step 4).
+        - `grebennikovius-all.ttl.zip`, the full OWL file after running reasoning (i.e., after Step 4); it is archived to reduce the file zie.
         - `NL`, generated NL descriptions.
         - `shacl.log`, SHACL output file.
 
