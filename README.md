@@ -81,4 +81,14 @@ materializer file --ontology-file merged_ontologies/tbox.owl --input output/greb
 2023.12.22 16:24:04 [INFO] org.renci.materializer.Main.:50:39 - Reasoning done in: 2.184s
 ```
 
+## NL descriptions
 
+The NL descriptions are in `main/output/NL`.
+
+## SPARQL Queries
+
+- Install [SPARQL Notebook for VS Code](https://marketplace.visualstudio.com/items?itemName=Zazuko.sparql-notebook).
+- Open up `main/sparql/query.sparqlbook` in VS Code.
+- Unpack `main/output/grebennikovius-all.ttl.zip`.
+- From within VS Code right click on `grebennikovius-all.ttl` and select "SPARQL Notebook: Use File as a Store".
+- Go to `query.sparqlbook` to execute the queries.
