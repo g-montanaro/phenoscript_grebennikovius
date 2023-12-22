@@ -1,9 +1,12 @@
 # Phenoscript Species Descriptions for the Dung Beetle Genus _Grebennikovius_
 
+ <p align="left">
+  <img src="https://github.com/g-montanaro/phenoscript_grebennikovius/blob/main/mct.jpg" width="300" title="Phenospy logo">
+</p> 
+
 This repository is associated with the manuscript:
 
-
-_ Montanaro G., Balhoff J., Girón J., Söderholm M., Tarasov S. Computable Species Descriptions and Nanopublications: Applying Ontology-based Technologies to Dung Beetles (Coleoptera: Scarabaeinae). Biodiversity Data Journal (in preparation)._
+_Montanaro G., Balhoff J., Girón J., Söderholm M., Tarasov S. Computable Species Descriptions and Nanopublications: Applying Ontology-based Technologies to Dung Beetles (Coleoptera: Scarabaeinae). Biodiversity Data Journal (in preparation)._
 
 It contains all data files and scripts necessary to reproduce the results. For detailed information, please refer to the original paper. The repository has been tested on Mac and should work on Linux without issues. Windows users may need to make some modifications.
 
