@@ -1,4 +1,4 @@
-# Phenoscript Species Descriptions for the Dung Beetle Genus _Grebennikovius_
+# Phenoscript Semantic Descriptions for the Dung Beetle Genus _Grebennikovius_
 
  <p align="left">
   <img src="https://github.com/g-montanaro/phenoscript_grebennikovius/blob/main/mct.jpg" width="300" title="Phenospy logo">
