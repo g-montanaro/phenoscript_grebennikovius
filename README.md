@@ -91,4 +91,4 @@ The NL descriptions are in `main/output/NL`.
 - Open up `main/sparql/query.sparqlbook` in VS Code.
 - Unpack `main/output/grebennikovius-all.ttl.zip`.
 - From within VS Code right click on `grebennikovius-all.ttl` and select "SPARQL Notebook: Use File as a Store".
-- Go to `query.sparqlbook` to execute the queries.
+- Go to `query.sparqlbook` and execute the queries.
