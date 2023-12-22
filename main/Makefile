@@ -33,7 +33,7 @@ make-tbox:
 		echo "Downloading source_ontologies ..."; \
 		phenospy fetch-ontos $(CONFIG_FILE) source_ontologies; \
 		echo "robot merge ontologies ..."; \
-		robot merge --inputs "source_ontologies/*.owl" --input source_queries/query.rdf --output merged_ontologies/tbox.owl; \
+		robot merge --inputs "source_ontologies/*.owl" --input source_queries/query.ttl --output merged_ontologies/tbox.owl; \
 		echo "robot remove individuals ..."; \
 		robot remove --input merged_ontologies/tbox.owl --select individuals --output merged_ontologies/tbox.owl; \
 	else \
