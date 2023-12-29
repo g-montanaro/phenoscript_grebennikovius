@@ -44,6 +44,7 @@ To run the pipeline, ensure the following software is preinstalled and globally 
     ```
 - [Materializer](https://github.com/balhoff/materializer/releases/tag/v0.2.7)
     - Download and unpack the `tgz` file. Make `/bin/materializer` globally accessible for execution.
+    - You may want to increase the amount of memory available for Java. This is done by setting the JAVA_OPTS and JVM_ARGS environment variables: `export JAVA_OPTS=-Xmx16G` and `export JVM_ARGS=-Xmx16G`.
 - [SPARQL Notebook for VS Code](https://marketplace.visualstudio.com/items?itemName=Zazuko.sparql-notebook)
     - Install this extension within VS Code from the Marketplace tab.
 
