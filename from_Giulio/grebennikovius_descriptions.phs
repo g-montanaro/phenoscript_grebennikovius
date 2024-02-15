@@ -37,7 +37,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > aism-antenna >> pato-yellow_brown;
     #Length 4.5mm.
     this >> pato-length .iao-is_quality_measured_as iao-measurement_datum:md-c4c164 .aism-has_unit unit-millimeter;
-																iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
+																					iao-measurement_datum:md-c4c164 .iao-has_measurement_value 4.5;
 
 
     #Head
@@ -105,8 +105,8 @@ OTU = { #// OTUName:  Grebennikovius armiger
     this > colao-elytral_interstria_6 > bspo-anterior-most_region >> pato-concave;
     #carina of interstria 8 expanded distally;
         aism-cuticular_carina:id-503423 > bspo-distal_region >> pato-increased_height;
-    #scutellum absent;
-    this > aism-scutellum >> pato-concealed;
+    #scutellar shield absent;
+    this > colao-scutellar_shield >> pato-concealed;
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-2e035a !> aism-cuticular_tubercle;
     #hind wings extremely reduced, smaller than in G. basilewskyi.
@@ -142,7 +142,7 @@ OTU = { #// OTUName:  Grebennikovius armiger
 
 
     #Tergite VIII.
-    #Entirely bordered;
+    #Entirely grooved;
 
     this > aism-abdominal_tergite_VIII:id-791f84 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-791f84;
     #covered with ocellate setigerous punctures  
@@ -168,13 +168,13 @@ OTU = { #// OTUName:  Grebennikovius armiger
     #ventral carina of male procoxae toothed medially;
     this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
     #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
-        aism-protibia:id-6b42fe >> pato-bent;
-        aism-protibia:id-6b42fe > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-6b42fe >> pato-curved;
+        aism-protibia:id-6b42fe > aism-antero-distal_margin > aism-cuticular_seta >> (pato-multiple, pato-increased_thickness);
         aism-protibia:id-6b42fe > aism-postero-distal_margin >> (pato-dilated, pato-curved);
     #ventral margin of hind femur produced in the middle into a broad subtriangular tooth;
     this > aism-metafemur:id-f5252e > bspo-ventral_margin > aism-cuticular_protrusion >> (pato-triangular, pato-flattened);
-    #metatibia strongly bent in the middle, abruptly widened in distal third, dorsal edge sinuated on distal half.
-    this > aism-metatibia:id-2e2ae5 > bspo-medial_region >> pato-bent;
+    #metatibia strongly curved in the middle, abruptly widened in distal third, dorsal edge sinuated on distal half.
+    this > aism-metatibia:id-2e2ae5 > bspo-medial_region >> pato-curved;
         aism-metatibia:id-2e2ae5 > bspo-distal_region >> pato-dilated;
         aism-metatibia:id-2e2ae5 > bspo-dorsal_margin > bspo-distal_region >> pato-curved;
 
@@ -297,8 +297,8 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
     this > colao-elytral_interstria_5 > bspo-distal_region > aism-cuticular_tubercle;
     #carina of interstria 8 expanded distally;
         aism-cuticular_carina:id-5d41b9 > bspo-distal_region >> pato-increased_height;
-    #scutellum absent;
-    this > aism-scutellum >> pato-concealed;
+    #scutellar shield absent;
+    this > colao-scutellar_shield >> pato-concealed;
     #hind wings approximately as long as half elytral length.
     this > aism-hind_wing:id-6b490e >> pato-atrophied;
         aism-hind_wing:id-6b490e >> pato-length:id-d38816 .iao-is_quality_measured_as iao-measurement_datum:md-adc2ba .aism-has_unit pato-length << colao-elytron_with_9_striae:id-2c694c;
@@ -330,7 +330,7 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
 
 
     #Tergite VIII.
-    #Entirely bordered;
+    #Entirely grooved;
     this > aism-abdominal_tergite_VIII:id-0422f3 > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-0422f3;
     #covered with ocellate setigerous punctures
         aism-abdominal_tergite_VIII:id-0422f3 > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
@@ -358,8 +358,8 @@ OTU = { #// OTUName:  Grebennikovius basilewskyi
     this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
     #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
     #expansion of protibial apex below tarsal insertion obtusely angular;
-        aism-protibia:id-2a66d7 >> pato-bent;
-        aism-protibia:id-2a66d7 > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-2a66d7 >> pato-curved;
+        aism-protibia:id-2a66d7 > aism-antero-distal_margin > aism-cuticular_seta >> (pato-multiple, pato-increased_thickness);
         aism-protibia:id-2a66d7 > aism-postero-distal_margin >> pato-obtuse;
     #ventral margin of metafemur with bulging on proximal 1/3, femur enlarged distally to the bulging;
     this > aism-metafemur:id-3dab8f > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-a7a496;
@@ -478,8 +478,8 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
         colao-elytron_with_9_striae:id-0f4748 > bspo-proximal_region >> pato-convex;
     #carina of interstria 8 expanded distally;
         aism-cuticular_carina:id-44b1f2 > bspo-distal_region >> pato-increased_height;
-    #scutellum absent;
-    this > aism-scutellum >> pato-concealed;
+    #scutellar shield absent;
+    this > colao-scutellar_shield >> pato-concealed;
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-ba8303 !> aism-cuticular_tubercle;
     #hind wings extremely reduced, smaller than in G. basilewskyi.
@@ -512,7 +512,7 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
 
 
     #Tergite VIII.
-    #Entirely bordered;
+    #Entirely grooved;
     this > aism-abdominal_tergite_VIII:id-38ed1f > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-38ed1f;
     #covered with ocellate setigerous punctures 
         aism-abdominal_tergite_VIII:id-38ed1f > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
@@ -538,8 +538,8 @@ OTU = { #// OTUName:  Grebennikovius lupanganus
     this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
     #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
     #expansion of protibial apex below tarsal insertion notched.
-        aism-protibia:id-e5e18e >> pato-bent;
-        aism-protibia:id-e5e18e > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-e5e18e >> pato-curved;
+        aism-protibia:id-e5e18e > aism-antero-distal_margin > aism-cuticular_seta >> (pato-multiple, pato-increased_thickness);
         aism-protibia:id-e5e18e > aism-postero-distal_margin >> (pato-dilated, pato-notched);
     #ventral margin of metafemur with a small bulging on proximal third;
     this > aism-metafemur:id-f717c2 > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-74dad1;
@@ -662,8 +662,8 @@ OTU = { #// OTUName:  Grebennikovius pafelo
     #elytral surface strongly depressed along medial side of carina of interstria 8;
     this > colao-elytral_interstria_8 > bspo-anatomical_side:id-c96b79 .aism-lateral_to aism-cuticular_carina:id-ce6248;
         bspo-anatomical_side:id-c96b79 >> pato-convex;
-    #scutellum absent;
-    this > aism-scutellum >> pato-concealed;
+    #scutellar shield absent;
+    this > colao-scutellar_shield >> pato-concealed;
     #elytral interstria 5 without tubercles;
         colao-elytral_interstria_5:id-dbda37 !> aism-cuticular_tubercle;
     #hind wings extremely reduced, smaller than in G. basilewskyi.
@@ -696,7 +696,7 @@ OTU = { #// OTUName:  Grebennikovius pafelo
 
 
     #Tergite VIII.
-    #Entirely bordered;
+    #Entirely grooved;
     this > aism-abdominal_tergite_VIII:id-551cbe > bspo-anatomical_margin .ro-coincident_with aism-cuticular_groove < aism-abdominal_tergite_VIII:id-551cbe;
     #covered with ocellate setigerous punctures
         aism-abdominal_tergite_VIII:id-551cbe > aism-cuticle_with_setigerous_punctures > aism-ocellate_setigerous_cuticular_puncture;
@@ -721,15 +721,15 @@ OTU = { #// OTUName:  Grebennikovius pafelo
     this > aism-procoxa > bspo-ventral_region > aism-cuticular_carina > aism-cuticular_tubercle;
     #protibiae strongly curved, their apex expanded and bearing a row of short, thick setae, their apex expanded below tarsal insertion;
     #expansion of protibial apex below tarsal insertion rounded.
-        aism-protibia:id-1ec803 >> pato-bent;
-        aism-protibia:id-1ec803 > aism-antero-distal_margin >> pato-setose;
+        aism-protibia:id-1ec803 >> pato-curved;
+        aism-protibia:id-1ec803 > aism-antero-distal_margin > aism-cuticular_seta >> (pato-multiple, pato-increased_thickness);
         aism-protibia:id-1ec803 > aism-postero-distal_margin >> (pato-dilated, pato-curved);
     #ventral margin of metafemur with bulging on proximal third, femur notched and then enlarged distally to the bulging;
     this > aism-metafemur:id-0365d4 > bspo-ventral_margin > bspo-proximal_region > aism-cuticular_tubercle:id-0fff74;
         aism-metafemur:id-0365d4 > bspo-anatomical_region:id-9e0608 .bspo-distal_to aism-cuticular_tubercle:id-0fff74;
         bspo-anatomical_region:id-9e0608 >> pato-dilated; #cmtg: IS IT OK TO USE .distal_to ?
-    #metatibia bent medially, widened in distal third, dorsal edge slightly sinuous on distal third.
-    this > aism-metatibia:id-f31f1b > bspo-medial_region >> pato-bent;
+    #metatibia curved medially, widened in distal third, dorsal edge slightly sinuous on distal third.
+    this > aism-metatibia:id-f31f1b > bspo-medial_region >> pato-curved;
         aism-metatibia:id-f31f1b > bspo-distal_region >> pato-dilated;
         aism-metatibia:id-f31f1b > bspo-dorsal_margin > bspo-distal_region >> pato-curved;
 
