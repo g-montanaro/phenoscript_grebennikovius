@@ -3,6 +3,7 @@ PHS_FILE = grebennikovius_descriptions.phs
 OUT_FILE_OWL = grebennikovius
 CONFIG_FILE = phenotypes/phs-config.yaml
 
+
 # Default target
 all: phs2-owl-NL validate-phs make-tbox reason-owl
 #all: make-tbox
@@ -20,7 +21,8 @@ phs2-owl-NL:
 # Validate phs using SHACL
 validate-phs:
 	@echo "\nSTEP: Validate using SHACL";
-	shacl validate --data output/$(OUT_FILE_OWL).owl --shapes source_queries/phenoscript.shacl.ttl > output/shacl.log
+	@mkdir -p log;
+	shacl validate --data output/$(OUT_FILE_OWL).owl --shapes utils/source_queries/phenoscript.shacl.ttl > log/shacl.log
 
 
 # Make Tbox ontology file: 
@@ -33,9 +35,9 @@ make-tbox:
 		echo "Downloading source_ontologies ..."; \
 		phenospy fetch-ontos $(CONFIG_FILE) source_ontologies; \
 		echo "robot merge ontologies ..."; \
-		robot merge --inputs "source_ontologies/*.owl" --input source_queries/query.ttl --output merged_ontologies/tbox.owl; \
+		robot merge --inputs "source_ontologies/*.owl" --input utils/source_queries/query.ttl --output source_ontologies/tbox.owl; \
 		echo "robot remove individuals ..."; \
-		robot remove --input merged_ontologies/tbox.owl --select individuals --output merged_ontologies/tbox.owl; \
+		robot remove --input source_ontologies/tbox.owl --select individuals --output source_ontologies/tbox.owl; \
 	else \
 		echo "source_ontologies is not empty. Skipping update."; \
 	fi
@@ -45,9 +47,9 @@ make-tbox:
 # merge all ontologies into a single file
 reason-owl:
 	@echo "\nSTEP: reason using materializer";
-	materializer file --ontology-file merged_ontologies/tbox.owl --input output/$(OUT_FILE_OWL).owl --output output/$(OUT_FILE_OWL)-reasoned.ttl --reasoner whelk
+	materializer file --ontology-file source_ontologies/tbox.owl --input output/$(OUT_FILE_OWL).owl --output output/$(OUT_FILE_OWL)-reasoned_raw.ttl --reasoner whelk > log/materializer.log
 	@echo "\nSTEP: annotate inffered axioms";
-	update --data output/$(OUT_FILE_OWL)-reasoned.ttl --update source_queries/annotate.ru --dump > output/$(OUT_FILE_OWL)-reasoned-annotated.ttl
+	update --data output/$(OUT_FILE_OWL)-reasoned_raw.ttl --update utils/source_queries/annotate.ru --dump > output/$(OUT_FILE_OWL)-reasoned-annotated.ttl
 	@echo "\nSTEP: merge all ontologies into a single file";
-	riot output/$(OUT_FILE_OWL).owl output/$(OUT_FILE_OWL)-reasoned-annotated.ttl merged_ontologies/tbox.owl > output/$(OUT_FILE_OWL)-all.ttl
+	riot output/$(OUT_FILE_OWL).owl output/$(OUT_FILE_OWL)-reasoned-annotated.ttl source_ontologies/tbox.owl > output/$(OUT_FILE_OWL)-final.ttl
 	@echo "\nMAKE COMPLETED";

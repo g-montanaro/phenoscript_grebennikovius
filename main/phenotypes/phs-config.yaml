@@ -15,7 +15,9 @@ authors:
 project-title: "Testing Phenoscript Language: four species of Grebennikovius (Coleoptera: Scarabaeinae) from the Eastern Arc Mountains"
 importOntologies:
   - https://raw.githubusercontent.com/sergeitarasov/aism/devel/src/ontology/aism-edit.owl
-  - https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl
+  #- http://purl.obolibrary.org/obo/aism.owl
+  #- https://raw.githubusercontent.com/sergeitarasov/colao/devel/src/ontology/colao-edit.owl
+  - http://purl.obolibrary.org/obo/colao.owl
   - https://raw.githubusercontent.com/sergeitarasov/PhenoScript/main/phenospy_package/phenospy/package-data/phenoscript.owl
   - http://purl.obolibrary.org/obo/pato.owl
   - http://purl.obolibrary.org/obo/bspo.owl
